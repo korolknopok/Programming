@@ -178,14 +178,14 @@ namespace Programming.View
             // 
             // ValueWeekdayBox
             // 
-            this.ValueWeekdayBox.Location = new System.Drawing.Point(423, 58);
+            this.ValueWeekdayBox.Location = new System.Drawing.Point(406, 58);
             this.ValueWeekdayBox.Name = "ValueWeekdayBox";
             this.ValueWeekdayBox.Size = new System.Drawing.Size(117, 22);
             this.ValueWeekdayBox.TabIndex = 9;
             // 
             // IntValueLabel
             // 
-            this.IntValueLabel.Location = new System.Drawing.Point(423, 33);
+            this.IntValueLabel.Location = new System.Drawing.Point(406, 33);
             this.IntValueLabel.Name = "IntValueLabel";
             this.IntValueLabel.Size = new System.Drawing.Size(116, 22);
             this.IntValueLabel.TabIndex = 8;
