@@ -4,8 +4,8 @@
     {
         Comedy,
         Drama,
-        Triller,
-        Fighter,
+        Thriller,
+        Fighting,
         Horrors,
         Blockbuster
     }

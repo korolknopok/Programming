@@ -8,7 +8,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="340bc002-5277-468b-904c-a56cf1522e43" name="Changes" comment="1">
-      <change beforePath="$PROJECT_DIR$/Programming/View/FormMain.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/View/FormMain.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Programming/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Programming/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Model/Genre.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Genre.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Programming.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Programming.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/View/FormMain.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/View/MainForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/View/FormMain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/View/MainForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/View/FormMain.resx" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/View/MainForm.resx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +25,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/cvit-/RiderProjects/Programming/Programming/Programming/View/FormMain.Designer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/cvit-/RiderProjects/Programming/Programming/Programming/View/FormMain.Designer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/cvit-/RiderProjects/Programming/Programming/Programming/View/FormMain.Designer.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="25wyU4ZEdHi4UbpwHsoQHY5w62y" />
@@ -71,7 +79,7 @@
       <workItem from="1646453139672" duration="1109000" />
       <workItem from="1646454678001" duration="32000" />
       <workItem from="1646454763248" duration="2392000" />
-      <workItem from="1646963394815" duration="2259000" />
+      <workItem from="1646963394815" duration="3651000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1646452562226</created>
@@ -101,7 +109,21 @@
       <option name="project" value="LOCAL" />
       <updated>1646966176972</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="1">
+      <created>1646966516502</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1646966516502</updated>
+    </task>
+    <task id="LOCAL-00006" summary="1">
+      <created>1646966741939</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1646966741939</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -2,7 +2,7 @@
 
 namespace Programming.View
 {
-    partial class FormMain
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -178,14 +178,14 @@ namespace Programming.View
             // 
             // ValueWeekdayBox
             // 
-            this.ValueWeekdayBox.Location = new System.Drawing.Point(406, 58);
+            this.ValueWeekdayBox.Location = new System.Drawing.Point(322, 59);
             this.ValueWeekdayBox.Name = "ValueWeekdayBox";
             this.ValueWeekdayBox.Size = new System.Drawing.Size(117, 22);
             this.ValueWeekdayBox.TabIndex = 9;
             // 
             // IntValueLabel
             // 
-            this.IntValueLabel.Location = new System.Drawing.Point(406, 33);
+            this.IntValueLabel.Location = new System.Drawing.Point(322, 34);
             this.IntValueLabel.Name = "IntValueLabel";
             this.IntValueLabel.Size = new System.Drawing.Size(116, 22);
             this.IntValueLabel.TabIndex = 8;
@@ -193,7 +193,7 @@ namespace Programming.View
             // 
             // ValueLabel
             // 
-            this.ValueLabel.Location = new System.Drawing.Point(214, 33);
+            this.ValueLabel.Location = new System.Drawing.Point(168, 34);
             this.ValueLabel.Name = "ValueLabel";
             this.ValueLabel.Size = new System.Drawing.Size(132, 22);
             this.ValueLabel.TabIndex = 7;
@@ -201,7 +201,7 @@ namespace Programming.View
             // 
             // EnumarationsLabel
             // 
-            this.EnumarationsLabel.Location = new System.Drawing.Point(12, 33);
+            this.EnumarationsLabel.Location = new System.Drawing.Point(12, 34);
             this.EnumarationsLabel.Name = "EnumarationsLabel";
             this.EnumarationsLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.EnumarationsLabel.Size = new System.Drawing.Size(150, 22);
@@ -212,7 +212,7 @@ namespace Programming.View
             // 
             this.ValuesListBox.FormattingEnabled = true;
             this.ValuesListBox.ItemHeight = 16;
-            this.ValuesListBox.Location = new System.Drawing.Point(214, 58);
+            this.ValuesListBox.Location = new System.Drawing.Point(168, 59);
             this.ValuesListBox.Name = "ValuesListBox";
             this.ValuesListBox.Size = new System.Drawing.Size(132, 148);
             this.ValuesListBox.TabIndex = 3;
@@ -222,19 +222,19 @@ namespace Programming.View
             // 
             this.EnumsListBox.FormattingEnabled = true;
             this.EnumsListBox.ItemHeight = 16;
-            this.EnumsListBox.Location = new System.Drawing.Point(12, 58);
+            this.EnumsListBox.Location = new System.Drawing.Point(12, 59);
             this.EnumsListBox.Name = "EnumsListBox";
             this.EnumsListBox.Size = new System.Drawing.Size(132, 148);
             this.EnumsListBox.TabIndex = 2;
             this.EnumsListBox.SelectedIndexChanged += new System.EventHandler(this.EnumsListBox_SelectedIndexChanged);
             // 
-            // FormMain
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(802, 492);
             this.Controls.Add(this.MainTabControl);
-            this.Name = "FormMain";
+            this.Name = "MainForm";
             this.ShowIcon = false;
             this.Text = "Programming Demo";
             this.MainTabControl.ResumeLayout(false);

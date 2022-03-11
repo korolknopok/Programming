@@ -5,13 +5,13 @@ using Programming.Model;
 
 namespace Programming.View
 {
-    public partial class FormMain : Form
+    public partial class MainForm : Form
     {
-        public FormMain()
+        public MainForm()
         {
             InitializeComponent();
-            Array initSeasonValues = System.Enum.GetValues(typeof(Season));
-            foreach (Season value in initSeasonValues)
+            Array Season = System.Enum.GetValues(typeof(Season));
+            foreach (Season value in Season)
             {
                 SeasonNamesComboBox.Items.Add(value);
             }
@@ -23,7 +23,7 @@ namespace Programming.View
                 EnumsListBox.Items.Add(value);
             }
 
-            EnumsListBox.SetSelected(0, true);
+            EnumsListBox.SelectedIndex = 0;
         }
 
         private void EnumsListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -72,7 +72,7 @@ namespace Programming.View
             Weekday value;
             if (System.Enum.TryParse(textWeekdayTextBox, out value))
             {
-                OutputWeekdayLabel.Text = $"Это день недели ({value} - {(int) value + 1})";
+                OutputWeekdayLabel.Text = $"Это день недели ({value} - {(int) value})";
             }
             else
             {
