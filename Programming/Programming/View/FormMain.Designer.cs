@@ -193,7 +193,7 @@ namespace Programming.View
             // 
             // ValueLabel
             // 
-            this.ValueLabel.Location = new System.Drawing.Point(200, 33);
+            this.ValueLabel.Location = new System.Drawing.Point(214, 33);
             this.ValueLabel.Name = "ValueLabel";
             this.ValueLabel.Size = new System.Drawing.Size(132, 22);
             this.ValueLabel.TabIndex = 7;
@@ -212,7 +212,7 @@ namespace Programming.View
             // 
             this.ValuesListBox.FormattingEnabled = true;
             this.ValuesListBox.ItemHeight = 16;
-            this.ValuesListBox.Location = new System.Drawing.Point(200, 58);
+            this.ValuesListBox.Location = new System.Drawing.Point(214, 58);
             this.ValuesListBox.Name = "ValuesListBox";
             this.ValuesListBox.Size = new System.Drawing.Size(132, 148);
             this.ValuesListBox.TabIndex = 3;
