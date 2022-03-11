@@ -178,14 +178,14 @@ namespace Programming.View
             // 
             // ValueWeekdayBox
             // 
-            this.ValueWeekdayBox.Location = new System.Drawing.Point(322, 59);
+            this.ValueWeekdayBox.Location = new System.Drawing.Point(349, 59);
             this.ValueWeekdayBox.Name = "ValueWeekdayBox";
             this.ValueWeekdayBox.Size = new System.Drawing.Size(117, 22);
             this.ValueWeekdayBox.TabIndex = 9;
             // 
             // IntValueLabel
             // 
-            this.IntValueLabel.Location = new System.Drawing.Point(322, 34);
+            this.IntValueLabel.Location = new System.Drawing.Point(349, 34);
             this.IntValueLabel.Name = "IntValueLabel";
             this.IntValueLabel.Size = new System.Drawing.Size(116, 22);
             this.IntValueLabel.TabIndex = 8;
@@ -193,7 +193,7 @@ namespace Programming.View
             // 
             // ValueLabel
             // 
-            this.ValueLabel.Location = new System.Drawing.Point(168, 34);
+            this.ValueLabel.Location = new System.Drawing.Point(183, 34);
             this.ValueLabel.Name = "ValueLabel";
             this.ValueLabel.Size = new System.Drawing.Size(132, 22);
             this.ValueLabel.TabIndex = 7;
@@ -212,7 +212,7 @@ namespace Programming.View
             // 
             this.ValuesListBox.FormattingEnabled = true;
             this.ValuesListBox.ItemHeight = 16;
-            this.ValuesListBox.Location = new System.Drawing.Point(168, 59);
+            this.ValuesListBox.Location = new System.Drawing.Point(183, 59);
             this.ValuesListBox.Name = "ValuesListBox";
             this.ValuesListBox.Size = new System.Drawing.Size(132, 148);
             this.ValuesListBox.TabIndex = 3;
