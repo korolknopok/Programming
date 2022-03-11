@@ -92,7 +92,7 @@ namespace Programming.View
             // 
             // GOButton
             // 
-            this.GOButton.Location = new System.Drawing.Point(180, 61);
+            this.GOButton.Location = new System.Drawing.Point(194, 58);
             this.GOButton.Name = "GOButton";
             this.GOButton.Size = new System.Drawing.Size(114, 29);
             this.GOButton.TabIndex = 3;
@@ -103,9 +103,9 @@ namespace Programming.View
             // SeasonNamesComboBox
             // 
             this.SeasonNamesComboBox.FormattingEnabled = true;
-            this.SeasonNamesComboBox.Location = new System.Drawing.Point(16, 64);
+            this.SeasonNamesComboBox.Location = new System.Drawing.Point(16, 61);
             this.SeasonNamesComboBox.Name = "SeasonNamesComboBox";
-            this.SeasonNamesComboBox.Size = new System.Drawing.Size(142, 24);
+            this.SeasonNamesComboBox.Size = new System.Drawing.Size(149, 24);
             this.SeasonNamesComboBox.TabIndex = 2;
             // 
             // ChooseSeasonLabel
@@ -131,7 +131,7 @@ namespace Programming.View
             // 
             // ParseWeekdayButton
             // 
-            this.ParseWeekdayButton.Location = new System.Drawing.Point(233, 61);
+            this.ParseWeekdayButton.Location = new System.Drawing.Point(237, 59);
             this.ParseWeekdayButton.Name = "ParseWeekdayButton";
             this.ParseWeekdayButton.Size = new System.Drawing.Size(114, 29);
             this.ParseWeekdayButton.TabIndex = 4;
@@ -148,10 +148,10 @@ namespace Programming.View
             // 
             // WeekdayTextBox
             // 
-            this.WeekdayTextBox.Location = new System.Drawing.Point(12, 64);
+            this.WeekdayTextBox.Location = new System.Drawing.Point(12, 61);
             this.WeekdayTextBox.Multiline = true;
             this.WeekdayTextBox.Name = "WeekdayTextBox";
-            this.WeekdayTextBox.Size = new System.Drawing.Size(198, 24);
+            this.WeekdayTextBox.Size = new System.Drawing.Size(198, 27);
             this.WeekdayTextBox.TabIndex = 1;
             // 
             // TypeValueLabel

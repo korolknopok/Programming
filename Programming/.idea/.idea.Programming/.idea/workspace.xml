@@ -7,7 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="340bc002-5277-468b-904c-a56cf1522e43" name="Changes" comment="1" />
+    <list default="true" id="340bc002-5277-468b-904c-a56cf1522e43" name="Changes" comment="1">
+      <change beforePath="$PROJECT_DIR$/Programming/View/MainForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/View/MainForm.Designer.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,6 +23,7 @@
     <setting file="mock://C:/Users/cvit-/RiderProjects/Programming/Programming/Programming/Model/Genre.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/cvit-/RiderProjects/Programming/Programming/Programming/View/MainForm.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/cvit-/RiderProjects/Programming/Programming/Programming/View/FormMain.Designer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/cvit-/RiderProjects/Programming/Programming/Programming/View/MainForm.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/cvit-/RiderProjects/Programming/Programming/Programming/View/MainForm.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/cvit-/RiderProjects/Programming/Programming/Programming/View/MainForm.Designer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/cvit-/RiderProjects/Programming/Programming/Programming/View/FormMain.Designer.cs" root0="SKIP_HIGHLIGHTING" />
@@ -76,7 +79,7 @@
       <workItem from="1646453139672" duration="1109000" />
       <workItem from="1646454678001" duration="32000" />
       <workItem from="1646454763248" duration="2392000" />
-      <workItem from="1646963394815" duration="6061000" />
+      <workItem from="1646963394815" duration="6368000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1646452562226</created>
@@ -155,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646971153630</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="1">
+      <created>1646972028230</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1646972028230</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
