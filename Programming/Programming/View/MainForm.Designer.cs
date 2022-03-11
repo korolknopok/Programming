@@ -43,7 +43,7 @@ namespace Programming.View
             this.WeekdayTextBox = new System.Windows.Forms.TextBox();
             this.TypeValueLabel = new System.Windows.Forms.Label();
             this.EnumerationsGroupBox = new System.Windows.Forms.GroupBox();
-            this.ValueWeekdayBox = new System.Windows.Forms.TextBox();
+            this.ValueWeekdayTextBox = new System.Windows.Forms.TextBox();
             this.IntValueLabel = new System.Windows.Forms.Label();
             this.ValueLabel = new System.Windows.Forms.Label();
             this.EnumarationsLabel = new System.Windows.Forms.Label();
@@ -164,7 +164,7 @@ namespace Programming.View
             // 
             // EnumerationsGroupBox
             // 
-            this.EnumerationsGroupBox.Controls.Add(this.ValueWeekdayBox);
+            this.EnumerationsGroupBox.Controls.Add(this.ValueWeekdayTextBox);
             this.EnumerationsGroupBox.Controls.Add(this.IntValueLabel);
             this.EnumerationsGroupBox.Controls.Add(this.ValueLabel);
             this.EnumerationsGroupBox.Controls.Add(this.EnumarationsLabel);
@@ -177,12 +177,12 @@ namespace Programming.View
             this.EnumerationsGroupBox.TabStop = false;
             this.EnumerationsGroupBox.Text = "Enumerations";
             // 
-            // ValueWeekdayBox
+            // ValueWeekdayTextBox
             // 
-            this.ValueWeekdayBox.Location = new System.Drawing.Point(349, 59);
-            this.ValueWeekdayBox.Name = "ValueWeekdayBox";
-            this.ValueWeekdayBox.Size = new System.Drawing.Size(117, 22);
-            this.ValueWeekdayBox.TabIndex = 9;
+            this.ValueWeekdayTextBox.Location = new System.Drawing.Point(349, 59);
+            this.ValueWeekdayTextBox.Name = "ValueWeekdayTextBox";
+            this.ValueWeekdayTextBox.Size = new System.Drawing.Size(117, 22);
+            this.ValueWeekdayTextBox.TabIndex = 9;
             // 
             // IntValueLabel
             // 
@@ -247,6 +247,8 @@ namespace Programming.View
             this.EnumerationsGroupBox.PerformLayout();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.TextBox ValueWeekdayTextBox;
 
         private System.Windows.Forms.TabControl MainTabControl;
 
