@@ -69,8 +69,7 @@ namespace Programming.View
         private void ParseWeekdayButton_Click(object sender, EventArgs e)
         {
             string textWeekdayTextBox = WeekdayTextBox.Text;
-            Weekday weekday;
-            if (System.Enum.TryParse(textWeekdayTextBox, out weekday))
+            if (System.Enum.TryParse(textWeekdayTextBox, out Weekday weekday))
             {
                 OutputWeekdayLabel.Text = $"Это день недели ({weekday} - {(int) weekday})";
             }
