@@ -62,7 +62,7 @@ namespace Programming.View
         private void ValuesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             var item = ValuesListBox.SelectedItem;
-            ValueWeekdayBox.Text = ((int) item).ToString();
+            ValueWeekdayTextBox.Text = ((int) item).ToString();
         }
 
 
