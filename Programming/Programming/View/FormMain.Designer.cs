@@ -31,7 +31,7 @@ namespace Programming.View
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.MainTabControl = new System.Windows.Forms.TabControl();
             this.EnumTabPage = new System.Windows.Forms.TabPage();
             this.SeasonHandleGroupBox = new System.Windows.Forms.GroupBox();
             this.GOButton = new System.Windows.Forms.Button();
@@ -49,21 +49,21 @@ namespace Programming.View
             this.EnumarationsLabel = new System.Windows.Forms.Label();
             this.ValuesListBox = new System.Windows.Forms.ListBox();
             this.EnumsListBox = new System.Windows.Forms.ListBox();
-            this.tabControl1.SuspendLayout();
+            this.MainTabControl.SuspendLayout();
             this.EnumTabPage.SuspendLayout();
             this.SeasonHandleGroupBox.SuspendLayout();
             this.WeekdayGroupBox.SuspendLayout();
             this.EnumerationsGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // MainTabControl
             // 
-            this.tabControl1.Controls.Add(this.EnumTabPage);
-            this.tabControl1.Location = new System.Drawing.Point(2, 5);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(800, 488);
-            this.tabControl1.TabIndex = 0;
+            this.MainTabControl.Controls.Add(this.EnumTabPage);
+            this.MainTabControl.Location = new System.Drawing.Point(2, 5);
+            this.MainTabControl.Name = "MainTabControl";
+            this.MainTabControl.SelectedIndex = 0;
+            this.MainTabControl.Size = new System.Drawing.Size(800, 488);
+            this.MainTabControl.TabIndex = 0;
             // 
             // EnumTabPage
             // 
@@ -233,11 +233,11 @@ namespace Programming.View
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(802, 492);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.MainTabControl);
             this.Name = "FormMain";
             this.ShowIcon = false;
             this.Text = "Programming Demo";
-            this.tabControl1.ResumeLayout(false);
+            this.MainTabControl.ResumeLayout(false);
             this.EnumTabPage.ResumeLayout(false);
             this.SeasonHandleGroupBox.ResumeLayout(false);
             this.WeekdayGroupBox.ResumeLayout(false);
@@ -246,6 +246,8 @@ namespace Programming.View
             this.EnumerationsGroupBox.PerformLayout();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.TabControl MainTabControl;
 
         private System.Windows.Forms.TextBox ValueWeekdayBox;
 
@@ -282,7 +284,7 @@ namespace Programming.View
 
         private System.Windows.Forms.TabPage EnumTabPage;
 
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabControl;
 
         private System.Windows.Forms.TabControl EnumTabControl;
         private System.Windows.Forms.TabPage tabPage2;
