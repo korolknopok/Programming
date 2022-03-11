@@ -85,14 +85,14 @@ namespace Programming.View
             this.SeasonHandleGroupBox.Controls.Add(this.ChooseSeasonLabel);
             this.SeasonHandleGroupBox.Location = new System.Drawing.Point(412, 263);
             this.SeasonHandleGroupBox.Name = "SeasonHandleGroupBox";
-            this.SeasonHandleGroupBox.Size = new System.Drawing.Size(363, 187);
+            this.SeasonHandleGroupBox.Size = new System.Drawing.Size(372, 190);
             this.SeasonHandleGroupBox.TabIndex = 2;
             this.SeasonHandleGroupBox.TabStop = false;
             this.SeasonHandleGroupBox.Text = "Season Handle";
             // 
             // GOButton
             // 
-            this.GOButton.Location = new System.Drawing.Point(188, 53);
+            this.GOButton.Location = new System.Drawing.Point(178, 53);
             this.GOButton.Name = "GOButton";
             this.GOButton.Size = new System.Drawing.Size(89, 53);
             this.GOButton.TabIndex = 3;
@@ -103,14 +103,14 @@ namespace Programming.View
             // SeasonNamesComboBox
             // 
             this.SeasonNamesComboBox.FormattingEnabled = true;
-            this.SeasonNamesComboBox.Location = new System.Drawing.Point(16, 66);
+            this.SeasonNamesComboBox.Location = new System.Drawing.Point(9, 66);
             this.SeasonNamesComboBox.Name = "SeasonNamesComboBox";
             this.SeasonNamesComboBox.Size = new System.Drawing.Size(142, 24);
             this.SeasonNamesComboBox.TabIndex = 2;
             // 
             // ChooseSeasonLabel
             // 
-            this.ChooseSeasonLabel.Location = new System.Drawing.Point(16, 39);
+            this.ChooseSeasonLabel.Location = new System.Drawing.Point(9, 39);
             this.ChooseSeasonLabel.Name = "ChooseSeasonLabel";
             this.ChooseSeasonLabel.Size = new System.Drawing.Size(149, 24);
             this.ChooseSeasonLabel.TabIndex = 1;
@@ -124,14 +124,14 @@ namespace Programming.View
             this.WeekdayGroupBox.Controls.Add(this.TypeValueLabel);
             this.WeekdayGroupBox.Location = new System.Drawing.Point(6, 263);
             this.WeekdayGroupBox.Name = "WeekdayGroupBox";
-            this.WeekdayGroupBox.Size = new System.Drawing.Size(391, 187);
+            this.WeekdayGroupBox.Size = new System.Drawing.Size(391, 190);
             this.WeekdayGroupBox.TabIndex = 1;
             this.WeekdayGroupBox.TabStop = false;
             this.WeekdayGroupBox.Text = "Weekday Parsing";
             // 
             // ParseWeekdayButton
             // 
-            this.ParseWeekdayButton.Location = new System.Drawing.Point(236, 53);
+            this.ParseWeekdayButton.Location = new System.Drawing.Point(229, 53);
             this.ParseWeekdayButton.Name = "ParseWeekdayButton";
             this.ParseWeekdayButton.Size = new System.Drawing.Size(86, 53);
             this.ParseWeekdayButton.TabIndex = 4;
@@ -148,14 +148,14 @@ namespace Programming.View
             // 
             // WeekdayTextBox
             // 
-            this.WeekdayTextBox.Location = new System.Drawing.Point(19, 68);
+            this.WeekdayTextBox.Location = new System.Drawing.Point(12, 66);
             this.WeekdayTextBox.Name = "WeekdayTextBox";
             this.WeekdayTextBox.Size = new System.Drawing.Size(198, 22);
             this.WeekdayTextBox.TabIndex = 1;
             // 
             // TypeValueLabel
             // 
-            this.TypeValueLabel.Location = new System.Drawing.Point(19, 41);
+            this.TypeValueLabel.Location = new System.Drawing.Point(12, 41);
             this.TypeValueLabel.Name = "TypeValueLabel";
             this.TypeValueLabel.Size = new System.Drawing.Size(173, 24);
             this.TypeValueLabel.TabIndex = 0;
@@ -169,9 +169,9 @@ namespace Programming.View
             this.EnumerationsGroupBox.Controls.Add(this.EnumarationsLabel);
             this.EnumerationsGroupBox.Controls.Add(this.ValuesListBox);
             this.EnumerationsGroupBox.Controls.Add(this.EnumsListBox);
-            this.EnumerationsGroupBox.Location = new System.Drawing.Point(6, 6);
+            this.EnumerationsGroupBox.Location = new System.Drawing.Point(6, 0);
             this.EnumerationsGroupBox.Name = "EnumerationsGroupBox";
-            this.EnumerationsGroupBox.Size = new System.Drawing.Size(769, 251);
+            this.EnumerationsGroupBox.Size = new System.Drawing.Size(778, 257);
             this.EnumerationsGroupBox.TabIndex = 0;
             this.EnumerationsGroupBox.TabStop = false;
             this.EnumerationsGroupBox.Text = "Enumerations";
