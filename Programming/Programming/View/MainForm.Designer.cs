@@ -34,11 +34,11 @@ namespace Programming.View
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.EnumTabPage = new System.Windows.Forms.TabPage();
             this.SeasonHandleGroupBox = new System.Windows.Forms.GroupBox();
+            this.ParseWeekdayButton = new System.Windows.Forms.Button();
             this.GOButton = new System.Windows.Forms.Button();
             this.SeasonNamesComboBox = new System.Windows.Forms.ComboBox();
             this.ChooseSeasonLabel = new System.Windows.Forms.Label();
             this.WeekdayGroupBox = new System.Windows.Forms.GroupBox();
-            this.ParseWeekdayButton = new System.Windows.Forms.Button();
             this.OutputWeekdayLabel = new System.Windows.Forms.Label();
             this.WeekdayTextBox = new System.Windows.Forms.TextBox();
             this.TypeValueLabel = new System.Windows.Forms.Label();
@@ -90,11 +90,21 @@ namespace Programming.View
             this.SeasonHandleGroupBox.TabStop = false;
             this.SeasonHandleGroupBox.Text = "Season Handle";
             // 
+            // ParseWeekdayButton
+            // 
+            this.ParseWeekdayButton.Location = new System.Drawing.Point(233, 61);
+            this.ParseWeekdayButton.Name = "ParseWeekdayButton";
+            this.ParseWeekdayButton.Size = new System.Drawing.Size(114, 29);
+            this.ParseWeekdayButton.TabIndex = 4;
+            this.ParseWeekdayButton.Text = "Parse";
+            this.ParseWeekdayButton.UseVisualStyleBackColor = true;
+            this.ParseWeekdayButton.Click += new System.EventHandler(this.ParseWeekdayButton_Click);
+            // 
             // GOButton
             // 
-            this.GOButton.Location = new System.Drawing.Point(178, 53);
+            this.GOButton.Location = new System.Drawing.Point(184, 61);
             this.GOButton.Name = "GOButton";
-            this.GOButton.Size = new System.Drawing.Size(89, 53);
+            this.GOButton.Size = new System.Drawing.Size(114, 29);
             this.GOButton.TabIndex = 3;
             this.GOButton.Text = "GO!";
             this.GOButton.UseVisualStyleBackColor = true;
@@ -103,14 +113,14 @@ namespace Programming.View
             // SeasonNamesComboBox
             // 
             this.SeasonNamesComboBox.FormattingEnabled = true;
-            this.SeasonNamesComboBox.Location = new System.Drawing.Point(9, 66);
+            this.SeasonNamesComboBox.Location = new System.Drawing.Point(16, 64);
             this.SeasonNamesComboBox.Name = "SeasonNamesComboBox";
             this.SeasonNamesComboBox.Size = new System.Drawing.Size(142, 24);
             this.SeasonNamesComboBox.TabIndex = 2;
             // 
             // ChooseSeasonLabel
             // 
-            this.ChooseSeasonLabel.Location = new System.Drawing.Point(9, 39);
+            this.ChooseSeasonLabel.Location = new System.Drawing.Point(16, 41);
             this.ChooseSeasonLabel.Name = "ChooseSeasonLabel";
             this.ChooseSeasonLabel.Size = new System.Drawing.Size(149, 24);
             this.ChooseSeasonLabel.TabIndex = 1;
@@ -129,16 +139,6 @@ namespace Programming.View
             this.WeekdayGroupBox.TabStop = false;
             this.WeekdayGroupBox.Text = "Weekday Parsing";
             // 
-            // ParseWeekdayButton
-            // 
-            this.ParseWeekdayButton.Location = new System.Drawing.Point(229, 53);
-            this.ParseWeekdayButton.Name = "ParseWeekdayButton";
-            this.ParseWeekdayButton.Size = new System.Drawing.Size(86, 53);
-            this.ParseWeekdayButton.TabIndex = 4;
-            this.ParseWeekdayButton.Text = "Parse";
-            this.ParseWeekdayButton.UseVisualStyleBackColor = true;
-            this.ParseWeekdayButton.Click += new System.EventHandler(this.ParseWeekdayButton_Click);
-            // 
             // OutputWeekdayLabel
             // 
             this.OutputWeekdayLabel.Location = new System.Drawing.Point(19, 105);
@@ -148,9 +148,10 @@ namespace Programming.View
             // 
             // WeekdayTextBox
             // 
-            this.WeekdayTextBox.Location = new System.Drawing.Point(12, 66);
+            this.WeekdayTextBox.Location = new System.Drawing.Point(12, 64);
+            this.WeekdayTextBox.Multiline = true;
             this.WeekdayTextBox.Name = "WeekdayTextBox";
-            this.WeekdayTextBox.Size = new System.Drawing.Size(198, 22);
+            this.WeekdayTextBox.Size = new System.Drawing.Size(198, 24);
             this.WeekdayTextBox.TabIndex = 1;
             // 
             // TypeValueLabel
