@@ -92,7 +92,7 @@ namespace Programming.View
             // 
             // GOButton
             // 
-            this.GOButton.Location = new System.Drawing.Point(184, 61);
+            this.GOButton.Location = new System.Drawing.Point(180, 61);
             this.GOButton.Name = "GOButton";
             this.GOButton.Size = new System.Drawing.Size(114, 29);
             this.GOButton.TabIndex = 3;

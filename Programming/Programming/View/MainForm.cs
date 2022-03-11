@@ -10,8 +10,8 @@ namespace Programming.View
         public MainForm()
         {
             InitializeComponent();
-            Array Season = System.Enum.GetValues(typeof(Season));
-            foreach (Season value in Season)
+            Array season = System.Enum.GetValues(typeof(Season));
+            foreach (Season value in season)
             {
                 SeasonNamesComboBox.Items.Add(value);
             }
