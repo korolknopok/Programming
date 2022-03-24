@@ -50,11 +50,14 @@ namespace Programming.View
             this.ValuesListBox = new System.Windows.Forms.ListBox();
             this.EnumsListBox = new System.Windows.Forms.ListBox();
             this.ClassesTabPage = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.MainTabControl.SuspendLayout();
             this.EnumTabPage.SuspendLayout();
             this.SeasonHandleGroupBox.SuspendLayout();
             this.WeekdayGroupBox.SuspendLayout();
             this.EnumerationsGroupBox.SuspendLayout();
+            this.ClassesTabPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainTabControl
@@ -62,7 +65,7 @@ namespace Programming.View
             this.MainTabControl.Controls.Add(this.EnumTabPage);
             this.MainTabControl.Controls.Add(this.ClassesTabPage);
             this.MainTabControl.Location = new System.Drawing.Point(2, 4);
-            this.MainTabControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MainTabControl.Margin = new System.Windows.Forms.Padding(2);
             this.MainTabControl.Name = "MainTabControl";
             this.MainTabControl.SelectedIndex = 0;
             this.MainTabControl.Size = new System.Drawing.Size(600, 396);
@@ -74,9 +77,9 @@ namespace Programming.View
             this.EnumTabPage.Controls.Add(this.WeekdayGroupBox);
             this.EnumTabPage.Controls.Add(this.EnumerationsGroupBox);
             this.EnumTabPage.Location = new System.Drawing.Point(4, 22);
-            this.EnumTabPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EnumTabPage.Margin = new System.Windows.Forms.Padding(2);
             this.EnumTabPage.Name = "EnumTabPage";
-            this.EnumTabPage.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EnumTabPage.Padding = new System.Windows.Forms.Padding(2);
             this.EnumTabPage.Size = new System.Drawing.Size(592, 370);
             this.EnumTabPage.TabIndex = 1;
             this.EnumTabPage.Text = "Enums";
@@ -88,9 +91,9 @@ namespace Programming.View
             this.SeasonHandleGroupBox.Controls.Add(this.SeasonNamesComboBox);
             this.SeasonHandleGroupBox.Controls.Add(this.ChooseSeasonLabel);
             this.SeasonHandleGroupBox.Location = new System.Drawing.Point(309, 214);
-            this.SeasonHandleGroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SeasonHandleGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.SeasonHandleGroupBox.Name = "SeasonHandleGroupBox";
-            this.SeasonHandleGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SeasonHandleGroupBox.Padding = new System.Windows.Forms.Padding(2);
             this.SeasonHandleGroupBox.Size = new System.Drawing.Size(279, 154);
             this.SeasonHandleGroupBox.TabIndex = 2;
             this.SeasonHandleGroupBox.TabStop = false;
@@ -99,7 +102,7 @@ namespace Programming.View
             // GOButton
             // 
             this.GOButton.Location = new System.Drawing.Point(146, 47);
-            this.GOButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GOButton.Margin = new System.Windows.Forms.Padding(2);
             this.GOButton.Name = "GOButton";
             this.GOButton.Size = new System.Drawing.Size(86, 24);
             this.GOButton.TabIndex = 3;
@@ -111,7 +114,7 @@ namespace Programming.View
             // 
             this.SeasonNamesComboBox.FormattingEnabled = true;
             this.SeasonNamesComboBox.Location = new System.Drawing.Point(12, 50);
-            this.SeasonNamesComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SeasonNamesComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.SeasonNamesComboBox.Name = "SeasonNamesComboBox";
             this.SeasonNamesComboBox.Size = new System.Drawing.Size(113, 21);
             this.SeasonNamesComboBox.TabIndex = 2;
@@ -132,9 +135,9 @@ namespace Programming.View
             this.WeekdayGroupBox.Controls.Add(this.WeekdayTextBox);
             this.WeekdayGroupBox.Controls.Add(this.TypeValueLabel);
             this.WeekdayGroupBox.Location = new System.Drawing.Point(4, 214);
-            this.WeekdayGroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WeekdayGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.WeekdayGroupBox.Name = "WeekdayGroupBox";
-            this.WeekdayGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WeekdayGroupBox.Padding = new System.Windows.Forms.Padding(2);
             this.WeekdayGroupBox.Size = new System.Drawing.Size(293, 154);
             this.WeekdayGroupBox.TabIndex = 1;
             this.WeekdayGroupBox.TabStop = false;
@@ -143,7 +146,7 @@ namespace Programming.View
             // ParseWeekdayButton
             // 
             this.ParseWeekdayButton.Location = new System.Drawing.Point(178, 48);
-            this.ParseWeekdayButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ParseWeekdayButton.Margin = new System.Windows.Forms.Padding(2);
             this.ParseWeekdayButton.Name = "ParseWeekdayButton";
             this.ParseWeekdayButton.Size = new System.Drawing.Size(86, 24);
             this.ParseWeekdayButton.TabIndex = 4;
@@ -162,7 +165,7 @@ namespace Programming.View
             // WeekdayTextBox
             // 
             this.WeekdayTextBox.Location = new System.Drawing.Point(9, 50);
-            this.WeekdayTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WeekdayTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.WeekdayTextBox.Multiline = true;
             this.WeekdayTextBox.Name = "WeekdayTextBox";
             this.WeekdayTextBox.Size = new System.Drawing.Size(150, 23);
@@ -186,9 +189,9 @@ namespace Programming.View
             this.EnumerationsGroupBox.Controls.Add(this.ValuesListBox);
             this.EnumerationsGroupBox.Controls.Add(this.EnumsListBox);
             this.EnumerationsGroupBox.Location = new System.Drawing.Point(4, 0);
-            this.EnumerationsGroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EnumerationsGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.EnumerationsGroupBox.Name = "EnumerationsGroupBox";
-            this.EnumerationsGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EnumerationsGroupBox.Padding = new System.Windows.Forms.Padding(2);
             this.EnumerationsGroupBox.Size = new System.Drawing.Size(584, 209);
             this.EnumerationsGroupBox.TabIndex = 0;
             this.EnumerationsGroupBox.TabStop = false;
@@ -197,7 +200,7 @@ namespace Programming.View
             // ValueWeekdayTextBox
             // 
             this.ValueWeekdayTextBox.Location = new System.Drawing.Point(262, 48);
-            this.ValueWeekdayTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ValueWeekdayTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.ValueWeekdayTextBox.Name = "ValueWeekdayTextBox";
             this.ValueWeekdayTextBox.Size = new System.Drawing.Size(89, 20);
             this.ValueWeekdayTextBox.TabIndex = 9;
@@ -234,7 +237,7 @@ namespace Programming.View
             // 
             this.ValuesListBox.FormattingEnabled = true;
             this.ValuesListBox.Location = new System.Drawing.Point(137, 48);
-            this.ValuesListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ValuesListBox.Margin = new System.Windows.Forms.Padding(2);
             this.ValuesListBox.Name = "ValuesListBox";
             this.ValuesListBox.Size = new System.Drawing.Size(100, 121);
             this.ValuesListBox.TabIndex = 3;
@@ -244,7 +247,7 @@ namespace Programming.View
             // 
             this.EnumsListBox.FormattingEnabled = true;
             this.EnumsListBox.Location = new System.Drawing.Point(9, 48);
-            this.EnumsListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EnumsListBox.Margin = new System.Windows.Forms.Padding(2);
             this.EnumsListBox.Name = "EnumsListBox";
             this.EnumsListBox.Size = new System.Drawing.Size(100, 121);
             this.EnumsListBox.TabIndex = 2;
@@ -252,6 +255,8 @@ namespace Programming.View
             // 
             // ClassesTabPage
             // 
+            this.ClassesTabPage.Controls.Add(this.groupBox2);
+            this.ClassesTabPage.Controls.Add(this.groupBox1);
             this.ClassesTabPage.Location = new System.Drawing.Point(4, 22);
             this.ClassesTabPage.Name = "ClassesTabPage";
             this.ClassesTabPage.Padding = new System.Windows.Forms.Padding(3);
@@ -260,13 +265,31 @@ namespace Programming.View
             this.ClassesTabPage.Text = "Classes";
             this.ClassesTabPage.UseVisualStyleBackColor = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Location = new System.Drawing.Point(26, 33);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(215, 264);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Location = new System.Drawing.Point(308, 43);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(215, 264);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox2";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(602, 400);
             this.Controls.Add(this.MainTabControl);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.ShowIcon = false;
             this.Text = "Programming Demo";
@@ -277,8 +300,12 @@ namespace Programming.View
             this.WeekdayGroupBox.PerformLayout();
             this.EnumerationsGroupBox.ResumeLayout(false);
             this.EnumerationsGroupBox.PerformLayout();
+            this.ClassesTabPage.ResumeLayout(false);
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
 
         private System.Windows.Forms.TabPage ClassesTabPage;
 
