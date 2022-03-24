@@ -3,7 +3,8 @@
     public class Film
     {
         private int _yearRelease;
-        private int _rating;
+        private double _rating;
+        private int _durationMinutes;
         public Film()
         {
 
@@ -23,7 +24,22 @@
         }
         public string Name { get; set; }
         public string Genre { get; set; }
-        public int DurationMinutes { get; set; }
+        public int DurationMinutes
+        {
+            get
+            {
+                return _durationMinutes;
+            }
+            set
+            {
+                if (value <= 0)
+                {
+                    throw new System.ArgumentException(
+                        "the DurationMinutes field must be greater than 0");
+                }
+                _durationMinutes = value;
+            }
+        }
         public int YearRelease
         {
             get
@@ -40,7 +56,7 @@
                 _yearRelease = value;
             }
         }
-        public int Rating
+        public double Rating
         {
             get
             {
