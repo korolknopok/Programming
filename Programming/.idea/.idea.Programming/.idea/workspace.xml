@@ -9,7 +9,13 @@
   <component name="ChangeListManager">
     <list default="true" id="340bc002-5277-468b-904c-a56cf1522e43" name="Changes" comment="1">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Programming/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Programming/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/View/MainForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/View/MainForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Model/Contact.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Contact.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Model/Discipline.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Discipline.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Model/Film.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Film.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Model/Rectangle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Rectangle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Model/Song.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Song.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Model/Time.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Time.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/View/MainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/View/MainForm.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +26,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/cvit-/Desktop/Papka/Programming/Programming/View/MainForm.Designer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/cvit-/Desktop/Papka/Programming/Programming/Model/Film.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="25wyU4ZEdHi4UbpwHsoQHY5w62y" />
@@ -78,7 +85,7 @@
       <workItem from="1648096585469" duration="608000" />
       <workItem from="1648105685381" duration="4809000" />
       <workItem from="1648137396013" duration="32000" />
-      <workItem from="1648138415678" duration="1673000" />
+      <workItem from="1648138415678" duration="3075000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1646452562226</created>
@@ -234,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648142769338</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="1">
+      <created>1648174281903</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1648174281903</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

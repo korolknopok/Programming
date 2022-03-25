@@ -15,6 +15,8 @@ namespace Programming.View
     public partial class MainForm : Form
     {
         const int CountElements = 5;
+        private Color _colorError = Color.LightPink;
+        private Color _colorCorrect = Color.White;
         private Rectangle[] _rectangles;
         private Rectangle _currentRectangle;
         private Film[] _films;
@@ -161,10 +163,10 @@ namespace Programming.View
             }
             catch
             {
-                LengthRectangleTextBox.BackColor = Color.LightPink;
+                LengthRectangleTextBox.BackColor = _colorError;
                 return;
             }
-            LengthRectangleTextBox.BackColor = Color.White;
+            LengthRectangleTextBox.BackColor = _colorCorrect;
         }
 
         private void WidthRectangleTextBox_TextChanged(object sender, EventArgs e)
@@ -177,10 +179,10 @@ namespace Programming.View
             }
             catch
             {
-                WidthRectangleTextBox.BackColor = Color.LightPink;
+                WidthRectangleTextBox.BackColor = _colorError;
                 return;
             }
-            WidthRectangleTextBox.BackColor = Color.White;
+            WidthRectangleTextBox.BackColor = _colorCorrect;
         }
 
         private void ColorRectangleTextBox_TextChanged(object sender, EventArgs e)
@@ -242,10 +244,10 @@ namespace Programming.View
             }
             catch
             {
-                YearReleaseFilmTextBox.BackColor = Color.LightPink;
+                YearReleaseFilmTextBox.BackColor = _colorError;
                 return;
             }
-            YearReleaseFilmTextBox.BackColor = Color.White;
+            YearReleaseFilmTextBox.BackColor = _colorCorrect;
         }
 
         private void DurationMinutesFilmTextBox_TextChanged(object sender, EventArgs e)
@@ -258,10 +260,10 @@ namespace Programming.View
             }
             catch
             {
-                DurationMinutesFilmTextBox.BackColor = Color.LightPink;
+                DurationMinutesFilmTextBox.BackColor = _colorError;
                 return;
             }
-            DurationMinutesFilmTextBox.BackColor = Color.White;
+            DurationMinutesFilmTextBox.BackColor = _colorCorrect;
         }
 
         private void RatingFilmTextBox_TextChanged(object sender, EventArgs e)
@@ -274,10 +276,10 @@ namespace Programming.View
             }
             catch
             {
-                RatingFilmTextBox.BackColor = Color.LightPink;
+                RatingFilmTextBox.BackColor = _colorError;
                 return;
             }
-            RatingFilmTextBox.BackColor = Color.White;
+            RatingFilmTextBox.BackColor = _colorCorrect;
             
         }
         private int FindFilmWithMaxRating(Film[] films)
