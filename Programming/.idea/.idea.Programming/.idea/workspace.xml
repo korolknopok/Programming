@@ -7,14 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="340bc002-5277-468b-904c-a56cf1522e43" name="Changes" comment="1">
-      <change beforePath="$PROJECT_DIR$/Programming/Model/Contact.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Contact.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/Model/Discipline.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Discipline.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/Model/Film.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Film.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/Model/Route.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Route.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/Model/Song.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Song.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/View/MainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/View/MainForm.cs" afterDir="false" />
-    </list>
+    <list default="true" id="340bc002-5277-468b-904c-a56cf1522e43" name="Changes" comment="1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,6 +27,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://C:/Users/cvit-/Desktop/Papka/Programming/Programming/View/MainForm.Designer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/cvit-/Desktop/Papka/Programming/Programming/Model/Film.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/cvit-/Desktop/Papka/Programming/Programming/Model/Contact.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/cvit-/Desktop/Papka/Programming/Programming/Model/Contact.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="25wyU4ZEdHi4UbpwHsoQHY5w62y" />
@@ -92,7 +86,7 @@
       <workItem from="1648096585469" duration="608000" />
       <workItem from="1648105685381" duration="4809000" />
       <workItem from="1648137396013" duration="32000" />
-      <workItem from="1648138415678" duration="3988000" />
+      <workItem from="1648138415678" duration="4606000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1646452562226</created>
@@ -262,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648175628386</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="1">
+      <created>1648176569223</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1648176569223</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

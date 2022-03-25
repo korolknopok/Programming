@@ -16,7 +16,7 @@ namespace Programming.View
     {
         const int CountElements = 5;
 
-        private Color _colorError = Color.LightPink;
+        private Color errorColor = Color.LightPink;
 
         private Color _colorCorrect = Color.White;
 
@@ -174,7 +174,7 @@ namespace Programming.View
             }
             catch
             {
-                LengthRectangleTextBox.BackColor = _colorError;
+                LengthRectangleTextBox.BackColor = errorColor;
                 return;
             }
 
@@ -191,7 +191,7 @@ namespace Programming.View
             }
             catch
             {
-                WidthRectangleTextBox.BackColor = _colorError;
+                WidthRectangleTextBox.BackColor = errorColor;
                 return;
             }
 
@@ -259,7 +259,7 @@ namespace Programming.View
             }
             catch
             {
-                YearReleaseFilmTextBox.BackColor = _colorError;
+                YearReleaseFilmTextBox.BackColor = errorColor;
                 return;
             }
 
@@ -276,7 +276,7 @@ namespace Programming.View
             }
             catch
             {
-                DurationMinutesFilmTextBox.BackColor = _colorError;
+                DurationMinutesFilmTextBox.BackColor = errorColor;
                 return;
             }
 
@@ -293,7 +293,7 @@ namespace Programming.View
             }
             catch
             {
-                RatingFilmTextBox.BackColor = _colorError;
+                RatingFilmTextBox.BackColor = errorColor;
                 return;
             }
 
