@@ -207,7 +207,7 @@ namespace Programming.View
         private int FindRectangleWithMaxWidth(Rectangle[] rectangles)
         {
             int maxWidthIndex = 0;
-            double maxValue = 0;
+            double maxValue = rectangles[0].Width;
             for (int i = 0; i < CountElements; i++)
             {
                 if (rectangles[i].Width > maxValue)
@@ -303,7 +303,7 @@ namespace Programming.View
         private int FindFilmWithMaxRating(Film[] films)
         {
             int maxRatingIndex = 0;
-            double maxValue = 0;
+            double maxValue = films[0].Rating;
             for (int i = 0; i < CountElements; i++)
             {
                 if (films[i].Rating > maxValue)
