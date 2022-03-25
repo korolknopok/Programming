@@ -48,9 +48,9 @@
     <ItemGroup>
         <Compile Include="Model\Colors.cs" />
         <Compile Include="Model\Contact.cs" />
-        <Compile Include="Model\Discipline.cs" />
+        <Compile Include="Model\Subject.cs" />
         <Compile Include="Model\EducationForm.cs" />
-        <Compile Include="Model\Film.cs" />
+        <Compile Include="Model\Movie.cs" />
         <Compile Include="Model\Genre.cs" />
         <Compile Include="Model\Manufactures.cs" />
         <Compile Include="Model\Rectangle.cs" />
