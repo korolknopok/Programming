@@ -18,6 +18,7 @@
         }
 
         public string Musician { get; set; }
+        
         public string Name { get; set; }
 
         public int DurationSeconds

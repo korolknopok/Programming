@@ -15,13 +15,21 @@ namespace Programming.View
     public partial class MainForm : Form
     {
         const int CountElements = 5;
+
         private Color _colorError = Color.LightPink;
+
         private Color _colorCorrect = Color.White;
+
         private Rectangle[] _rectangles;
+
         private Rectangle _currentRectangle;
+
         private Film[] _films;
+
         private Film _currentFilm;
+
         private Random _randomValues;
+
         public MainForm()
         {
             InitializeComponent();
@@ -49,8 +57,9 @@ namespace Programming.View
                 _currentRectangle.Length = _randomValues.Next(101);
                 _currentRectangle.Color = colors.GetValue(_randomValues.Next(0, colors.Length)).ToString();
                 _rectangles[i] = _currentRectangle;
-                RectangleListBox.Items.Add($"Rectangle {i+1}");
+                RectangleListBox.Items.Add($"Rectangle {i + 1}");
             }
+
             RectangleListBox.SelectedIndex = 0;
 
             _films = new Film[CountElements];
@@ -66,6 +75,7 @@ namespace Programming.View
                 _films[i] = _currentFilm;
                 FilmListBox.Items.Add($"Film {i + 1}");
             }
+
             FilmListBox.SelectedIndex = 0;
         }
 
@@ -96,6 +106,7 @@ namespace Programming.View
                 default:
                     throw new NotImplementedException();
             }
+
             foreach (var value in enumValues)
             {
                 ValuesListBox.Items.Add(value);
@@ -166,6 +177,7 @@ namespace Programming.View
                 LengthRectangleTextBox.BackColor = _colorError;
                 return;
             }
+
             LengthRectangleTextBox.BackColor = _colorCorrect;
         }
 
@@ -182,6 +194,7 @@ namespace Programming.View
                 WidthRectangleTextBox.BackColor = _colorError;
                 return;
             }
+
             WidthRectangleTextBox.BackColor = _colorCorrect;
         }
 
@@ -190,6 +203,7 @@ namespace Programming.View
             string colorRectangleValue = ColorRectangleTextBox.Text;
             _currentRectangle.Color = colorRectangleValue;
         }
+
         private int FindRectangleWithMaxWidth(Rectangle[] rectangles)
         {
             int maxWidthIndex = 0;
@@ -202,6 +216,7 @@ namespace Programming.View
                     maxWidthIndex = i;
                 }
             }
+
             return maxWidthIndex;
         }
 
@@ -247,6 +262,7 @@ namespace Programming.View
                 YearReleaseFilmTextBox.BackColor = _colorError;
                 return;
             }
+
             YearReleaseFilmTextBox.BackColor = _colorCorrect;
         }
 
@@ -263,6 +279,7 @@ namespace Programming.View
                 DurationMinutesFilmTextBox.BackColor = _colorError;
                 return;
             }
+
             DurationMinutesFilmTextBox.BackColor = _colorCorrect;
         }
 
@@ -279,9 +296,10 @@ namespace Programming.View
                 RatingFilmTextBox.BackColor = _colorError;
                 return;
             }
+
             RatingFilmTextBox.BackColor = _colorCorrect;
-            
         }
+
         private int FindFilmWithMaxRating(Film[] films)
         {
             int maxRatingIndex = 0;
@@ -294,6 +312,7 @@ namespace Programming.View
                     maxRatingIndex = i;
                 }
             }
+
             return maxRatingIndex;
         }
 

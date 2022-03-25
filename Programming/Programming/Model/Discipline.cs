@@ -18,6 +18,7 @@
         }
 
         public string Name { get; set; }
+        
         public string ExamDate { get; set; }
 
         public int Mark

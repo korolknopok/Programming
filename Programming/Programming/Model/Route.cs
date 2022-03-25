@@ -18,6 +18,7 @@
         }
 
         public string DeparturePoint { get; set; }
+        
         public string DestinationPoint { get; set; }
 
         public int FlightTimeMinutes
