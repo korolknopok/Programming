@@ -90,26 +90,6 @@ namespace Programming.View
             }
             return movies;
         }
-        //private void CreateMovies()
-        //{
-        //    _randomValues = new Random();
-        //    _rectangles = new Rectangle[CountElements];
-        //    var genres = Enum.GetValues(typeof(Genre));
-        //    for (int i = 0; i < CountElements; i++)
-        //    {
-        //        _currentMovie = new Movie();
-        //        _currentMovie.Rating = _randomValues.Next(101) / 10.0;
-        //        _currentMovie.ReleaseYear = _randomValues.Next(1900, 2023);
-        //        _currentMovie.Genre = genres.GetValue(_randomValues.Next(0, genres.Length)).ToString();
-        //        _currentMovie.Name = $"Movie {_currentMovie.Genre} {_currentMovie.ReleaseYear}";
-        //        _currentMovie.DurationMinutes = _randomValues.Next(150);
-        //        _movies[i] = _currentMovie;
-
-        //    }
-
-
-        //}
-
         private int FindRectangleWithMaxWidth(Rectangle[] rectangles)
         {
             int maxWidthIndex = 0;
@@ -125,7 +105,6 @@ namespace Programming.View
 
             return maxWidthIndex;
         }
-
         private int FindMovieWithMaxRating(Movie[] movies)
         {
             int maxRatingIndex = 0;
@@ -141,8 +120,6 @@ namespace Programming.View
 
             return maxRatingIndex;
         }
-
-
         private void EnumsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             ValuesListBox.Items.Clear();
@@ -177,13 +154,11 @@ namespace Programming.View
             }
         }
 
-
         private void ValuesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             var item = ValuesListBox.SelectedItem;
             ValueWeekdayTextBox.Text = ((int) item).ToString();
         }
-
 
         private void ParseWeekdayButton_Click(object sender, EventArgs e)
         {
@@ -198,7 +173,6 @@ namespace Programming.View
                 OutputWeekdayLabel.Text = "Нет такого для недели";
             }
         }
-
         private void GOButton_Click(object sender, EventArgs e)
         {
             switch (SeasonNamesComboBox.SelectedItem)
@@ -219,7 +193,6 @@ namespace Programming.View
                     break;
             }
         }
-
         private void RectangleListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             int selectedIndexRectangle = RectangleListBox.SelectedIndex;
@@ -228,7 +201,6 @@ namespace Programming.View
             WidthRectangleTextBox.Text = _currentRectangle.Width.ToString();
             ColorRectangleTextBox.Text = _currentRectangle.Color;
         }
-
         private void LengthRectangleTextBox_TextChanged(object sender, EventArgs e)
         {
             try
@@ -245,7 +217,6 @@ namespace Programming.View
 
             LengthRectangleTextBox.BackColor = _correctColor;
         }
-
         private void WidthRectangleTextBox_TextChanged(object sender, EventArgs e)
         {
             try
@@ -262,19 +233,16 @@ namespace Programming.View
 
             WidthRectangleTextBox.BackColor = _correctColor;
         }
-
         private void ColorRectangleTextBox_TextChanged(object sender, EventArgs e)
         {
             string colorRectangleValue = ColorRectangleTextBox.Text;
             _currentRectangle.Color = colorRectangleValue;
         }
-
         private void FindRectangleButton_Click(object sender, EventArgs e)
         {
             int findMaxWidthIndex = FindRectangleWithMaxWidth(_rectangles);
             RectangleListBox.SelectedIndex = findMaxWidthIndex;
         }
-
         private void MovieListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             int selectedIndexMovie = MovieListBox.SelectedIndex;
@@ -285,7 +253,6 @@ namespace Programming.View
             DurationMinutesMovieTextBox.Text = _currentMovie.DurationMinutes.ToString();
             RatingMovieTextBox.Text = _currentMovie.Rating.ToString();
         }
-
         private void FindMovieButton_Click(object sender, EventArgs e)
         {
             int findMaxRatingIndex = FindMovieWithMaxRating(_movies);
@@ -297,10 +264,6 @@ namespace Programming.View
             string nameMovieValue = NameMovieTextBox.Text;
             _currentMovie.Name = nameMovieValue;
         }
-        
-
-        
-
         private void RatingMovieTextBox_TextChanged(object sender, EventArgs e)
         {
             try
@@ -317,13 +280,11 @@ namespace Programming.View
 
             RatingMovieTextBox.BackColor = _correctColor;
         }
-
         private void GenreMovieTextBox_TextChanged(object sender, EventArgs e)
         {
             string genreFilmValue = GenreMovieTextBox.Text;
             _currentMovie.Genre = genreFilmValue;
         }
-
         private void YearReleaseMovieTextBox_TextChanged(object sender, EventArgs e)
         {
             try
@@ -340,7 +301,6 @@ namespace Programming.View
 
             YearReleaseMovieTextBox.BackColor = _correctColor;
         }
-
         private void DurationMinutesMovieTextBox_TextChanged(object sender, EventArgs e)
         {
             try
