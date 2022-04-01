@@ -104,7 +104,7 @@ namespace Programming.View
             this.EnumTabPage.Margin = new System.Windows.Forms.Padding(2);
             this.EnumTabPage.Name = "EnumTabPage";
             this.EnumTabPage.Padding = new System.Windows.Forms.Padding(2);
-            this.EnumTabPage.Size = new System.Drawing.Size(594, 390);
+            this.EnumTabPage.Size = new System.Drawing.Size(597, 369);
             this.EnumTabPage.TabIndex = 1;
             this.EnumTabPage.Text = "Enums";
             this.EnumTabPage.UseVisualStyleBackColor = true;
