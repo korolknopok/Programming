@@ -51,13 +51,13 @@ namespace Programming.View
             this.EnumsListBox = new System.Windows.Forms.ListBox();
             this.ClassesTabPage = new System.Windows.Forms.TabPage();
             this.MovieGroupBox = new System.Windows.Forms.GroupBox();
+            this.RatingMovieTextBox = new System.Windows.Forms.TextBox();
             this.MovieListBox = new System.Windows.Forms.ListBox();
             this.NameMovieTextBox = new System.Windows.Forms.TextBox();
             this.FindMovieButton = new System.Windows.Forms.Button();
             this.GenreMovieTextBox = new System.Windows.Forms.TextBox();
             this.YearReleaseMovieTextBox = new System.Windows.Forms.TextBox();
             this.DurationMinutesMovieTextBox = new System.Windows.Forms.TextBox();
-            this.RatingMovieTextBox = new System.Windows.Forms.TextBox();
             this.NameFilmLabel = new System.Windows.Forms.Label();
             this.DurationMinutesFilmLabel = new System.Windows.Forms.Label();
             this.YearReleaseFilmLabel = new System.Windows.Forms.Label();
@@ -289,13 +289,13 @@ namespace Programming.View
             // 
             // MovieGroupBox
             // 
+            this.MovieGroupBox.Controls.Add(this.RatingMovieTextBox);
             this.MovieGroupBox.Controls.Add(this.MovieListBox);
             this.MovieGroupBox.Controls.Add(this.NameMovieTextBox);
             this.MovieGroupBox.Controls.Add(this.FindMovieButton);
             this.MovieGroupBox.Controls.Add(this.GenreMovieTextBox);
             this.MovieGroupBox.Controls.Add(this.YearReleaseMovieTextBox);
             this.MovieGroupBox.Controls.Add(this.DurationMinutesMovieTextBox);
-            this.MovieGroupBox.Controls.Add(this.RatingMovieTextBox);
             this.MovieGroupBox.Controls.Add(this.NameFilmLabel);
             this.MovieGroupBox.Controls.Add(this.DurationMinutesFilmLabel);
             this.MovieGroupBox.Controls.Add(this.YearReleaseFilmLabel);
@@ -308,6 +308,14 @@ namespace Programming.View
             this.MovieGroupBox.TabStop = false;
             this.MovieGroupBox.Text = "Movie";
             // 
+            // RatingMovieTextBox
+            // 
+            this.RatingMovieTextBox.Location = new System.Drawing.Point(120, 201);
+            this.RatingMovieTextBox.Name = "RatingMovieTextBox";
+            this.RatingMovieTextBox.Size = new System.Drawing.Size(119, 20);
+            this.RatingMovieTextBox.TabIndex = 18;
+            this.RatingMovieTextBox.TextChanged += new System.EventHandler(this.RatingMovieTextBox_TextChanged);
+            // 
             // MovieListBox
             // 
             this.MovieListBox.FormattingEnabled = true;
@@ -315,6 +323,7 @@ namespace Programming.View
             this.MovieListBox.Name = "MovieListBox";
             this.MovieListBox.Size = new System.Drawing.Size(112, 290);
             this.MovieListBox.TabIndex = 0;
+            this.MovieListBox.SelectedIndexChanged += new System.EventHandler(this.MovieListBox_SelectedIndexChanged);
             // 
             // NameMovieTextBox
             // 
@@ -357,14 +366,6 @@ namespace Programming.View
             this.DurationMinutesMovieTextBox.Size = new System.Drawing.Size(119, 20);
             this.DurationMinutesMovieTextBox.TabIndex = 10;
             this.DurationMinutesMovieTextBox.TextChanged += new System.EventHandler(this.DurationMinutesFilmTextBox_TextChanged);
-            // 
-            // RatingMovieTextBox
-            // 
-            this.RatingMovieTextBox.Location = new System.Drawing.Point(120, 201);
-            this.RatingMovieTextBox.Name = "RatingMovieTextBox";
-            this.RatingMovieTextBox.Size = new System.Drawing.Size(119, 20);
-            this.RatingMovieTextBox.TabIndex = 9;
-            this.RatingMovieTextBox.TextChanged += new System.EventHandler(this.RatingFilmTextBox_TextChanged);
             // 
             // NameFilmLabel
             // 
@@ -516,6 +517,8 @@ namespace Programming.View
         }
 
         private System.Windows.Forms.TextBox RatingMovieTextBox;
+
+        private System.Windows.Forms.TextBox RatingMovie;
 
         private System.Windows.Forms.TextBox DurationMinutesMovieTextBox;
 

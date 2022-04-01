@@ -38,13 +38,16 @@ namespace Programming.View
             {
                 SeasonNamesComboBox.Items.Add(value);
             }
-
             SeasonNamesComboBox.SelectedIndex = 0;
+
             Array initValues = System.Enum.GetValues(typeof(Enums));
             foreach (Enums value in initValues)
             {
                 EnumsListBox.Items.Add(value);
             }
+            EnumsListBox.SelectedIndex = 0;
+
+            _randomValues = new Random();
 
             _rectangles = CreateRectangles();
             RectangleListBox.SelectedIndex = 0;
@@ -286,31 +289,15 @@ namespace Programming.View
         private void FindMovieButton_Click(object sender, EventArgs e)
         {
             int findMaxRatingIndex = FindMovieWithMaxRating(_movies);
-            FilmListBox.SelectedIndex = findMaxRatingIndex;
+            MovieListBox.SelectedIndex = findMaxRatingIndex;
         }
 
         private void NameMovieTextBox_TextChanged(object sender, EventArgs e)
         {
-            string nameFilmValue = NameFilmTextBox.Text;
+            string nameFilmValue = NameMovieTextBox.Text;
             _currentMovie.Name = nameFilmValue;
         }
-
-        private void RatingFilmTextBox_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                string currentRating = RatingFilmTextBox.Text;
-                int ratingFilmValue = int.Parse(currentRating);
-                _currentMovie.Rating = ratingFilmValue;
-            }
-            catch
-            {
-                RatingFilmTextBox.BackColor = _errorColor;
-                return;
-            }
-
-            RatingFilmTextBox.BackColor = _correctColor;
-        }
+        
 
         private void DurationMinutesFilmTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -350,6 +337,24 @@ namespace Programming.View
         {
             string genreFilmValue = GenreFilmTextBox.Text;
             _currentMovie.Genre = genreFilmValue;
+        }
+
+
+        private void RatingMovieTextBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string currentRating = RatingFilmTextBox.Text;
+                double ratingMovieValue = double.Parse(currentRating);
+                _currentMovie.Rating = ratingMovieValue;
+            }
+            catch
+            {
+                RatingMovieTextBox.BackColor = _errorColor;
+                return;
+            }
+
+            RatingMovieTextBox.BackColor = _correctColor;
         }
     }
 }
