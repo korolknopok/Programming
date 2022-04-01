@@ -125,7 +125,7 @@ namespace Programming.View
             // 
             // GOButton
             // 
-            this.GOButton.Location = new System.Drawing.Point(128, 49);
+            this.GOButton.Location = new System.Drawing.Point(121, 49);
             this.GOButton.Margin = new System.Windows.Forms.Padding(2);
             this.GOButton.Name = "GOButton";
             this.GOButton.Size = new System.Drawing.Size(71, 24);
@@ -137,7 +137,7 @@ namespace Programming.View
             // SeasonNamesComboBox
             // 
             this.SeasonNamesComboBox.FormattingEnabled = true;
-            this.SeasonNamesComboBox.Location = new System.Drawing.Point(12, 50);
+            this.SeasonNamesComboBox.Location = new System.Drawing.Point(4, 51);
             this.SeasonNamesComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.SeasonNamesComboBox.Name = "SeasonNamesComboBox";
             this.SeasonNamesComboBox.Size = new System.Drawing.Size(113, 21);
@@ -145,7 +145,7 @@ namespace Programming.View
             // 
             // ChooseSeasonLabel
             // 
-            this.ChooseSeasonLabel.Location = new System.Drawing.Point(12, 33);
+            this.ChooseSeasonLabel.Location = new System.Drawing.Point(5, 33);
             this.ChooseSeasonLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ChooseSeasonLabel.Name = "ChooseSeasonLabel";
             this.ChooseSeasonLabel.Size = new System.Drawing.Size(112, 20);
@@ -169,7 +169,7 @@ namespace Programming.View
             // 
             // ParseWeekdayButton
             // 
-            this.ParseWeekdayButton.Location = new System.Drawing.Point(163, 50);
+            this.ParseWeekdayButton.Location = new System.Drawing.Point(121, 48);
             this.ParseWeekdayButton.Margin = new System.Windows.Forms.Padding(2);
             this.ParseWeekdayButton.Name = "ParseWeekdayButton";
             this.ParseWeekdayButton.Size = new System.Drawing.Size(71, 24);
@@ -188,16 +188,16 @@ namespace Programming.View
             // 
             // WeekdayTextBox
             // 
-            this.WeekdayTextBox.Location = new System.Drawing.Point(9, 50);
+            this.WeekdayTextBox.Location = new System.Drawing.Point(4, 49);
             this.WeekdayTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.WeekdayTextBox.Multiline = true;
             this.WeekdayTextBox.Name = "WeekdayTextBox";
-            this.WeekdayTextBox.Size = new System.Drawing.Size(150, 23);
+            this.WeekdayTextBox.Size = new System.Drawing.Size(113, 21);
             this.WeekdayTextBox.TabIndex = 1;
             // 
             // TypeValueLabel
             // 
-            this.TypeValueLabel.Location = new System.Drawing.Point(9, 33);
+            this.TypeValueLabel.Location = new System.Drawing.Point(4, 33);
             this.TypeValueLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TypeValueLabel.Name = "TypeValueLabel";
             this.TypeValueLabel.Size = new System.Drawing.Size(130, 20);
@@ -223,7 +223,7 @@ namespace Programming.View
             // 
             // ValueWeekdayTextBox
             // 
-            this.ValueWeekdayTextBox.Location = new System.Drawing.Point(259, 48);
+            this.ValueWeekdayTextBox.Location = new System.Drawing.Point(253, 48);
             this.ValueWeekdayTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.ValueWeekdayTextBox.Name = "ValueWeekdayTextBox";
             this.ValueWeekdayTextBox.Size = new System.Drawing.Size(89, 20);
@@ -231,7 +231,7 @@ namespace Programming.View
             // 
             // IntValueLabel
             // 
-            this.IntValueLabel.Location = new System.Drawing.Point(259, 28);
+            this.IntValueLabel.Location = new System.Drawing.Point(253, 28);
             this.IntValueLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.IntValueLabel.Name = "IntValueLabel";
             this.IntValueLabel.Size = new System.Drawing.Size(87, 18);
@@ -240,7 +240,7 @@ namespace Programming.View
             // 
             // ValueLabel
             // 
-            this.ValueLabel.Location = new System.Drawing.Point(134, 28);
+            this.ValueLabel.Location = new System.Drawing.Point(129, 28);
             this.ValueLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ValueLabel.Name = "ValueLabel";
             this.ValueLabel.Size = new System.Drawing.Size(99, 18);
@@ -249,7 +249,7 @@ namespace Programming.View
             // 
             // EnumarationsLabel
             // 
-            this.EnumarationsLabel.Location = new System.Drawing.Point(9, 28);
+            this.EnumarationsLabel.Location = new System.Drawing.Point(4, 28);
             this.EnumarationsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.EnumarationsLabel.Name = "EnumarationsLabel";
             this.EnumarationsLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -260,7 +260,7 @@ namespace Programming.View
             // ValuesListBox
             // 
             this.ValuesListBox.FormattingEnabled = true;
-            this.ValuesListBox.Location = new System.Drawing.Point(134, 48);
+            this.ValuesListBox.Location = new System.Drawing.Point(129, 48);
             this.ValuesListBox.Margin = new System.Windows.Forms.Padding(2);
             this.ValuesListBox.Name = "ValuesListBox";
             this.ValuesListBox.Size = new System.Drawing.Size(100, 121);
@@ -270,7 +270,7 @@ namespace Programming.View
             // EnumsListBox
             // 
             this.EnumsListBox.FormattingEnabled = true;
-            this.EnumsListBox.Location = new System.Drawing.Point(9, 48);
+            this.EnumsListBox.Location = new System.Drawing.Point(4, 48);
             this.EnumsListBox.Margin = new System.Windows.Forms.Padding(2);
             this.EnumsListBox.Name = "EnumsListBox";
             this.EnumsListBox.Size = new System.Drawing.Size(100, 121);
@@ -358,7 +358,7 @@ namespace Programming.View
             // 
             // NameMovieTextBox
             // 
-            this.NameMovieTextBox.Location = new System.Drawing.Point(123, 36);
+            this.NameMovieTextBox.Location = new System.Drawing.Point(123, 37);
             this.NameMovieTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.NameMovieTextBox.Name = "NameMovieTextBox";
             this.NameMovieTextBox.Size = new System.Drawing.Size(119, 20);
@@ -367,7 +367,7 @@ namespace Programming.View
             // 
             // FindMovieButton
             // 
-            this.FindMovieButton.Location = new System.Drawing.Point(123, 287);
+            this.FindMovieButton.Location = new System.Drawing.Point(123, 286);
             this.FindMovieButton.Margin = new System.Windows.Forms.Padding(2);
             this.FindMovieButton.Name = "FindMovieButton";
             this.FindMovieButton.Size = new System.Drawing.Size(71, 23);
@@ -405,7 +405,7 @@ namespace Programming.View
             // 
             // YearReleaseFilmLabel
             // 
-            this.YearReleaseFilmLabel.Location = new System.Drawing.Point(123, 97);
+            this.YearReleaseFilmLabel.Location = new System.Drawing.Point(123, 98);
             this.YearReleaseFilmLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.YearReleaseFilmLabel.Name = "YearReleaseFilmLabel";
             this.YearReleaseFilmLabel.Size = new System.Drawing.Size(106, 15);
@@ -441,7 +441,7 @@ namespace Programming.View
             // 
             // FindRectangleButton
             // 
-            this.FindRectangleButton.Location = new System.Drawing.Point(122, 287);
+            this.FindRectangleButton.Location = new System.Drawing.Point(122, 286);
             this.FindRectangleButton.Margin = new System.Windows.Forms.Padding(2);
             this.FindRectangleButton.Name = "FindRectangleButton";
             this.FindRectangleButton.Size = new System.Drawing.Size(71, 24);

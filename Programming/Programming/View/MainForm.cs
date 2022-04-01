@@ -70,6 +70,7 @@ namespace Programming.View
             }
             RectangleListBox.SelectedIndex = 0;
         }
+        
         private void CreateMovie()
         {
             
@@ -88,6 +89,7 @@ namespace Programming.View
             }
             MovieListBox.SelectedIndex = 0;
         }
+        
         private int FindRectangleWithMaxWidth(Rectangle[] rectangles)
         {
             int maxWidthIndex = 0;
