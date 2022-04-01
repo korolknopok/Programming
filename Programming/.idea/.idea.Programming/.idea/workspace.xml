@@ -7,7 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="340bc002-5277-468b-904c-a56cf1522e43" name="Changes" comment="1" />
+    <list default="true" id="340bc002-5277-468b-904c-a56cf1522e43" name="Changes" comment="1">
+      <change beforePath="$PROJECT_DIR$/Programming/View/MainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/View/MainForm.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +28,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://C:/Users/cvit-/Desktop/Programming/Programming/Programming/FIX2/Programming/Programming/View/MainForm.Designer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/cvit-/Desktop/Programming/Programming/Programming/FIX2/Programming/Programming/View/MainForm.Designer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/cvit-/Desktop/Programming/Programming/Programming/FIX2/Programming/Programming/View/MainForm.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="25wyU4ZEdHi4UbpwHsoQHY5w62y" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -90,7 +94,7 @@
       <workItem from="1648441972664" duration="1794000" />
       <workItem from="1648790982925" duration="511000" />
       <workItem from="1648800885847" duration="3484000" />
-      <workItem from="1648812344772" duration="476000" />
+      <workItem from="1648812344772" duration="810000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1646452562226</created>
@@ -316,7 +320,21 @@
       <option name="project" value="LOCAL" />
       <updated>1648812371103</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="11">
+      <created>1648812922909</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1648812922909</updated>
+    </task>
+    <task id="LOCAL-00034" summary="1">
+      <created>1648813077280</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1648813077280</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,6 +357,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="11" />
     <MESSAGE value="1" />
     <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>

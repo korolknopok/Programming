@@ -33,14 +33,14 @@ namespace Programming.View
         public MainForm()
         {
             InitializeComponent();
-            Array seasons = System.Enum.GetValues(typeof(Season));
+            Array seasons = Enum.GetValues(typeof(Season));
             foreach (Season value in seasons)
             {
                 SeasonNamesComboBox.Items.Add(value);
             }
             SeasonNamesComboBox.SelectedIndex = 0;
 
-            Array initValues = System.Enum.GetValues(typeof(Enums));
+            Array initValues = Enum.GetValues(typeof(Enums));
             foreach (Enums value in initValues)
             {
                 EnumsListBox.Items.Add(value);
@@ -127,22 +127,22 @@ namespace Programming.View
             switch (EnumsListBox.SelectedItem)
             {
                 case Enums.Colors:
-                    enumValues = System.Enum.GetValues(typeof(Colors));
+                    enumValues = Enum.GetValues(typeof(Colors));
                     break;
                 case Enums.Weekday:
-                    enumValues = System.Enum.GetValues(typeof(Weekday));
+                    enumValues = Enum.GetValues(typeof(Weekday));
                     break;
                 case Enums.Season:
-                    enumValues = System.Enum.GetValues(typeof(Season));
+                    enumValues = Enum.GetValues(typeof(Season));
                     break;
                 case Enums.Manufactures:
-                    enumValues = System.Enum.GetValues(typeof(Manufactures));
+                    enumValues = Enum.GetValues(typeof(Manufactures));
                     break;
                 case Enums.Genre:
-                    enumValues = System.Enum.GetValues(typeof(Genre));
+                    enumValues = Enum.GetValues(typeof(Genre));
                     break;
                 case Enums.EducationForm:
-                    enumValues = System.Enum.GetValues(typeof(EducationForm));
+                    enumValues = Enum.GetValues(typeof(EducationForm));
                     break;
                 default:
                     throw new NotImplementedException();
@@ -164,7 +164,7 @@ namespace Programming.View
         {
             string textWeekdayTextBox = WeekdayTextBox.Text;
             Weekday weekday;
-            if (System.Enum.TryParse(textWeekdayTextBox, out weekday))
+            if (Enum.TryParse(textWeekdayTextBox, out weekday))
             {
                 OutputWeekdayLabel.Text = $"Это день недели ({weekday} - {(int) weekday})";
             }
