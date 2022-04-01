@@ -1,5 +1,6 @@
 ﻿namespace Programming.Model
 {
+    using System;
     public class Song
     {
         private int _durationSeconds;
@@ -31,7 +32,7 @@
             {
                 if (value <= 0)
                 {
-                    throw new System.ArgumentException(
+                    throw new ArgumentException(
                         "the value of the Duration Seconds field must be greater than zero");
                 }
 

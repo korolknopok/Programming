@@ -3,6 +3,7 @@ using System.Data;
 
 namespace Programming.Model
 {
+    using System;
     public class Movie
     {
         private int _releaseYear;
@@ -41,7 +42,7 @@ namespace Programming.Model
             {
                 if (value <= 0)
                 {
-                    throw new System.ArgumentException(
+                    throw new ArgumentException(
                         "the DurationMinutes field must be greater than 0");
                 }
 
@@ -59,7 +60,7 @@ namespace Programming.Model
             {
                 if (value < 1900 || value > DateTime.Now.Year)
                 {
-                    throw new System.ArgumentException(
+                    throw new ArgumentException(
                         $"the release year should be in the range from 1900 to {DateTime.Now.Year}");
                 }
 
@@ -77,7 +78,7 @@ namespace Programming.Model
             {
                 if (value < 0 || value > 10)
                 {
-                    throw new System.ArgumentException(
+                    throw new ArgumentException(
                         "the rating should be in the range from 0 to 10");
                 }
 

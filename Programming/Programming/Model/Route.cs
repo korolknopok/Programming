@@ -1,11 +1,13 @@
 ﻿namespace Programming.Model
 {
+    using System;
     public class Route
     {
         private int _flightTimeMinutes;
 
         public Route()
         {
+            
         }
 
         public Route(string departure,
@@ -31,7 +33,7 @@
             {
                 if (value <= 0)
                 {
-                    throw new System.ArgumentException(
+                    throw new ArgumentException(
                         "the FlightTImeMinutes field must be greater than 0");
                 }
 

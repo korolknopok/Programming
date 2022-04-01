@@ -1,5 +1,6 @@
 ﻿namespace Programming.Model
 {
+    using System;
     public class Time
     {
         private int _hours;
@@ -29,7 +30,7 @@
             {
                 if (value < 0 || value > 23)
                 {
-                    throw new System.ArgumentException(
+                    throw new ArgumentException(
                         "the value of the Hours field must be in the range from 0 to 23");
                 }
 
@@ -47,7 +48,7 @@
             {
                 if (value < 0 || value > 60)
                 {
-                    throw new System.ArgumentOutOfRangeException(
+                    throw new ArgumentOutOfRangeException(
                         "the value of the Minutes field must be in the range from 0 to 60");
                 }
 
@@ -57,12 +58,15 @@
 
         public int Seconds
         {
-            get { return _seconds; }
+            get
+            {
+                return _seconds;
+            }
             set
             {
                 if (value < 0 || value > 60)
                 {
-                    throw new System.ArgumentOutOfRangeException(
+                    throw new ArgumentOutOfRangeException(
                         "the value of the Seconds field must be in the range from 0 to 60");
                 }
 
