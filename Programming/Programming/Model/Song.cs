@@ -1,6 +1,7 @@
 ﻿namespace Programming.Model
 {
     using System;
+    
     public class Song
     {
         private int _durationSeconds;

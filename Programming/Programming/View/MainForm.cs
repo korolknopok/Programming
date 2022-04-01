@@ -49,16 +49,14 @@ namespace Programming.View
 
             _random = new Random();
 
-            _rectangles = CreateRectangles();
-            RectangleListBox.SelectedIndex = 0;
+            CreateRectangles();
 
-            _movies = CreateMovie();
-            MovieListBox.SelectedIndex = 0;
+            CreateMovie();
+            
         }
 
-        private Rectangle[] CreateRectangles()
+        private void CreateRectangles()
         {
-            _random = new Random();
             _rectangles = new Rectangle[CountElements];
             var colors = Enum.GetValues(typeof(Colors));
             for (int i = 0; i < CountElements; i++)
@@ -70,13 +68,12 @@ namespace Programming.View
                 _rectangles[i] = _currentRectangle;
                 RectangleListBox.Items.Add($"Rectangle {i + 1}");
             }
-
-            return _rectangles;
+            RectangleListBox.SelectedIndex = 0;
         }
-        private Movie[] CreateMovie()
+        private void CreateMovie()
         {
             
-            Movie[] movies = new Movie[CountElements];
+            _movies = new Movie[CountElements];
             var genres = Enum.GetValues(typeof(Genre));
             for (int i = 0; i < CountElements; i++)
             {
@@ -86,10 +83,10 @@ namespace Programming.View
                 _currentMovie.Genre = genres.GetValue(_random.Next(0, genres.Length)).ToString();
                 _currentMovie.Name = $"Movie {_currentMovie.Genre} {_currentMovie.ReleaseYear}";
                 _currentMovie.DurationMinutes = _random.Next(150);
-                movies[i] = _currentMovie;
+                _movies[i] = _currentMovie;
                 MovieListBox.Items.Add($"Movie {i + 1}");
             }
-            return movies;
+            MovieListBox.SelectedIndex = 0;
         }
         private int FindRectangleWithMaxWidth(Rectangle[] rectangles)
         {
@@ -295,8 +292,8 @@ namespace Programming.View
         
         private void GenreMovieTextBox_TextChanged(object sender, EventArgs e)
         {
-            string genreFilmValue = GenreMovieTextBox.Text;
-            _currentMovie.Genre = genreFilmValue;
+            string genreMovieValue = GenreMovieTextBox.Text;
+            _currentMovie.Genre = genreMovieValue;
         }
         
         private void YearReleaseMovieTextBox_TextChanged(object sender, EventArgs e)
@@ -304,8 +301,8 @@ namespace Programming.View
             try
             {
                 string currentYearRelease = YearReleaseMovieTextBox.Text;
-                int yearReleaseFilmValue = int.Parse(currentYearRelease);
-                _currentMovie.ReleaseYear = yearReleaseFilmValue;
+                int yearReleaseMovieValue = int.Parse(currentYearRelease);
+                _currentMovie.ReleaseYear = yearReleaseMovieValue;
             }
             catch
             {
@@ -321,8 +318,8 @@ namespace Programming.View
             try
             {
                 string currentDurationMinutes = DurationMinutesMovieTextBox.Text;
-                int durationMinutesFilmValue = int.Parse(currentDurationMinutes);
-                _currentMovie.DurationMinutes = durationMinutesFilmValue;
+                int durationMinutesMovieValue = int.Parse(currentDurationMinutes);
+                _currentMovie.DurationMinutes = durationMinutesMovieValue;
             }
             catch
             {

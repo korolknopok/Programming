@@ -1,13 +1,14 @@
-﻿using System;
-using System.Data;
-
-namespace Programming.Model
+﻿namespace Programming.Model
 {
     using System;
+    using System.Data;
+
     public class Movie
     {
         private int _releaseYear;
+        
         private double _rating;
+        
         private int _durationMinutes;
 
         public Movie()

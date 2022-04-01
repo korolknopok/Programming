@@ -1,10 +1,13 @@
 ﻿namespace Programming.Model
 {
     using System;
+    
     public class Time
     {
         private int _hours;
+        
         private int _minutes;
+        
         private int _seconds;
 
         public Time()
@@ -46,10 +49,10 @@
             }
             set
             {
-                if (value < 0 || value > 60)
+                if (value < 0 || value > 59)
                 {
                     throw new ArgumentOutOfRangeException(
-                        "the value of the Minutes field must be in the range from 0 to 60");
+                        "the value of the Minutes field must be in the range from 0 to 59");
                 }
 
                 _minutes = value;
@@ -64,10 +67,10 @@
             }
             set
             {
-                if (value < 0 || value > 60)
+                if (value < 0 || value > 59)
                 {
                     throw new ArgumentOutOfRangeException(
-                        "the value of the Seconds field must be in the range from 0 to 60");
+                        "the value of the Seconds field must be in the range from 0 to 59");
                 }
 
                 _seconds = value;

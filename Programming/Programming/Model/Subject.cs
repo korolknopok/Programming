@@ -1,6 +1,7 @@
 ﻿namespace Programming.Model
 {
     using System;
+    
     public class Subject
     {
         private int _mark;
@@ -10,17 +11,17 @@
         }
 
         public Subject(string name,
-            string countOfHours,
+            string hoursCount,
             int mark)
         {
             Name = name;
-            CountOfHours = countOfHours;
+            HoursCount = hoursCount;
             Mark = mark;
         }
 
         public string Name { get; set; }
         
-        public string CountOfHours { get; set; }
+        public string HoursCount { get; set; }
 
         public int Mark
         {

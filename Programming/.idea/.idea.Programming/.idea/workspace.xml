@@ -7,7 +7,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="340bc002-5277-468b-904c-a56cf1522e43" name="Changes" comment="" />
+    <list default="true" id="340bc002-5277-468b-904c-a56cf1522e43" name="Changes" comment="1">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Programming/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Programming/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Model/Contact.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Contact.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Model/Movie.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Movie.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Model/Rectangle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Rectangle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Model/Route.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Route.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Model/Song.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Song.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Model/Subject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Subject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Model/Time.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Time.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/View/MainForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/View/MainForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/View/MainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/View/MainForm.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +37,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://C:/Users/cvit-/Desktop/Papka/jopa/Programming/Programming/View/MainForm.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/cvit-/Desktop/Papka/jopa/Programming/Programming/View/MainForm.Designer.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="25wyU4ZEdHi4UbpwHsoQHY5w62y" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -91,7 +103,7 @@
       <workItem from="1648790982925" duration="511000" />
       <workItem from="1648800885847" duration="3484000" />
       <workItem from="1648812344772" duration="1534000" />
-      <workItem from="1648815989862" duration="314000" />
+      <workItem from="1648815989862" duration="3284000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1646452562226</created>
@@ -345,7 +357,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648816137318</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="1">
+      <created>1648816529014</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1648816529014</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

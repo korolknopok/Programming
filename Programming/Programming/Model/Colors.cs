@@ -8,5 +8,5 @@
         Yellow,
         Orange,
         Blue
-    }
+    } 
 }

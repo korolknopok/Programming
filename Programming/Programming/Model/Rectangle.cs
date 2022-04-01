@@ -1,10 +1,11 @@
 ﻿namespace Programming.Model
-
 {
     using System;
+    
     public class Rectangle
     {
         private double _length;
+        
         private double _width;
 
         public Rectangle()
