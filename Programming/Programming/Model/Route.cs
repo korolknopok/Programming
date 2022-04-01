@@ -8,22 +8,25 @@
         {
         }
 
-        public Route(string departurePoint,
-            string destinationPoint,
+        public Route(string departure,
+            string destination,
             int flightTimeMinutes)
         {
-            DeparturePoint = departurePoint;
-            DestinationPoint = destinationPoint;
+            Departure = departure;
+            Destination = destination;
             FlightTimeMinutes = flightTimeMinutes;
         }
 
-        public string DeparturePoint { get; set; }
+        public string Departure { get; set; }
         
-        public string DestinationPoint { get; set; }
+        public string Destination { get; set; }
 
         public int FlightTimeMinutes
         {
-            get { return _flightTimeMinutes; }
+            get
+            {
+                return _flightTimeMinutes;
+            }
             set
             {
                 if (value <= 0)

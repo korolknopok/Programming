@@ -1,23 +1,26 @@
-﻿namespace Programming.Model
+﻿using System;
+using System.Data;
+
+namespace Programming.Model
 {
-    public class Film
+    public class Movie
     {
-        private int _yearRelease;
+        private int _releaseYear;
         private double _rating;
         private int _durationMinutes;
 
-        public Film()
+        public Movie()
         {
         }
 
-        public Film(int yearRelease,
+        public Movie(int releaseYear,
             int durationMinutes,
             int rating,
             string name,
             string genre
         )
         {
-            YearRelease = yearRelease;
+            ReleaseYear = releaseYear;
             DurationMinutes = durationMinutes;
             Rating = rating;
             Name = name;
@@ -30,7 +33,10 @@
 
         public int DurationMinutes
         {
-            get { return _durationMinutes; }
+            get
+            {
+                return _durationMinutes;
+            }
             set
             {
                 if (value <= 0)
@@ -43,27 +49,33 @@
             }
         }
 
-        public int YearRelease
+        public int ReleaseYear
         {
-            get { return _yearRelease; }
+            get
+            {
+                return _releaseYear;
+            }
             set
             {
-                if (1900 > value || value > 2022)
+                if (value < 1900 || value > DateTime.Now.Year)
                 {
                     throw new System.ArgumentException(
-                        "the release year should be in the range from 1900 to 2022");
+                        $"the release year should be in the range from 1900 to {DateTime.Now.Year}");
                 }
 
-                _yearRelease = value;
+                _releaseYear = value;
             }
         }
 
         public double Rating
         {
-            get { return _rating; }
+            get
+            {
+                return _rating;
+            }
             set
             {
-                if (0 > value || value > 10)
+                if (value < 0 || value > 10)
                 {
                     throw new System.ArgumentException(
                         "the rating should be in the range from 0 to 10");

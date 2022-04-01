@@ -1,32 +1,32 @@
 ﻿namespace Programming.Model
 {
-    public class Discipline
+    public class Subject
     {
         private int _mark;
 
-        public Discipline()
+        public Subject()
         {
         }
 
-        public Discipline(string name,
-            string examDate,
+        public Subject(string name,
+            string countOfHours,
             int mark)
         {
             Name = name;
-            ExamDate = examDate;
+            CountOfHours = countOfHours;
             Mark = mark;
         }
 
         public string Name { get; set; }
         
-        public string ExamDate { get; set; }
+        public string CountOfHours { get; set; }
 
         public int Mark
         {
             get { return _mark; }
             set
             {
-                if (1 > value || value > 5)
+                if (value < 1 || value > 5)
                 {
                     throw new System.ArgumentException(
                         "the value of the Mark field should be between 1 (unsatisfactory) and 5 (excellent)");

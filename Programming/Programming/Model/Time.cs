@@ -21,10 +21,13 @@
 
         public int Hours
         {
-            get { return _hours; }
+            get
+            {
+                return _hours;
+            }
             set
             {
-                if (0 > value || value > 23)
+                if (value < 0 || value > 23)
                 {
                     throw new System.ArgumentException(
                         "the value of the Hours field must be in the range from 0 to 23");
@@ -36,10 +39,13 @@
 
         public int Minutes
         {
-            get { return _minutes; }
+            get
+            {
+                return _minutes;
+            }
             set
             {
-                if (0 > value || value > 60)
+                if (value < 0 || value > 60)
                 {
                     throw new System.ArgumentOutOfRangeException(
                         "the value of the Minutes field must be in the range from 0 to 60");
@@ -54,7 +60,7 @@
             get { return _seconds; }
             set
             {
-                if (0 > value || value > 60)
+                if (value < 0 || value > 60)
                 {
                     throw new System.ArgumentOutOfRangeException(
                         "the value of the Seconds field must be in the range from 0 to 60");

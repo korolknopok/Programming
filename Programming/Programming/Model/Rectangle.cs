@@ -22,7 +22,10 @@
 
         public double Length
         {
-            get { return _length; }
+            get
+            {
+                return _length;
+            }
             set
             {
                 if (value <= 0)
@@ -37,7 +40,10 @@
 
         public double Width
         {
-            get { return _width; }
+            get
+            {
+                return _width;
+            }
             set
             {
                 if (value <= 0)
