@@ -88,11 +88,11 @@ namespace Programming.View
             // 
             this.MainTabControl.Controls.Add(this.EnumTabPage);
             this.MainTabControl.Controls.Add(this.ClassesTabPage);
-            this.MainTabControl.Location = new System.Drawing.Point(-1, 4);
+            this.MainTabControl.Location = new System.Drawing.Point(3, 4);
             this.MainTabControl.Margin = new System.Windows.Forms.Padding(2);
             this.MainTabControl.Name = "MainTabControl";
             this.MainTabControl.SelectedIndex = 0;
-            this.MainTabControl.Size = new System.Drawing.Size(605, 395);
+            this.MainTabControl.Size = new System.Drawing.Size(601, 395);
             this.MainTabControl.TabIndex = 0;
             // 
             // EnumTabPage
@@ -104,7 +104,7 @@ namespace Programming.View
             this.EnumTabPage.Margin = new System.Windows.Forms.Padding(2);
             this.EnumTabPage.Name = "EnumTabPage";
             this.EnumTabPage.Padding = new System.Windows.Forms.Padding(2);
-            this.EnumTabPage.Size = new System.Drawing.Size(597, 369);
+            this.EnumTabPage.Size = new System.Drawing.Size(596, 369);
             this.EnumTabPage.TabIndex = 1;
             this.EnumTabPage.Text = "Enums";
             this.EnumTabPage.UseVisualStyleBackColor = true;
@@ -158,11 +158,11 @@ namespace Programming.View
             this.WeekdayGroupBox.Controls.Add(this.OutputWeekdayLabel);
             this.WeekdayGroupBox.Controls.Add(this.WeekdayTextBox);
             this.WeekdayGroupBox.Controls.Add(this.TypeValueLabel);
-            this.WeekdayGroupBox.Location = new System.Drawing.Point(2, 214);
+            this.WeekdayGroupBox.Location = new System.Drawing.Point(4, 214);
             this.WeekdayGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.WeekdayGroupBox.Name = "WeekdayGroupBox";
             this.WeekdayGroupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.WeekdayGroupBox.Size = new System.Drawing.Size(295, 155);
+            this.WeekdayGroupBox.Size = new System.Drawing.Size(293, 155);
             this.WeekdayGroupBox.TabIndex = 1;
             this.WeekdayGroupBox.TabStop = false;
             this.WeekdayGroupBox.Text = "Weekday Parsing";
@@ -212,11 +212,11 @@ namespace Programming.View
             this.EnumerationsGroupBox.Controls.Add(this.EnumarationsLabel);
             this.EnumerationsGroupBox.Controls.Add(this.ValuesListBox);
             this.EnumerationsGroupBox.Controls.Add(this.EnumsListBox);
-            this.EnumerationsGroupBox.Location = new System.Drawing.Point(2, 0);
+            this.EnumerationsGroupBox.Location = new System.Drawing.Point(4, 0);
             this.EnumerationsGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.EnumerationsGroupBox.Name = "EnumerationsGroupBox";
             this.EnumerationsGroupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.EnumerationsGroupBox.Size = new System.Drawing.Size(586, 209);
+            this.EnumerationsGroupBox.Size = new System.Drawing.Size(584, 209);
             this.EnumerationsGroupBox.TabIndex = 0;
             this.EnumerationsGroupBox.TabStop = false;
             this.EnumerationsGroupBox.Text = "Enumerations";
@@ -284,7 +284,7 @@ namespace Programming.View
             this.ClassesTabPage.Location = new System.Drawing.Point(4, 22);
             this.ClassesTabPage.Name = "ClassesTabPage";
             this.ClassesTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.ClassesTabPage.Size = new System.Drawing.Size(597, 369);
+            this.ClassesTabPage.Size = new System.Drawing.Size(593, 369);
             this.ClassesTabPage.TabIndex = 2;
             this.ClassesTabPage.Text = "Classes";
             this.ClassesTabPage.UseVisualStyleBackColor = true;
