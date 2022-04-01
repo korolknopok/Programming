@@ -51,6 +51,7 @@ namespace Programming.View
             this.EnumsListBox = new System.Windows.Forms.ListBox();
             this.ClassesTabPage = new System.Windows.Forms.TabPage();
             this.MovieGroupBox = new System.Windows.Forms.GroupBox();
+            this.MovieListBox = new System.Windows.Forms.ListBox();
             this.NameMovieTextBox = new System.Windows.Forms.TextBox();
             this.FindMovieButton = new System.Windows.Forms.Button();
             this.GenreMovieTextBox = new System.Windows.Forms.TextBox();
@@ -71,7 +72,6 @@ namespace Programming.View
             this.WidthRectangleLabel = new System.Windows.Forms.Label();
             this.LengthRectangleLabel = new System.Windows.Forms.Label();
             this.RectangleListBox = new System.Windows.Forms.ListBox();
-            this.MovieListBox = new System.Windows.Forms.ListBox();
             this.MainTabControl.SuspendLayout();
             this.EnumTabPage.SuspendLayout();
             this.SeasonHandleGroupBox.SuspendLayout();
@@ -301,12 +301,20 @@ namespace Programming.View
             this.MovieGroupBox.Controls.Add(this.YearReleaseFilmLabel);
             this.MovieGroupBox.Controls.Add(this.GenreFilmLabel);
             this.MovieGroupBox.Controls.Add(this.RatingFilmLabel);
-            this.MovieGroupBox.Location = new System.Drawing.Point(292, 3);
+            this.MovieGroupBox.Location = new System.Drawing.Point(292, 0);
             this.MovieGroupBox.Name = "MovieGroupBox";
-            this.MovieGroupBox.Size = new System.Drawing.Size(294, 364);
+            this.MovieGroupBox.Size = new System.Drawing.Size(297, 367);
             this.MovieGroupBox.TabIndex = 1;
             this.MovieGroupBox.TabStop = false;
             this.MovieGroupBox.Text = "Movie";
+            // 
+            // MovieListBox
+            // 
+            this.MovieListBox.FormattingEnabled = true;
+            this.MovieListBox.Location = new System.Drawing.Point(2, 19);
+            this.MovieListBox.Name = "MovieListBox";
+            this.MovieListBox.Size = new System.Drawing.Size(112, 290);
+            this.MovieListBox.TabIndex = 0;
             // 
             // NameMovieTextBox
             // 
@@ -408,9 +416,9 @@ namespace Programming.View
             this.RectangleGroupBox.Controls.Add(this.WidthRectangleLabel);
             this.RectangleGroupBox.Controls.Add(this.LengthRectangleLabel);
             this.RectangleGroupBox.Controls.Add(this.RectangleListBox);
-            this.RectangleGroupBox.Location = new System.Drawing.Point(3, 3);
+            this.RectangleGroupBox.Location = new System.Drawing.Point(3, 0);
             this.RectangleGroupBox.Name = "RectangleGroupBox";
-            this.RectangleGroupBox.Size = new System.Drawing.Size(283, 364);
+            this.RectangleGroupBox.Size = new System.Drawing.Size(283, 367);
             this.RectangleGroupBox.TabIndex = 0;
             this.RectangleGroupBox.TabStop = false;
             this.RectangleGroupBox.Text = "Ractangles";
@@ -482,14 +490,6 @@ namespace Programming.View
             this.RectangleListBox.TabIndex = 0;
             this.RectangleListBox.SelectedIndexChanged += new System.EventHandler(this.RectangleListBox_SelectedIndexChanged);
             // 
-            // MovieListBox
-            // 
-            this.MovieListBox.FormattingEnabled = true;
-            this.MovieListBox.Location = new System.Drawing.Point(2, 19);
-            this.MovieListBox.Name = "MovieListBox";
-            this.MovieListBox.Size = new System.Drawing.Size(112, 290);
-            this.MovieListBox.TabIndex = 0;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -513,7 +513,6 @@ namespace Programming.View
             this.RectangleGroupBox.ResumeLayout(false);
             this.RectangleGroupBox.PerformLayout();
             this.ResumeLayout(false);
-
         }
 
         private System.Windows.Forms.TextBox RatingMovieTextBox;
