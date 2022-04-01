@@ -277,8 +277,8 @@ namespace Programming.View
 
         private void MovieListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int selectedIndexFilm = FilmListBox.SelectedIndex;
-            _currentMovie = _movies[selectedIndexFilm];
+            int selectedIndexMovie = MovieListBox.SelectedIndex;
+            _currentMovie = _movies[selectedIndexMovie];
             NameMovieTextBox.Text = _currentMovie.Name;
             GenreMovieTextBox.Text = _currentMovie.Genre;
             YearReleaseMovieTextBox.Text = _currentMovie.ReleaseYear.ToString();
@@ -294,57 +294,18 @@ namespace Programming.View
 
         private void NameMovieTextBox_TextChanged(object sender, EventArgs e)
         {
-            string nameFilmValue = NameMovieTextBox.Text;
-            _currentMovie.Name = nameFilmValue;
+            string nameMovieValue = NameMovieTextBox.Text;
+            _currentMovie.Name = nameMovieValue;
         }
         
 
-        private void DurationMinutesFilmTextBox_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                string currentDurationMinutes = DurationMinutesFilmTextBox.Text;
-                int durationMinutesFilmValue = int.Parse(currentDurationMinutes);
-                _currentMovie.DurationMinutes = durationMinutesFilmValue;
-            }
-            catch
-            {
-                DurationMinutesFilmTextBox.BackColor = _errorColor;
-                return;
-            }
-
-            DurationMinutesFilmTextBox.BackColor = _correctColor;
-        }
-
-        private void YearReleaseFilmTextBox_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                string currentYearRelease = YearReleaseFilmTextBox.Text;
-                int yearReleaseFilmValue = int.Parse(currentYearRelease);
-                _currentMovie.ReleaseYear = yearReleaseFilmValue;
-            }
-            catch
-            {
-                YearReleaseFilmTextBox.BackColor = _errorColor;
-                return;
-            }
-
-            YearReleaseFilmTextBox.BackColor = _correctColor;
-        }
-
-        private void GenreFilmTextBox_TextChanged(object sender, EventArgs e)
-        {
-            string genreFilmValue = GenreFilmTextBox.Text;
-            _currentMovie.Genre = genreFilmValue;
-        }
-
+        
 
         private void RatingMovieTextBox_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                string currentRating = RatingFilmTextBox.Text;
+                string currentRating = RatingMovieTextBox.Text;
                 double ratingMovieValue = double.Parse(currentRating);
                 _currentMovie.Rating = ratingMovieValue;
             }
@@ -355,6 +316,46 @@ namespace Programming.View
             }
 
             RatingMovieTextBox.BackColor = _correctColor;
+        }
+
+        private void GenreMovieTextBox_TextChanged(object sender, EventArgs e)
+        {
+            string genreFilmValue = GenreMovieTextBox.Text;
+            _currentMovie.Genre = genreFilmValue;
+        }
+
+        private void YearReleaseMovieTextBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string currentYearRelease = YearReleaseMovieTextBox.Text;
+                int yearReleaseFilmValue = int.Parse(currentYearRelease);
+                _currentMovie.ReleaseYear = yearReleaseFilmValue;
+            }
+            catch
+            {
+                YearReleaseMovieTextBox.BackColor = _errorColor;
+                return;
+            }
+
+            YearReleaseMovieTextBox.BackColor = _correctColor;
+        }
+
+        private void DurationMinutesMovieTextBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string currentDurationMinutes = DurationMinutesMovieTextBox.Text;
+                int durationMinutesFilmValue = int.Parse(currentDurationMinutes);
+                _currentMovie.DurationMinutes = durationMinutesFilmValue;
+            }
+            catch
+            {
+                DurationMinutesMovieTextBox.BackColor = _errorColor;
+                return;
+            }
+
+            DurationMinutesMovieTextBox.BackColor = _correctColor;
         }
     }
 }

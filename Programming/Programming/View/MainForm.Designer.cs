@@ -31,6 +31,7 @@ namespace Programming.View
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.EnumTabPage = new System.Windows.Forms.TabPage();
             this.SeasonHandleGroupBox = new System.Windows.Forms.GroupBox();
@@ -51,13 +52,13 @@ namespace Programming.View
             this.EnumsListBox = new System.Windows.Forms.ListBox();
             this.ClassesTabPage = new System.Windows.Forms.TabPage();
             this.MovieGroupBox = new System.Windows.Forms.GroupBox();
+            this.DurationMinutesMovieTextBox = new System.Windows.Forms.TextBox();
+            this.YearReleaseMovieTextBox = new System.Windows.Forms.TextBox();
+            this.GenreMovieTextBox = new System.Windows.Forms.TextBox();
             this.RatingMovieTextBox = new System.Windows.Forms.TextBox();
             this.MovieListBox = new System.Windows.Forms.ListBox();
             this.NameMovieTextBox = new System.Windows.Forms.TextBox();
             this.FindMovieButton = new System.Windows.Forms.Button();
-            this.GenreMovieTextBox = new System.Windows.Forms.TextBox();
-            this.YearReleaseMovieTextBox = new System.Windows.Forms.TextBox();
-            this.DurationMinutesMovieTextBox = new System.Windows.Forms.TextBox();
             this.NameFilmLabel = new System.Windows.Forms.Label();
             this.DurationMinutesFilmLabel = new System.Windows.Forms.Label();
             this.YearReleaseFilmLabel = new System.Windows.Forms.Label();
@@ -72,6 +73,7 @@ namespace Programming.View
             this.WidthRectangleLabel = new System.Windows.Forms.Label();
             this.LengthRectangleLabel = new System.Windows.Forms.Label();
             this.RectangleListBox = new System.Windows.Forms.ListBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.MainTabControl.SuspendLayout();
             this.EnumTabPage.SuspendLayout();
             this.SeasonHandleGroupBox.SuspendLayout();
@@ -86,11 +88,11 @@ namespace Programming.View
             // 
             this.MainTabControl.Controls.Add(this.EnumTabPage);
             this.MainTabControl.Controls.Add(this.ClassesTabPage);
-            this.MainTabControl.Location = new System.Drawing.Point(2, 4);
+            this.MainTabControl.Location = new System.Drawing.Point(-1, 4);
             this.MainTabControl.Margin = new System.Windows.Forms.Padding(2);
             this.MainTabControl.Name = "MainTabControl";
             this.MainTabControl.SelectedIndex = 0;
-            this.MainTabControl.Size = new System.Drawing.Size(600, 396);
+            this.MainTabControl.Size = new System.Drawing.Size(605, 395);
             this.MainTabControl.TabIndex = 0;
             // 
             // EnumTabPage
@@ -102,7 +104,7 @@ namespace Programming.View
             this.EnumTabPage.Margin = new System.Windows.Forms.Padding(2);
             this.EnumTabPage.Name = "EnumTabPage";
             this.EnumTabPage.Padding = new System.Windows.Forms.Padding(2);
-            this.EnumTabPage.Size = new System.Drawing.Size(592, 370);
+            this.EnumTabPage.Size = new System.Drawing.Size(594, 390);
             this.EnumTabPage.TabIndex = 1;
             this.EnumTabPage.Text = "Enums";
             this.EnumTabPage.UseVisualStyleBackColor = true;
@@ -282,20 +284,20 @@ namespace Programming.View
             this.ClassesTabPage.Location = new System.Drawing.Point(4, 22);
             this.ClassesTabPage.Name = "ClassesTabPage";
             this.ClassesTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.ClassesTabPage.Size = new System.Drawing.Size(592, 370);
+            this.ClassesTabPage.Size = new System.Drawing.Size(597, 369);
             this.ClassesTabPage.TabIndex = 2;
             this.ClassesTabPage.Text = "Classes";
             this.ClassesTabPage.UseVisualStyleBackColor = true;
             // 
             // MovieGroupBox
             // 
+            this.MovieGroupBox.Controls.Add(this.DurationMinutesMovieTextBox);
+            this.MovieGroupBox.Controls.Add(this.YearReleaseMovieTextBox);
+            this.MovieGroupBox.Controls.Add(this.GenreMovieTextBox);
             this.MovieGroupBox.Controls.Add(this.RatingMovieTextBox);
             this.MovieGroupBox.Controls.Add(this.MovieListBox);
             this.MovieGroupBox.Controls.Add(this.NameMovieTextBox);
             this.MovieGroupBox.Controls.Add(this.FindMovieButton);
-            this.MovieGroupBox.Controls.Add(this.GenreMovieTextBox);
-            this.MovieGroupBox.Controls.Add(this.YearReleaseMovieTextBox);
-            this.MovieGroupBox.Controls.Add(this.DurationMinutesMovieTextBox);
             this.MovieGroupBox.Controls.Add(this.NameFilmLabel);
             this.MovieGroupBox.Controls.Add(this.DurationMinutesFilmLabel);
             this.MovieGroupBox.Controls.Add(this.YearReleaseFilmLabel);
@@ -303,10 +305,34 @@ namespace Programming.View
             this.MovieGroupBox.Controls.Add(this.RatingFilmLabel);
             this.MovieGroupBox.Location = new System.Drawing.Point(292, 0);
             this.MovieGroupBox.Name = "MovieGroupBox";
-            this.MovieGroupBox.Size = new System.Drawing.Size(297, 367);
+            this.MovieGroupBox.Size = new System.Drawing.Size(296, 366);
             this.MovieGroupBox.TabIndex = 1;
             this.MovieGroupBox.TabStop = false;
             this.MovieGroupBox.Text = "Movie";
+            // 
+            // DurationMinutesMovieTextBox
+            // 
+            this.DurationMinutesMovieTextBox.Location = new System.Drawing.Point(120, 163);
+            this.DurationMinutesMovieTextBox.Name = "DurationMinutesMovieTextBox";
+            this.DurationMinutesMovieTextBox.Size = new System.Drawing.Size(118, 20);
+            this.DurationMinutesMovieTextBox.TabIndex = 21;
+            this.DurationMinutesMovieTextBox.TextChanged += new System.EventHandler(this.DurationMinutesMovieTextBox_TextChanged);
+            // 
+            // YearReleaseMovieTextBox
+            // 
+            this.YearReleaseMovieTextBox.Location = new System.Drawing.Point(120, 119);
+            this.YearReleaseMovieTextBox.Name = "YearReleaseMovieTextBox";
+            this.YearReleaseMovieTextBox.Size = new System.Drawing.Size(119, 20);
+            this.YearReleaseMovieTextBox.TabIndex = 20;
+            this.YearReleaseMovieTextBox.TextChanged += new System.EventHandler(this.YearReleaseMovieTextBox_TextChanged);
+            // 
+            // GenreMovieTextBox
+            // 
+            this.GenreMovieTextBox.Location = new System.Drawing.Point(120, 81);
+            this.GenreMovieTextBox.Name = "GenreMovieTextBox";
+            this.GenreMovieTextBox.Size = new System.Drawing.Size(119, 20);
+            this.GenreMovieTextBox.TabIndex = 19;
+            this.GenreMovieTextBox.TextChanged += new System.EventHandler(this.GenreMovieTextBox_TextChanged);
             // 
             // RatingMovieTextBox
             // 
@@ -342,30 +368,6 @@ namespace Programming.View
             this.FindMovieButton.Text = "Find";
             this.FindMovieButton.UseVisualStyleBackColor = true;
             this.FindMovieButton.Click += new System.EventHandler(this.FindMovieButton_Click);
-            // 
-            // GenreMovieTextBox
-            // 
-            this.GenreMovieTextBox.Location = new System.Drawing.Point(120, 78);
-            this.GenreMovieTextBox.Name = "GenreMovieTextBox";
-            this.GenreMovieTextBox.Size = new System.Drawing.Size(119, 20);
-            this.GenreMovieTextBox.TabIndex = 12;
-            this.GenreMovieTextBox.TextChanged += new System.EventHandler(this.GenreFilmTextBox_TextChanged);
-            // 
-            // YearReleaseMovieTextBox
-            // 
-            this.YearReleaseMovieTextBox.Location = new System.Drawing.Point(120, 119);
-            this.YearReleaseMovieTextBox.Name = "YearReleaseMovieTextBox";
-            this.YearReleaseMovieTextBox.Size = new System.Drawing.Size(119, 20);
-            this.YearReleaseMovieTextBox.TabIndex = 11;
-            this.YearReleaseMovieTextBox.TextChanged += new System.EventHandler(this.YearReleaseFilmTextBox_TextChanged);
-            // 
-            // DurationMinutesMovieTextBox
-            // 
-            this.DurationMinutesMovieTextBox.Location = new System.Drawing.Point(120, 160);
-            this.DurationMinutesMovieTextBox.Name = "DurationMinutesMovieTextBox";
-            this.DurationMinutesMovieTextBox.Size = new System.Drawing.Size(119, 20);
-            this.DurationMinutesMovieTextBox.TabIndex = 10;
-            this.DurationMinutesMovieTextBox.TextChanged += new System.EventHandler(this.DurationMinutesFilmTextBox_TextChanged);
             // 
             // NameFilmLabel
             // 
@@ -419,7 +421,7 @@ namespace Programming.View
             this.RectangleGroupBox.Controls.Add(this.RectangleListBox);
             this.RectangleGroupBox.Location = new System.Drawing.Point(3, 0);
             this.RectangleGroupBox.Name = "RectangleGroupBox";
-            this.RectangleGroupBox.Size = new System.Drawing.Size(283, 367);
+            this.RectangleGroupBox.Size = new System.Drawing.Size(285, 366);
             this.RectangleGroupBox.TabIndex = 0;
             this.RectangleGroupBox.TabStop = false;
             this.RectangleGroupBox.Text = "Ractangles";
@@ -495,7 +497,7 @@ namespace Programming.View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(602, 400);
+            this.ClientSize = new System.Drawing.Size(600, 400);
             this.Controls.Add(this.MainTabControl);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
@@ -516,13 +518,15 @@ namespace Programming.View
             this.ResumeLayout(false);
         }
 
+        private System.Windows.Forms.TextBox YearReleaseMovieTextBox;
+
+        private System.Windows.Forms.Timer timer1;
+
         private System.Windows.Forms.TextBox RatingMovieTextBox;
 
         private System.Windows.Forms.TextBox RatingMovie;
 
         private System.Windows.Forms.TextBox DurationMinutesMovieTextBox;
-
-        private System.Windows.Forms.TextBox YearReleaseMovieTextBox;
 
         private System.Windows.Forms.TextBox GenreMovieTextBox;
 
@@ -535,8 +539,6 @@ namespace Programming.View
         private System.Windows.Forms.TextBox RatingFilmTextBox;
 
         private System.Windows.Forms.TextBox DurationMinutesFilmTextBox;
-
-        private System.Windows.Forms.TextBox YearReleaseFilmTextBox;
 
         private System.Windows.Forms.TextBox GenreFilmTextBox;
 
