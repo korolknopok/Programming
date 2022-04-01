@@ -53,7 +53,6 @@ namespace Programming.View
             this.MovieGroupBox = new System.Windows.Forms.GroupBox();
             this.NameMovieTextBox = new System.Windows.Forms.TextBox();
             this.FindMovieButton = new System.Windows.Forms.Button();
-            this.MovieListBox = new System.Windows.Forms.ListBox();
             this.GenreMovieTextBox = new System.Windows.Forms.TextBox();
             this.YearReleaseMovieTextBox = new System.Windows.Forms.TextBox();
             this.DurationMinutesMovieTextBox = new System.Windows.Forms.TextBox();
@@ -72,6 +71,7 @@ namespace Programming.View
             this.WidthRectangleLabel = new System.Windows.Forms.Label();
             this.LengthRectangleLabel = new System.Windows.Forms.Label();
             this.RectangleListBox = new System.Windows.Forms.ListBox();
+            this.MovieListBox = new System.Windows.Forms.ListBox();
             this.MainTabControl.SuspendLayout();
             this.EnumTabPage.SuspendLayout();
             this.SeasonHandleGroupBox.SuspendLayout();
@@ -289,9 +289,9 @@ namespace Programming.View
             // 
             // MovieGroupBox
             // 
+            this.MovieGroupBox.Controls.Add(this.MovieListBox);
             this.MovieGroupBox.Controls.Add(this.NameMovieTextBox);
             this.MovieGroupBox.Controls.Add(this.FindMovieButton);
-            this.MovieGroupBox.Controls.Add(this.MovieListBox);
             this.MovieGroupBox.Controls.Add(this.GenreMovieTextBox);
             this.MovieGroupBox.Controls.Add(this.YearReleaseMovieTextBox);
             this.MovieGroupBox.Controls.Add(this.DurationMinutesMovieTextBox);
@@ -325,15 +325,6 @@ namespace Programming.View
             this.FindMovieButton.Text = "Find";
             this.FindMovieButton.UseVisualStyleBackColor = true;
             this.FindMovieButton.Click += new System.EventHandler(this.FindMovieButton_Click);
-            // 
-            // MovieListBox
-            // 
-            this.MovieListBox.FormattingEnabled = true;
-            this.MovieListBox.Location = new System.Drawing.Point(6, 19);
-            this.MovieListBox.Name = "MovieListBox";
-            this.MovieListBox.Size = new System.Drawing.Size(108, 290);
-            this.MovieListBox.TabIndex = 15;
-            this.MovieListBox.SelectedIndexChanged += new System.EventHandler(this.MovieListBox_SelectedIndexChanged);
             // 
             // GenreMovieTextBox
             // 
@@ -491,6 +482,14 @@ namespace Programming.View
             this.RectangleListBox.TabIndex = 0;
             this.RectangleListBox.SelectedIndexChanged += new System.EventHandler(this.RectangleListBox_SelectedIndexChanged);
             // 
+            // MovieListBox
+            // 
+            this.MovieListBox.FormattingEnabled = true;
+            this.MovieListBox.Location = new System.Drawing.Point(2, 19);
+            this.MovieListBox.Name = "MovieListBox";
+            this.MovieListBox.Size = new System.Drawing.Size(112, 290);
+            this.MovieListBox.TabIndex = 0;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -514,6 +513,7 @@ namespace Programming.View
             this.RectangleGroupBox.ResumeLayout(false);
             this.RectangleGroupBox.PerformLayout();
             this.ResumeLayout(false);
+
         }
 
         private System.Windows.Forms.TextBox RatingMovieTextBox;
@@ -527,8 +527,6 @@ namespace Programming.View
         private System.Windows.Forms.TextBox NameMovieTextBox;
 
         private System.Windows.Forms.Button FindMovieButton;
-
-        private System.Windows.Forms.ListBox MovieListBox;
 
         private System.Windows.Forms.GroupBox MovieGroupBox;
 
@@ -632,6 +630,9 @@ namespace Programming.View
         private System.Windows.Forms.TabControl EnumTabControl;
         private System.Windows.Forms.TabPage tabPage2;
 
+        
+
+        private System.Windows.Forms.ListBox MovieListBox;
         #endregion
     }
 }

@@ -49,7 +49,7 @@ namespace Programming.View
             _rectangles = CreateRectangles();
             RectangleListBox.SelectedIndex = 0;
 
-            _movies = CreateMovies();
+            _movies = CreateMovie();
             MovieListBox.SelectedIndex = 0;
         }
 
@@ -70,8 +70,7 @@ namespace Programming.View
 
             return _rectangles;
         }
-
-        public Movie[] CreateMovies()
+        private Movie[] CreateMovie()
         {
             Movie[] movies = new Movie[CountElements];
             var genres = Enum.GetValues(typeof(Genre));
@@ -83,11 +82,30 @@ namespace Programming.View
                 _currentMovie.Genre = genres.GetValue(_randomValues.Next(0, genres.Length)).ToString();
                 _currentMovie.Name = $"Movie {_currentMovie.Genre} {_currentMovie.ReleaseYear}";
                 _currentMovie.DurationMinutes = _randomValues.Next(150);
-                _movies[i] = _currentMovie;
-                FilmListBox.Items.Add($"Movie {i + 1}");
+                movies[i] = _currentMovie;
+                MovieListBox.Items.Add($"Movie {i + 1}");
             }
             return movies;
         }
+        //private void CreateMovies()
+        //{
+        //    _randomValues = new Random();
+        //    _rectangles = new Rectangle[CountElements];
+        //    var genres = Enum.GetValues(typeof(Genre));
+        //    for (int i = 0; i < CountElements; i++)
+        //    {
+        //        _currentMovie = new Movie();
+        //        _currentMovie.Rating = _randomValues.Next(101) / 10.0;
+        //        _currentMovie.ReleaseYear = _randomValues.Next(1900, 2023);
+        //        _currentMovie.Genre = genres.GetValue(_randomValues.Next(0, genres.Length)).ToString();
+        //        _currentMovie.Name = $"Movie {_currentMovie.Genre} {_currentMovie.ReleaseYear}";
+        //        _currentMovie.DurationMinutes = _randomValues.Next(150);
+        //        _movies[i] = _currentMovie;
+
+        //    }
+
+
+        //}
 
         private int FindRectangleWithMaxWidth(Rectangle[] rectangles)
         {
