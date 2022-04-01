@@ -118,7 +118,7 @@ namespace Programming.View
             this.SeasonHandleGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.SeasonHandleGroupBox.Name = "SeasonHandleGroupBox";
             this.SeasonHandleGroupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.SeasonHandleGroupBox.Size = new System.Drawing.Size(279, 154);
+            this.SeasonHandleGroupBox.Size = new System.Drawing.Size(279, 155);
             this.SeasonHandleGroupBox.TabIndex = 2;
             this.SeasonHandleGroupBox.TabStop = false;
             this.SeasonHandleGroupBox.Text = "Season Handle";
@@ -162,7 +162,7 @@ namespace Programming.View
             this.WeekdayGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.WeekdayGroupBox.Name = "WeekdayGroupBox";
             this.WeekdayGroupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.WeekdayGroupBox.Size = new System.Drawing.Size(293, 154);
+            this.WeekdayGroupBox.Size = new System.Drawing.Size(293, 155);
             this.WeekdayGroupBox.TabIndex = 1;
             this.WeekdayGroupBox.TabStop = false;
             this.WeekdayGroupBox.Text = "Weekday Parsing";
@@ -305,7 +305,7 @@ namespace Programming.View
             this.MovieGroupBox.Controls.Add(this.RatingFilmLabel);
             this.MovieGroupBox.Location = new System.Drawing.Point(292, 0);
             this.MovieGroupBox.Name = "MovieGroupBox";
-            this.MovieGroupBox.Size = new System.Drawing.Size(296, 366);
+            this.MovieGroupBox.Size = new System.Drawing.Size(296, 369);
             this.MovieGroupBox.TabIndex = 1;
             this.MovieGroupBox.TabStop = false;
             this.MovieGroupBox.Text = "Movie";
@@ -421,7 +421,7 @@ namespace Programming.View
             this.RectangleGroupBox.Controls.Add(this.RectangleListBox);
             this.RectangleGroupBox.Location = new System.Drawing.Point(3, 0);
             this.RectangleGroupBox.Name = "RectangleGroupBox";
-            this.RectangleGroupBox.Size = new System.Drawing.Size(285, 366);
+            this.RectangleGroupBox.Size = new System.Drawing.Size(285, 369);
             this.RectangleGroupBox.TabIndex = 0;
             this.RectangleGroupBox.TabStop = false;
             this.RectangleGroupBox.Text = "Ractangles";
