@@ -51,7 +51,7 @@ namespace Programming.View
 
             CreateRectangles();
 
-            CreateMovie();
+            CreateMovies();
             
         }
 
@@ -71,7 +71,7 @@ namespace Programming.View
             RectangleListBox.SelectedIndex = 0;
         }
         
-        private void CreateMovie()
+        private void CreateMovies()
         {
             
             _movies = new Movie[CountElements];
