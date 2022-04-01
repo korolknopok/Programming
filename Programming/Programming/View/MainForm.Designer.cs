@@ -158,11 +158,11 @@ namespace Programming.View
             this.WeekdayGroupBox.Controls.Add(this.OutputWeekdayLabel);
             this.WeekdayGroupBox.Controls.Add(this.WeekdayTextBox);
             this.WeekdayGroupBox.Controls.Add(this.TypeValueLabel);
-            this.WeekdayGroupBox.Location = new System.Drawing.Point(4, 214);
+            this.WeekdayGroupBox.Location = new System.Drawing.Point(2, 214);
             this.WeekdayGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.WeekdayGroupBox.Name = "WeekdayGroupBox";
             this.WeekdayGroupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.WeekdayGroupBox.Size = new System.Drawing.Size(293, 155);
+            this.WeekdayGroupBox.Size = new System.Drawing.Size(295, 155);
             this.WeekdayGroupBox.TabIndex = 1;
             this.WeekdayGroupBox.TabStop = false;
             this.WeekdayGroupBox.Text = "Weekday Parsing";
@@ -212,11 +212,11 @@ namespace Programming.View
             this.EnumerationsGroupBox.Controls.Add(this.EnumarationsLabel);
             this.EnumerationsGroupBox.Controls.Add(this.ValuesListBox);
             this.EnumerationsGroupBox.Controls.Add(this.EnumsListBox);
-            this.EnumerationsGroupBox.Location = new System.Drawing.Point(4, 0);
+            this.EnumerationsGroupBox.Location = new System.Drawing.Point(2, 0);
             this.EnumerationsGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.EnumerationsGroupBox.Name = "EnumerationsGroupBox";
             this.EnumerationsGroupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.EnumerationsGroupBox.Size = new System.Drawing.Size(584, 209);
+            this.EnumerationsGroupBox.Size = new System.Drawing.Size(586, 209);
             this.EnumerationsGroupBox.TabIndex = 0;
             this.EnumerationsGroupBox.TabStop = false;
             this.EnumerationsGroupBox.Text = "Enumerations";

@@ -14,7 +14,7 @@ namespace Programming.View
 {
     public partial class MainForm : Form
     {
-        const int CountElements = 5;
+        private const int CountElements = 5;
         
         private Color _errorColor = Color.LightPink;
 
