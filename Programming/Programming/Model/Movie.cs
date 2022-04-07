@@ -41,12 +41,7 @@
             }
             set
             {
-                if (value <= 0)
-                {
-                    throw new ArgumentException(
-                        "the DurationMinutes field must be greater than 0");
-                }
-
+                Validator.AssertOnPositiveValue(nameof(_durationMinutes),value);
                 _durationMinutes = value;
             }
         }
@@ -59,12 +54,7 @@
             }
             set
             {
-                if (value < 1900 || value > DateTime.Now.Year)
-                {
-                    throw new ArgumentException(
-                        $"the release year should be in the range from 1900 to {DateTime.Now.Year}");
-                }
-
+                Validator.AssertValueInRange(nameof(ReleaseYear), value, 1900, DateTime.Now.Year);
                 _releaseYear = value;
             }
         }
@@ -77,12 +67,7 @@
             }
             set
             {
-                if (value < 0 || value > 10)
-                {
-                    throw new ArgumentException(
-                        "the rating should be in the range from 0 to 10");
-                }
-
+                Validator.AssertValueInRange(nameof(Rating), value, 0, 10);
                 _rating = value;
             }
         }

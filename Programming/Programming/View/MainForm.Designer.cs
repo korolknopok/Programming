@@ -65,6 +65,12 @@ namespace Programming.View
             this.YearReleaseFilmLabel = new System.Windows.Forms.Label();
             this.RatingFilmLabel = new System.Windows.Forms.Label();
             this.RectangleGroupBox = new System.Windows.Forms.GroupBox();
+            this.IdRectangleTextBox = new System.Windows.Forms.TextBox();
+            this.YRectangleTextBox = new System.Windows.Forms.TextBox();
+            this.XRectangleTextBox = new System.Windows.Forms.TextBox();
+            this.IdRectangleLabel = new System.Windows.Forms.Label();
+            this.YRectangleLable = new System.Windows.Forms.Label();
+            this.XRectangleLabel = new System.Windows.Forms.Label();
             this.FindRectangleButton = new System.Windows.Forms.Button();
             this.WidthRectangleTextBox = new System.Windows.Forms.TextBox();
             this.ColorRectangleTextBox = new System.Windows.Forms.TextBox();
@@ -423,6 +429,12 @@ namespace Programming.View
             // 
             // RectangleGroupBox
             // 
+            this.RectangleGroupBox.Controls.Add(this.IdRectangleTextBox);
+            this.RectangleGroupBox.Controls.Add(this.YRectangleTextBox);
+            this.RectangleGroupBox.Controls.Add(this.XRectangleTextBox);
+            this.RectangleGroupBox.Controls.Add(this.IdRectangleLabel);
+            this.RectangleGroupBox.Controls.Add(this.YRectangleLable);
+            this.RectangleGroupBox.Controls.Add(this.XRectangleLabel);
             this.RectangleGroupBox.Controls.Add(this.FindRectangleButton);
             this.RectangleGroupBox.Controls.Add(this.WidthRectangleTextBox);
             this.RectangleGroupBox.Controls.Add(this.ColorRectangleTextBox);
@@ -438,6 +450,60 @@ namespace Programming.View
             this.RectangleGroupBox.TabIndex = 0;
             this.RectangleGroupBox.TabStop = false;
             this.RectangleGroupBox.Text = "Rectangles";
+            // 
+            // IdRectangleTextBox
+            // 
+            this.IdRectangleTextBox.Enabled = false;
+            this.IdRectangleTextBox.Location = new System.Drawing.Point(122, 225);
+            this.IdRectangleTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.IdRectangleTextBox.Name = "IdRectangleTextBox";
+            this.IdRectangleTextBox.Size = new System.Drawing.Size(119, 20);
+            this.IdRectangleTextBox.TabIndex = 13;
+            // 
+            // YRectangleTextBox
+            // 
+            this.YRectangleTextBox.Enabled = false;
+            this.YRectangleTextBox.Location = new System.Drawing.Point(122, 189);
+            this.YRectangleTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.YRectangleTextBox.Name = "YRectangleTextBox";
+            this.YRectangleTextBox.Size = new System.Drawing.Size(119, 20);
+            this.YRectangleTextBox.TabIndex = 12;
+            // 
+            // XRectangleTextBox
+            // 
+            this.XRectangleTextBox.Enabled = false;
+            this.XRectangleTextBox.Location = new System.Drawing.Point(122, 153);
+            this.XRectangleTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.XRectangleTextBox.Name = "XRectangleTextBox";
+            this.XRectangleTextBox.Size = new System.Drawing.Size(119, 20);
+            this.XRectangleTextBox.TabIndex = 11;
+            // 
+            // IdRectangleLabel
+            // 
+            this.IdRectangleLabel.Location = new System.Drawing.Point(122, 211);
+            this.IdRectangleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.IdRectangleLabel.Name = "IdRectangleLabel";
+            this.IdRectangleLabel.Size = new System.Drawing.Size(35, 12);
+            this.IdRectangleLabel.TabIndex = 10;
+            this.IdRectangleLabel.Text = "Id";
+            // 
+            // YRectangleLable
+            // 
+            this.YRectangleLable.Location = new System.Drawing.Point(122, 175);
+            this.YRectangleLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.YRectangleLable.Name = "YRectangleLable";
+            this.YRectangleLable.Size = new System.Drawing.Size(35, 12);
+            this.YRectangleLable.TabIndex = 9;
+            this.YRectangleLable.Text = "Y";
+            // 
+            // XRectangleLabel
+            // 
+            this.XRectangleLabel.Location = new System.Drawing.Point(122, 137);
+            this.XRectangleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.XRectangleLabel.Name = "XRectangleLabel";
+            this.XRectangleLabel.Size = new System.Drawing.Size(35, 14);
+            this.XRectangleLabel.TabIndex = 8;
+            this.XRectangleLabel.Text = "X";
             // 
             // FindRectangleButton
             // 
@@ -538,6 +604,13 @@ namespace Programming.View
             this.RectangleGroupBox.PerformLayout();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Label XRectangleLabel;
+        private System.Windows.Forms.Label YRectangleLable;
+        private System.Windows.Forms.Label IdRectangleLabel;
+        private System.Windows.Forms.TextBox XRectangleTextBox;
+        private System.Windows.Forms.TextBox YRectangleTextBox;
+        private System.Windows.Forms.TextBox IdRectangleTextBox;
 
         private System.Windows.Forms.TextBox YearReleaseMovieTextBox;
 
