@@ -23,7 +23,7 @@
         }
         public static void AssertValueInRange(string nameProperty, int value, int min, int max)
         {
-            if (value < min && value > max)
+            if (value < min || value > max)
             {
                 throw new ArgumentException(
                     $"the value of the {nameProperty} field should be between {min} and {max} (inclusive)");
@@ -32,7 +32,7 @@
 
         public static void AssertValueInRange(string nameProperty, double value, double min, double max)
         {
-            if (value < min && value > max)
+            if (value < min || value > max)
             {
                 throw new ArgumentException(
                     $"the value of the {nameProperty} field should be between {min} and {max} (inclusive)");
