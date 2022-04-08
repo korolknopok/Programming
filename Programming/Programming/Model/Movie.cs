@@ -67,7 +67,7 @@
             }
             set
             {
-                Validator.AssertValueInRange(nameof(Rating), value, 0, 10);
+                Validator.AssertValueInRange(nameof(Rating), value, 0d, 10d);
                 _rating = value;
             }
         }
