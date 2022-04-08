@@ -18,9 +18,9 @@ namespace Programming.Model
         {
             int dX = Math.Abs(ring1.Center.X - ring2.Center.X);
             int dY = Math.Abs(ring1.Center.Y - ring2.Center.Y);
-            double C = Math.Sqrt(Math.Pow(dX, 2) + Math.Pow(dY, 2));
+            double с = Math.Sqrt(Math.Pow(dX, 2) + Math.Pow(dY, 2));
 
-            return C < (ring1.OuterRadius + ring2.OuterRadius);
+            return с < (ring1.OuterRadius + ring2.OuterRadius);
         }
     }
 }
