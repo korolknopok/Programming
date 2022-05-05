@@ -31,7 +31,7 @@ namespace Programming.View
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.EnumTabPage = new System.Windows.Forms.TabPage();
             this.SeasonHandleGroupBox = new System.Windows.Forms.GroupBox();
@@ -79,7 +79,9 @@ namespace Programming.View
             this.WidthRectangleLabel = new System.Windows.Forms.Label();
             this.LengthRectangleLabel = new System.Windows.Forms.Label();
             this.RectangleListBox = new System.Windows.Forms.ListBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.RectangleTabPage = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.MainTabControl.SuspendLayout();
             this.EnumTabPage.SuspendLayout();
             this.SeasonHandleGroupBox.SuspendLayout();
@@ -88,12 +90,14 @@ namespace Programming.View
             this.ClassesTabPage.SuspendLayout();
             this.MovieGroupBox.SuspendLayout();
             this.RectangleGroupBox.SuspendLayout();
+            this.RectangleTabPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainTabControl
             // 
             this.MainTabControl.Controls.Add(this.EnumTabPage);
             this.MainTabControl.Controls.Add(this.ClassesTabPage);
+            this.MainTabControl.Controls.Add(this.RectangleTabPage);
             this.MainTabControl.Location = new System.Drawing.Point(3, 4);
             this.MainTabControl.Margin = new System.Windows.Forms.Padding(2);
             this.MainTabControl.Name = "MainTabControl";
@@ -485,7 +489,7 @@ namespace Programming.View
             this.IdRectangleLabel.Name = "IdRectangleLabel";
             this.IdRectangleLabel.Size = new System.Drawing.Size(35, 12);
             this.IdRectangleLabel.TabIndex = 10;
-            this.IdRectangleLabel.Text = "Id";
+            this.IdRectangleLabel.Text = "Id:";
             // 
             // YRectangleLable
             // 
@@ -494,7 +498,7 @@ namespace Programming.View
             this.YRectangleLable.Name = "YRectangleLable";
             this.YRectangleLable.Size = new System.Drawing.Size(35, 12);
             this.YRectangleLable.TabIndex = 9;
-            this.YRectangleLable.Text = "Y";
+            this.YRectangleLable.Text = "Y:";
             // 
             // XRectangleLabel
             // 
@@ -503,7 +507,7 @@ namespace Programming.View
             this.XRectangleLabel.Name = "XRectangleLabel";
             this.XRectangleLabel.Size = new System.Drawing.Size(35, 14);
             this.XRectangleLabel.TabIndex = 8;
-            this.XRectangleLabel.Text = "X";
+            this.XRectangleLabel.Text = "X:";
             // 
             // FindRectangleButton
             // 
@@ -580,6 +584,46 @@ namespace Programming.View
             this.RectangleListBox.TabIndex = 0;
             this.RectangleListBox.SelectedIndexChanged += new System.EventHandler(this.RectangleListBox_SelectedIndexChanged);
             // 
+            // RectangleTabPage
+            // 
+            this.RectangleTabPage.Controls.Add(this.button2);
+            this.RectangleTabPage.Controls.Add(this.button1);
+            this.RectangleTabPage.Location = new System.Drawing.Point(4, 22);
+            this.RectangleTabPage.Name = "RectangleTabPage";
+            this.RectangleTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.RectangleTabPage.Size = new System.Drawing.Size(593, 369);
+            this.RectangleTabPage.TabIndex = 3;
+            this.RectangleTabPage.Text = "Rectangle";
+            this.RectangleTabPage.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (250)))), ((int) (((byte) (250)))), ((int) (((byte) (250)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = ((System.Drawing.Image) (resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(224, 177);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(43, 35);
+            this.button2.TabIndex = 1;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (250)))), ((int) (((byte) (250)))), ((int) (((byte) (250)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image) (resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(132, 177);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(43, 35);
+            this.button1.TabIndex = 0;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -602,8 +646,11 @@ namespace Programming.View
             this.MovieGroupBox.PerformLayout();
             this.RectangleGroupBox.ResumeLayout(false);
             this.RectangleGroupBox.PerformLayout();
+            this.RectangleTabPage.ResumeLayout(false);
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.TabPage RectangleTabPage;
 
         private System.Windows.Forms.Label XRectangleLabel;
         private System.Windows.Forms.Label YRectangleLable;
@@ -613,8 +660,6 @@ namespace Programming.View
         private System.Windows.Forms.TextBox IdRectangleTextBox;
 
         private System.Windows.Forms.TextBox YearReleaseMovieTextBox;
-
-        private System.Windows.Forms.Timer timer1;
 
         private System.Windows.Forms.TextBox RatingMovieTextBox;
 
