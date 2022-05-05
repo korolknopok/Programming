@@ -64,9 +64,18 @@ namespace Programming.View
             RectanglesListBox.Items.Clear();
             IdSelectedTextBox.Clear();
             XSelectedTextBox.Clear();
-            YSelectedRectangleTextBox.Clear();
-            WidthSelectedRectangleTextBox.Clear();
-            HeightSelectedRectangleTextBox.Clear();
+            YSelectedTextBox.Clear();
+            WidthSelectedTextBox.Clear();
+            HeightSelectedTextBox.Clear();
+        }
+       
+        private string FormattedText(Rectangle rectangle)
+        {
+            return $"{rectangle.Id}: " +
+                   $"(X: {rectangle.Center.X};" +
+                   $" Y: {rectangle.Center.Y};" +
+                   $" W: {rectangle.Width};" +
+                   $" H: {rectangle.Height})";
         }
 
         // private void CreateRectangles()
@@ -389,6 +398,23 @@ namespace Programming.View
         private void RemoveRectangleButton_MouseLeave(object sender, EventArgs e)
         {
             RemoveRectangleButton.Image = Properties.Resources.rectangle_remove_24x24_uncolor;
+        }
+
+        private void RemoveRectangleButton_Click(object sender, EventArgs e)
+        {
+            int indexSelectedRectangle = RectanglesListBox.SelectedIndex;
+
+            if (indexSelectedRectangle != -1)
+            {
+                _rectangles.RemoveAt(indexSelectedRectangle);
+                ClearRectangleInfo();
+
+                for (int i = 0; i < _rectangles.Count; i++)
+                {
+                    RectanglesListBox.Items.Add(FormattedText(_rectangles[i]));
+                    RectanglesListBox.SelectedIndex = 0;
+                }
+            }
         }
     }
 }

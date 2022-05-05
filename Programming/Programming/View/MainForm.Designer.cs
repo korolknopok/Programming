@@ -80,9 +80,9 @@ namespace Programming.View
             this.LengthRectangleLabel = new System.Windows.Forms.Label();
             this.RectangleListBox = new System.Windows.Forms.ListBox();
             this.RectangleTabPage = new System.Windows.Forms.TabPage();
-            this.HeightSelectedTextBox = new System.Windows.Forms.TextBox();
-            this.WidthSelectedTextBox = new System.Windows.Forms.TextBox();
             this.YSelectedTextBox = new System.Windows.Forms.TextBox();
+            this.Y = new System.Windows.Forms.TextBox();
+            this.WidthSelectedTextBox = new System.Windows.Forms.TextBox();
             this.XSelectedTextBox = new System.Windows.Forms.TextBox();
             this.IdSelectedTextBox = new System.Windows.Forms.TextBox();
             this.HeightLabel = new System.Windows.Forms.Label();
@@ -600,9 +600,9 @@ namespace Programming.View
             // 
             // RectangleTabPage
             // 
-            this.RectangleTabPage.Controls.Add(this.HeightSelectedTextBox);
-            this.RectangleTabPage.Controls.Add(this.WidthSelectedTextBox);
             this.RectangleTabPage.Controls.Add(this.YSelectedTextBox);
+            this.RectangleTabPage.Controls.Add(this.Y);
+            this.RectangleTabPage.Controls.Add(this.WidthSelectedTextBox);
             this.RectangleTabPage.Controls.Add(this.XSelectedTextBox);
             this.RectangleTabPage.Controls.Add(this.IdSelectedTextBox);
             this.RectangleTabPage.Controls.Add(this.HeightLabel);
@@ -624,13 +624,21 @@ namespace Programming.View
             this.RectangleTabPage.Text = "Rectangle";
             this.RectangleTabPage.UseVisualStyleBackColor = true;
             // 
-            // HeightSelectedTextBox
+            // YSelectedTextBox
             // 
-            this.HeightSelectedTextBox.Location = new System.Drawing.Point(59, 297);
-            this.HeightSelectedTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.HeightSelectedTextBox.Name = "HeightSelectedTextBox";
-            this.HeightSelectedTextBox.Size = new System.Drawing.Size(92, 20);
-            this.HeightSelectedTextBox.TabIndex = 15;
+            this.YSelectedTextBox.Location = new System.Drawing.Point(59, 251);
+            this.YSelectedTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.YSelectedTextBox.Name = "YSelectedTextBox";
+            this.YSelectedTextBox.Size = new System.Drawing.Size(92, 20);
+            this.YSelectedTextBox.TabIndex = 16;
+            // 
+            // Y
+            // 
+            this.Y.Location = new System.Drawing.Point(59, 297);
+            this.Y.Margin = new System.Windows.Forms.Padding(2);
+            this.Y.Name = "Y";
+            this.Y.Size = new System.Drawing.Size(92, 20);
+            this.Y.TabIndex = 15;
             // 
             // WidthSelectedTextBox
             // 
@@ -639,14 +647,6 @@ namespace Programming.View
             this.WidthSelectedTextBox.Name = "WidthSelectedTextBox";
             this.WidthSelectedTextBox.Size = new System.Drawing.Size(92, 20);
             this.WidthSelectedTextBox.TabIndex = 14;
-            // 
-            // YSelectedTextBox
-            // 
-            this.YSelectedTextBox.Location = new System.Drawing.Point(59, 251);
-            this.YSelectedTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.YSelectedTextBox.Name = "YSelectedTextBox";
-            this.YSelectedTextBox.Size = new System.Drawing.Size(92, 20);
-            this.YSelectedTextBox.TabIndex = 13;
             // 
             // XSelectedTextBox
             // 
@@ -807,20 +807,22 @@ namespace Programming.View
             this.ResumeLayout(false);
         }
 
+        private System.Windows.Forms.TextBox YSelectedTextBox;
+
+        private System.Windows.Forms.TextBox WidthSelectedTextBox;
+
+        private System.Windows.Forms.TextBox Y;
+
+        private System.Windows.Forms.TextBox XSelectedTextBox;
+
         private System.Windows.Forms.TextBox HeightSelectedTextBox;
 
         private System.Windows.Forms.TextBox IdSelectedTextBox;
-
-        private System.Windows.Forms.TextBox IdSelectedRectangleTextBox;
-
-        private System.Windows.Forms.TextBox IdSelectedRectangleTextBox;
 
         private System.Windows.Forms.TextBox WidthSelectedRectangleTextBox;
 
         private System.Windows.Forms.TextBox IdSelectedRectangleTextBox;
         private System.Windows.Forms.TextBox YSelectedRectangleTextBox;
-
-        private System.Windows.Forms.TextBox IdSelectedRectangleTextBox;
 
         private System.Windows.Forms.TextBox HeightSelectedRectangleTextBox;
         private System.Windows.Forms.TextBox XSelectedRectangleTextBox;

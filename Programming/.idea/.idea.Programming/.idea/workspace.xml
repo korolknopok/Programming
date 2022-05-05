@@ -9,11 +9,8 @@
   <component name="ChangeListManager">
     <list default="true" id="340bc002-5277-468b-904c-a56cf1522e43" name="Changes" comment="1">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Programming/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Programming/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/Model/CollisionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/CollisionManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/Model/Rectangle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Rectangle.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Programming/View/MainForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/View/MainForm.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Programming/View/MainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/View/MainForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/View/MainForm.resx" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/View/MainForm.resx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +31,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://C:/Users/cvit-/Desktop/Papka/jopa/Programming/Programming/View/MainForm.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Programming/View/MainForm.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/cvit-/Desktop/Papka/jopa/Programming/Programming/Model/CollisionManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="25wyU4ZEdHi4UbpwHsoQHY5w62y" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -104,7 +102,7 @@
       <workItem from="1648864689185" duration="2320000" />
       <workItem from="1649340790481" duration="7082000" />
       <workItem from="1649385282965" duration="2501000" />
-      <workItem from="1651716195127" duration="5812000" />
+      <workItem from="1651716195127" duration="6451000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1646452562226</created>
@@ -428,7 +426,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651718761092</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="1">
+      <created>1651723207408</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1651723207408</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
