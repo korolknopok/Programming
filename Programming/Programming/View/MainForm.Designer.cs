@@ -81,7 +81,7 @@ namespace Programming.View
             this.RectangleListBox = new System.Windows.Forms.ListBox();
             this.RectangleTabPage = new System.Windows.Forms.TabPage();
             this.YSelectedTextBox = new System.Windows.Forms.TextBox();
-            this.Y = new System.Windows.Forms.TextBox();
+            this.HeightSelectedTextBox = new System.Windows.Forms.TextBox();
             this.WidthSelectedTextBox = new System.Windows.Forms.TextBox();
             this.XSelectedTextBox = new System.Windows.Forms.TextBox();
             this.IdSelectedTextBox = new System.Windows.Forms.TextBox();
@@ -601,7 +601,7 @@ namespace Programming.View
             // RectangleTabPage
             // 
             this.RectangleTabPage.Controls.Add(this.YSelectedTextBox);
-            this.RectangleTabPage.Controls.Add(this.Y);
+            this.RectangleTabPage.Controls.Add(this.HeightSelectedTextBox);
             this.RectangleTabPage.Controls.Add(this.WidthSelectedTextBox);
             this.RectangleTabPage.Controls.Add(this.XSelectedTextBox);
             this.RectangleTabPage.Controls.Add(this.IdSelectedTextBox);
@@ -631,14 +631,16 @@ namespace Programming.View
             this.YSelectedTextBox.Name = "YSelectedTextBox";
             this.YSelectedTextBox.Size = new System.Drawing.Size(92, 20);
             this.YSelectedTextBox.TabIndex = 16;
+            this.YSelectedTextBox.TextChanged += new System.EventHandler(this.YSelectedTextBox_TextChanged);
             // 
-            // Y
+            // HeightSelectedTextBox
             // 
-            this.Y.Location = new System.Drawing.Point(59, 297);
-            this.Y.Margin = new System.Windows.Forms.Padding(2);
-            this.Y.Name = "Y";
-            this.Y.Size = new System.Drawing.Size(92, 20);
-            this.Y.TabIndex = 15;
+            this.HeightSelectedTextBox.Location = new System.Drawing.Point(59, 297);
+            this.HeightSelectedTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.HeightSelectedTextBox.Name = "HeightSelectedTextBox";
+            this.HeightSelectedTextBox.Size = new System.Drawing.Size(92, 20);
+            this.HeightSelectedTextBox.TabIndex = 15;
+            this.HeightSelectedTextBox.TextChanged += new System.EventHandler(this.HeightSelectedTextBox_TextChanged);
             // 
             // WidthSelectedTextBox
             // 
@@ -647,6 +649,7 @@ namespace Programming.View
             this.WidthSelectedTextBox.Name = "WidthSelectedTextBox";
             this.WidthSelectedTextBox.Size = new System.Drawing.Size(92, 20);
             this.WidthSelectedTextBox.TabIndex = 14;
+            this.WidthSelectedTextBox.TextChanged += new System.EventHandler(this.WidthSelectedTextBox_TextChanged);
             // 
             // XSelectedTextBox
             // 
@@ -655,9 +658,11 @@ namespace Programming.View
             this.XSelectedTextBox.Name = "XSelectedTextBox";
             this.XSelectedTextBox.Size = new System.Drawing.Size(92, 20);
             this.XSelectedTextBox.TabIndex = 12;
+            this.XSelectedTextBox.TextChanged += new System.EventHandler(this.XSelectedTextBox_TextChanged);
             // 
             // IdSelectedTextBox
             // 
+            this.IdSelectedTextBox.Enabled = false;
             this.IdSelectedTextBox.Location = new System.Drawing.Point(59, 204);
             this.IdSelectedTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.IdSelectedTextBox.Name = "IdSelectedTextBox";
@@ -735,6 +740,7 @@ namespace Programming.View
             this.RectanglesListBox.Name = "RectanglesListBox";
             this.RectanglesListBox.Size = new System.Drawing.Size(218, 121);
             this.RectanglesListBox.TabIndex = 3;
+            this.RectanglesListBox.SelectedIndexChanged += new System.EventHandler(this.RectanglesListBox_SelectedIndexChanged);
             // 
             // RectangleLabel
             // 

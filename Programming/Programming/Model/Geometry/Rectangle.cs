@@ -7,9 +7,9 @@ namespace Programming.Model
     {
         private static int _allRectanglesCount;
         
-        private double _height;
+        private int _height;
         
-        private double _width;
+        private int _width;
 
         private int _id;
 
@@ -19,8 +19,8 @@ namespace Programming.Model
             _id = _allRectanglesCount;
         }
 
-        public Rectangle(double height,
-            double width,
+        public Rectangle(int height,
+            int width,
             string color,
             Point2D center)
         
@@ -41,11 +41,11 @@ namespace Programming.Model
         {
             get
             {
-                return _allRectanglesCount;
+                return _id;
             }
         }
 
-        public double Height
+        public int Height
         {
             get
             {
@@ -58,7 +58,7 @@ namespace Programming.Model
             }
         }
 
-        public double Width
+        public int Width
         {
             get
             {
