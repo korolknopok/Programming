@@ -7,7 +7,7 @@ namespace Programming.Model
     {
         private static int _allRectanglesCount;
         
-        private double _length;
+        private double _height;
         
         private double _width;
 
@@ -19,13 +19,13 @@ namespace Programming.Model
             _id = _allRectanglesCount;
         }
 
-        public Rectangle(double length,
+        public Rectangle(double height,
             double width,
             string color,
             Point2D center)
         
         {
-            Length = length;
+            Height = height;
             Width = width;
             Color = color;
             Center = center;
@@ -45,16 +45,16 @@ namespace Programming.Model
             }
         }
 
-        public double Length
+        public double Height
         {
             get
             {
-                return _length;
+                return _height;
             }
             set
             {
-                Validator.AssertOnPositiveValue(nameof(Length), value);
-                _length = value;
+                Validator.AssertOnPositiveValue(nameof(Height), value);
+                _height = value;
             }
         }
 
