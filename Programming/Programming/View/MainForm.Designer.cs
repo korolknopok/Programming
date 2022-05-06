@@ -80,6 +80,7 @@ namespace Programming.View
             this.LengthRectangleLabel = new System.Windows.Forms.Label();
             this.RectangleListBox = new System.Windows.Forms.ListBox();
             this.RectangleTabPage = new System.Windows.Forms.TabPage();
+            this.CanvasPanel = new System.Windows.Forms.Panel();
             this.YSelectedTextBox = new System.Windows.Forms.TextBox();
             this.HeightSelectedTextBox = new System.Windows.Forms.TextBox();
             this.WidthSelectedTextBox = new System.Windows.Forms.TextBox();
@@ -91,7 +92,6 @@ namespace Programming.View
             this.XLabel = new System.Windows.Forms.Label();
             this.IdLabel = new System.Windows.Forms.Label();
             this.SelectedRectangleLabel = new System.Windows.Forms.Label();
-            this.CanvasPanel = new System.Windows.Forms.ListBox();
             this.RectanglesListBox = new System.Windows.Forms.ListBox();
             this.RectangleLabel = new System.Windows.Forms.Label();
             this.RemoveRectangleButton = new System.Windows.Forms.Button();
@@ -112,11 +112,12 @@ namespace Programming.View
             this.MainTabControl.Controls.Add(this.EnumTabPage);
             this.MainTabControl.Controls.Add(this.ClassesTabPage);
             this.MainTabControl.Controls.Add(this.RectangleTabPage);
-            this.MainTabControl.Location = new System.Drawing.Point(3, 4);
+            this.MainTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainTabControl.Location = new System.Drawing.Point(0, 0);
             this.MainTabControl.Margin = new System.Windows.Forms.Padding(2);
             this.MainTabControl.Name = "MainTabControl";
             this.MainTabControl.SelectedIndex = 0;
-            this.MainTabControl.Size = new System.Drawing.Size(601, 395);
+            this.MainTabControl.Size = new System.Drawing.Size(600, 400);
             this.MainTabControl.TabIndex = 0;
             // 
             // EnumTabPage
@@ -600,6 +601,7 @@ namespace Programming.View
             // 
             // RectangleTabPage
             // 
+            this.RectangleTabPage.Controls.Add(this.CanvasPanel);
             this.RectangleTabPage.Controls.Add(this.YSelectedTextBox);
             this.RectangleTabPage.Controls.Add(this.HeightSelectedTextBox);
             this.RectangleTabPage.Controls.Add(this.WidthSelectedTextBox);
@@ -611,7 +613,6 @@ namespace Programming.View
             this.RectangleTabPage.Controls.Add(this.XLabel);
             this.RectangleTabPage.Controls.Add(this.IdLabel);
             this.RectangleTabPage.Controls.Add(this.SelectedRectangleLabel);
-            this.RectangleTabPage.Controls.Add(this.CanvasPanel);
             this.RectangleTabPage.Controls.Add(this.RectanglesListBox);
             this.RectangleTabPage.Controls.Add(this.RectangleLabel);
             this.RectangleTabPage.Controls.Add(this.RemoveRectangleButton);
@@ -619,10 +620,20 @@ namespace Programming.View
             this.RectangleTabPage.Location = new System.Drawing.Point(4, 22);
             this.RectangleTabPage.Name = "RectangleTabPage";
             this.RectangleTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.RectangleTabPage.Size = new System.Drawing.Size(593, 369);
+            this.RectangleTabPage.Size = new System.Drawing.Size(592, 374);
             this.RectangleTabPage.TabIndex = 3;
             this.RectangleTabPage.Text = "Rectangle";
             this.RectangleTabPage.UseVisualStyleBackColor = true;
+            // 
+            // CanvasPanel
+            // 
+            this.CanvasPanel.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.CanvasPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CanvasPanel.Location = new System.Drawing.Point(230, 5);
+            this.CanvasPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.CanvasPanel.Name = "CanvasPanel";
+            this.CanvasPanel.Size = new System.Drawing.Size(358, 373);
+            this.CanvasPanel.TabIndex = 17;
             // 
             // YSelectedTextBox
             // 
@@ -723,16 +734,6 @@ namespace Programming.View
             this.SelectedRectangleLabel.TabIndex = 5;
             this.SelectedRectangleLabel.Text = "Selected Rectangle:";
             // 
-            // CanvasPanel
-            // 
-            this.CanvasPanel.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.CanvasPanel.FormattingEnabled = true;
-            this.CanvasPanel.Location = new System.Drawing.Point(228, 5);
-            this.CanvasPanel.Margin = new System.Windows.Forms.Padding(2);
-            this.CanvasPanel.Name = "CanvasPanel";
-            this.CanvasPanel.Size = new System.Drawing.Size(360, 355);
-            this.CanvasPanel.TabIndex = 4;
-            // 
             // RectanglesListBox
             // 
             this.RectanglesListBox.FormattingEnabled = true;
@@ -791,7 +792,6 @@ namespace Programming.View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(600, 400);
             this.Controls.Add(this.MainTabControl);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -814,6 +814,10 @@ namespace Programming.View
             this.RectangleTabPage.PerformLayout();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Panel CanvasPanel;
+
+        private System.Windows.Forms.Panel panel1;
 
         private System.Windows.Forms.TextBox YSelectedTextBox;
 
@@ -847,8 +851,6 @@ namespace Programming.View
         private System.Windows.Forms.Label YLabel;
         private System.Windows.Forms.Label WidthLabel;
         private System.Windows.Forms.Label HeightLabel;
-
-        private System.Windows.Forms.ListBox CanvasPanel;
 
         private System.Windows.Forms.ListBox listBox2;
 
