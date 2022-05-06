@@ -129,7 +129,7 @@ namespace Programming.View
             this.EnumTabPage.Margin = new System.Windows.Forms.Padding(2);
             this.EnumTabPage.Name = "EnumTabPage";
             this.EnumTabPage.Padding = new System.Windows.Forms.Padding(2);
-            this.EnumTabPage.Size = new System.Drawing.Size(593, 369);
+            this.EnumTabPage.Size = new System.Drawing.Size(592, 374);
             this.EnumTabPage.TabIndex = 1;
             this.EnumTabPage.Text = "Enums";
             this.EnumTabPage.UseVisualStyleBackColor = true;
@@ -309,7 +309,7 @@ namespace Programming.View
             this.ClassesTabPage.Location = new System.Drawing.Point(4, 22);
             this.ClassesTabPage.Name = "ClassesTabPage";
             this.ClassesTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.ClassesTabPage.Size = new System.Drawing.Size(593, 369);
+            this.ClassesTabPage.Size = new System.Drawing.Size(592, 374);
             this.ClassesTabPage.TabIndex = 2;
             this.ClassesTabPage.Text = "Classes";
             this.ClassesTabPage.UseVisualStyleBackColor = true;
@@ -632,7 +632,7 @@ namespace Programming.View
             this.CanvasPanel.Location = new System.Drawing.Point(230, 5);
             this.CanvasPanel.Margin = new System.Windows.Forms.Padding(2);
             this.CanvasPanel.Name = "CanvasPanel";
-            this.CanvasPanel.Size = new System.Drawing.Size(358, 373);
+            this.CanvasPanel.Size = new System.Drawing.Size(358, 364);
             this.CanvasPanel.TabIndex = 17;
             // 
             // YSelectedTextBox
