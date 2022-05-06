@@ -725,6 +725,7 @@ namespace Programming.View
             // 
             // CanvasPanel
             // 
+            this.CanvasPanel.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.CanvasPanel.FormattingEnabled = true;
             this.CanvasPanel.Location = new System.Drawing.Point(228, 5);
             this.CanvasPanel.Margin = new System.Windows.Forms.Padding(2);
@@ -790,6 +791,7 @@ namespace Programming.View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(600, 400);
             this.Controls.Add(this.MainTabControl);
             this.Margin = new System.Windows.Forms.Padding(2);
