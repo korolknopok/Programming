@@ -7,10 +7,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="340bc002-5277-468b-904c-a56cf1522e43" name="Changes" comment="1">
+    <list default="true" id="340bc002-5277-468b-904c-a56cf1522e43" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Programming/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Programming/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/Model/Geometry/RectangleFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Geometry/RectangleFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Model/Geometry/Point2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Geometry/Point2D.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Model/Geometry/Rectangle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Geometry/Rectangle.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Programming/View/MainForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/View/MainForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/View/MainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/View/MainForm.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +21,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -30,7 +33,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Programming/View/MainForm.Designer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/cvit-/Desktop/Papka/jopa/Programming/Programming/View/MainForm.Designer.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="25wyU4ZEdHi4UbpwHsoQHY5w62y" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -102,14 +104,11 @@
       <workItem from="1649340790481" duration="7082000" />
       <workItem from="1649385282965" duration="2501000" />
       <workItem from="1651716195127" duration="11244000" />
-      <workItem from="1651802417209" duration="4222000" />
-    </task>
-    <task id="LOCAL-00003" summary="1">
-      <created>1646964040294</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1646964040294</updated>
+      <workItem from="1651802417209" duration="7954000" />
+      <workItem from="1652174816801" duration="1373000" />
+      <workItem from="1652191715800" duration="1461000" />
+      <workItem from="1652336293529" duration="4916000" />
+      <workItem from="1652367764502" duration="3652000" />
     </task>
     <task id="LOCAL-00004" summary="1">
       <created>1646966176972</created>
@@ -447,7 +446,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651806460299</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="1">
+      <created>1651808474666</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1651808474666</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

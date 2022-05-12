@@ -23,7 +23,7 @@ namespace Programming.Model
 
             set
             {
-                Validator.AssertOnPositiveValue(nameof(X),value);
+                //Validator.AssertOnPositiveValue(nameof(X),value);
                 _x = value;
             }
         }
@@ -37,7 +37,7 @@ namespace Programming.Model
 
             set
             {
-                Validator.AssertOnPositiveValue(nameof(Y), value);
+                //Validator.AssertOnPositiveValue(nameof(Y), value);
                 _y = value;
             }
         }

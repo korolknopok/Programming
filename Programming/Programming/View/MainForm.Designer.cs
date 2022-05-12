@@ -637,7 +637,7 @@ namespace Programming.View
             // 
             // YSelectedTextBox
             // 
-            this.YSelectedTextBox.Location = new System.Drawing.Point(59, 251);
+            this.YSelectedTextBox.Location = new System.Drawing.Point(62, 246);
             this.YSelectedTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.YSelectedTextBox.Name = "YSelectedTextBox";
             this.YSelectedTextBox.Size = new System.Drawing.Size(92, 20);
@@ -646,7 +646,7 @@ namespace Programming.View
             // 
             // HeightSelectedTextBox
             // 
-            this.HeightSelectedTextBox.Location = new System.Drawing.Point(59, 297);
+            this.HeightSelectedTextBox.Location = new System.Drawing.Point(62, 294);
             this.HeightSelectedTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.HeightSelectedTextBox.Name = "HeightSelectedTextBox";
             this.HeightSelectedTextBox.Size = new System.Drawing.Size(92, 20);
@@ -655,7 +655,7 @@ namespace Programming.View
             // 
             // WidthSelectedTextBox
             // 
-            this.WidthSelectedTextBox.Location = new System.Drawing.Point(59, 275);
+            this.WidthSelectedTextBox.Location = new System.Drawing.Point(62, 270);
             this.WidthSelectedTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.WidthSelectedTextBox.Name = "WidthSelectedTextBox";
             this.WidthSelectedTextBox.Size = new System.Drawing.Size(92, 20);
@@ -664,7 +664,7 @@ namespace Programming.View
             // 
             // XSelectedTextBox
             // 
-            this.XSelectedTextBox.Location = new System.Drawing.Point(59, 228);
+            this.XSelectedTextBox.Location = new System.Drawing.Point(62, 224);
             this.XSelectedTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.XSelectedTextBox.Name = "XSelectedTextBox";
             this.XSelectedTextBox.Size = new System.Drawing.Size(92, 20);
@@ -674,7 +674,7 @@ namespace Programming.View
             // IdSelectedTextBox
             // 
             this.IdSelectedTextBox.Enabled = false;
-            this.IdSelectedTextBox.Location = new System.Drawing.Point(59, 204);
+            this.IdSelectedTextBox.Location = new System.Drawing.Point(62, 201);
             this.IdSelectedTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.IdSelectedTextBox.Name = "IdSelectedTextBox";
             this.IdSelectedTextBox.Size = new System.Drawing.Size(92, 20);
@@ -682,48 +682,48 @@ namespace Programming.View
             // 
             // HeightLabel
             // 
-            this.HeightLabel.Location = new System.Drawing.Point(17, 300);
+            this.HeightLabel.Location = new System.Drawing.Point(15, 297);
             this.HeightLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.HeightLabel.Name = "HeightLabel";
-            this.HeightLabel.Size = new System.Drawing.Size(35, 23);
+            this.HeightLabel.Size = new System.Drawing.Size(47, 20);
             this.HeightLabel.TabIndex = 10;
             this.HeightLabel.Text = "Height:";
             // 
             // WidthLabel
             // 
-            this.WidthLabel.Location = new System.Drawing.Point(17, 277);
+            this.WidthLabel.Location = new System.Drawing.Point(17, 275);
             this.WidthLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.WidthLabel.Name = "WidthLabel";
-            this.WidthLabel.Size = new System.Drawing.Size(47, 23);
+            this.WidthLabel.Size = new System.Drawing.Size(47, 20);
             this.WidthLabel.TabIndex = 9;
             this.WidthLabel.Text = "Width:";
             // 
             // YLabel
             // 
-            this.YLabel.Location = new System.Drawing.Point(34, 254);
+            this.YLabel.Location = new System.Drawing.Point(37, 251);
             this.YLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.YLabel.Name = "YLabel";
-            this.YLabel.Size = new System.Drawing.Size(35, 23);
+            this.YLabel.Size = new System.Drawing.Size(21, 20);
             this.YLabel.TabIndex = 8;
             this.YLabel.Text = "Y:";
             // 
             // XLabel
             // 
-            this.XLabel.Location = new System.Drawing.Point(34, 231);
+            this.XLabel.Location = new System.Drawing.Point(37, 228);
             this.XLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.XLabel.Name = "XLabel";
-            this.XLabel.Size = new System.Drawing.Size(35, 23);
+            this.XLabel.Size = new System.Drawing.Size(21, 20);
             this.XLabel.TabIndex = 7;
             this.XLabel.Text = "X:";
             // 
             // IdLabel
             // 
-            this.IdLabel.Location = new System.Drawing.Point(34, 208);
+            this.IdLabel.Location = new System.Drawing.Point(37, 204);
             this.IdLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.IdLabel.Name = "IdLabel";
-            this.IdLabel.Size = new System.Drawing.Size(35, 23);
+            this.IdLabel.Size = new System.Drawing.Size(21, 20);
             this.IdLabel.TabIndex = 6;
-            this.IdLabel.Text = "id:";
+            this.IdLabel.Text = "Id:";
             // 
             // SelectedRectangleLabel
             // 
@@ -817,27 +817,15 @@ namespace Programming.View
 
         private System.Windows.Forms.Panel CanvasPanel;
 
-        private System.Windows.Forms.Panel panel1;
-
         private System.Windows.Forms.TextBox YSelectedTextBox;
 
         private System.Windows.Forms.TextBox WidthSelectedTextBox;
-
-        private System.Windows.Forms.TextBox Y;
 
         private System.Windows.Forms.TextBox XSelectedTextBox;
 
         private System.Windows.Forms.TextBox HeightSelectedTextBox;
 
         private System.Windows.Forms.TextBox IdSelectedTextBox;
-
-        private System.Windows.Forms.TextBox WidthSelectedRectangleTextBox;
-
-        private System.Windows.Forms.TextBox IdSelectedRectangleTextBox;
-        private System.Windows.Forms.TextBox YSelectedRectangleTextBox;
-
-        private System.Windows.Forms.TextBox HeightSelectedRectangleTextBox;
-        private System.Windows.Forms.TextBox XSelectedRectangleTextBox;
 
         private System.Windows.Forms.Button RemoveRectangleButton;
 
@@ -851,10 +839,6 @@ namespace Programming.View
         private System.Windows.Forms.Label YLabel;
         private System.Windows.Forms.Label WidthLabel;
         private System.Windows.Forms.Label HeightLabel;
-
-        private System.Windows.Forms.ListBox listBox2;
-
-        private System.Windows.Forms.ListBox listBox1;
 
         private System.Windows.Forms.Label RectangleLabel;
 
@@ -871,8 +855,6 @@ namespace Programming.View
 
         private System.Windows.Forms.TextBox RatingMovieTextBox;
 
-        private System.Windows.Forms.TextBox RatingMovie;
-
         private System.Windows.Forms.TextBox DurationMinutesMovieTextBox;
 
         private System.Windows.Forms.TextBox GenreMovieTextBox;
@@ -883,14 +865,6 @@ namespace Programming.View
 
         private System.Windows.Forms.GroupBox MovieGroupBox;
 
-        private System.Windows.Forms.TextBox RatingFilmTextBox;
-
-        private System.Windows.Forms.TextBox DurationMinutesFilmTextBox;
-
-        private System.Windows.Forms.TextBox GenreFilmTextBox;
-
-        private System.Windows.Forms.TextBox NameFilmTextBox;
-
         private System.Windows.Forms.TextBox ColorRectangleTextBox;
 
         private System.Windows.Forms.TextBox WidthRectangleTextBox;
@@ -899,56 +873,34 @@ namespace Programming.View
 
         private System.Windows.Forms.Button FindRectangleButton;
 
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button FindRactangleButton;
-        private System.Windows.Forms.Button FindFilmButton;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label GenreFilmLabel;
-        private System.Windows.Forms.TextBox textBox7;
+      
         private System.Windows.Forms.Label YearReleaseFilmLabel;
-        private System.Windows.Forms.TextBox textBox6;
+        
         private System.Windows.Forms.Label DurationMinutesFilmLabel;
-        private System.Windows.Forms.TextBox textBox5;
+        
         private System.Windows.Forms.Label RatingFilmLabel;
 
         private System.Windows.Forms.Label NameFilmLabel;
 
         private System.Windows.Forms.Label WidthRectangleLabel;
         private System.Windows.Forms.Label ColorRectangleLabel;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label LengthRectangleLabel;
 
         private System.Windows.Forms.ListBox RectangleListBox;
-        private System.Windows.Forms.ListBox FilmListBox;
-        private System.Windows.Forms.Label label4;
 
-        private System.Windows.Forms.GroupBox FilmGroupBox;
+        
         private System.Windows.Forms.GroupBox RectangleGroupBox;
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
-
         private System.Windows.Forms.TabPage ClassesTabPage;
-
-        private System.Windows.Forms.TabPage tabPage1;
 
         private System.Windows.Forms.TextBox ValueWeekdayTextBox;
 
         private System.Windows.Forms.TabControl MainTabControl;
 
-        private System.Windows.Forms.TextBox ValueWeekdayBox;
-
         private System.Windows.Forms.Label EnumarationsLabel;
         private System.Windows.Forms.Label ValueLabel;
         private System.Windows.Forms.Label IntValueLabel;
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
 
         private System.Windows.Forms.Label OutputWeekdayLabel;
 
@@ -961,27 +913,15 @@ namespace Programming.View
 
         private System.Windows.Forms.TextBox WeekdayTextBox;
         private System.Windows.Forms.ComboBox SeasonNamesComboBox;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-
         private System.Windows.Forms.GroupBox WeekdayGroupBox;
         private System.Windows.Forms.GroupBox SeasonHandleGroupBox;
         private System.Windows.Forms.Label TypeValueLabel;
         private System.Windows.Forms.Label ChooseSeasonLabel;
-        private System.Windows.Forms.TextBox textBox1;
 
         private System.Windows.Forms.GroupBox EnumerationsGroupBox;
-        private System.Windows.Forms.Label label;
-        private System.Windows.Forms.Label label2;
+        
 
         private System.Windows.Forms.TabPage EnumTabPage;
-
-        private System.Windows.Forms.TabControl tabControl;
-
-        private System.Windows.Forms.TabControl EnumTabControl;
-        private System.Windows.Forms.TabPage tabPage2;
-
-        
 
         private System.Windows.Forms.ListBox MovieListBox;
         #endregion
