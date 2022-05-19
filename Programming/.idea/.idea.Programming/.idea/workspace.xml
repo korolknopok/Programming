@@ -8,20 +8,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="340bc002-5277-468b-904c-a56cf1522e43" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Programming/Model/AppColors.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Programming/View/Controls/RectangleControl.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Programming/View/Controls/RectangleControl.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Programming/View/Controls/RectangleControl.resx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Programming/View/Controls/RectanglesCollisionControl.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Programming/View/Controls/RectanglesCollisionControl.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Programming/View/Controls/RectanglesCollisionControl.resx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Programming/View/Controls/MovieControl.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Programming/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Programming/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/Model/Geometry/RectangleFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Geometry/RectangleFactory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Programming/Programming.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Programming.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Programming/View/MainForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/View/MainForm.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Programming/View/MainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/View/MainForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/View/MainForm.resx" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/View/MainForm.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/View/Panels/RectangleCollisionControl.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,8 +32,8 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Programming/View/MainForm.Designer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a92ad44406b431896773a464e9ec96e52e5b0/2e/d988e9f0/List`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Programming/View/MainForm.Designer.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="25wyU4ZEdHi4UbpwHsoQHY5w62y" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -127,6 +118,8 @@
       <workItem from="1652933093028" duration="776000" />
       <workItem from="1652933936544" duration="2121000" />
       <workItem from="1652936116742" duration="591000" />
+      <workItem from="1652941129341" duration="725000" />
+      <workItem from="1652941906277" duration="73000" />
     </task>
     <task id="LOCAL-00007" summary="1">
       <created>1646969675728</created>
