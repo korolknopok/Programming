@@ -216,7 +216,6 @@ namespace Programming.View
             this.EnumerationsGroupBox.TabIndex = 0;
             this.EnumerationsGroupBox.TabStop = false;
             this.EnumerationsGroupBox.Text = "Enumeration";
-            this.EnumerationsGroupBox.Enter += new System.EventHandler(this.EnumerationsGroupBox_Enter);
             // 
             // ValueWeekdayTextBox
             // 
@@ -295,7 +294,6 @@ namespace Programming.View
             this.RectanglesGroupBox.TabIndex = 2;
             this.RectanglesGroupBox.TabStop = false;
             this.RectanglesGroupBox.Text = "Rectangles";
-            this.RectanglesGroupBox.Enter += new System.EventHandler(this.RectanglesGroupBox_Enter);
             // 
             // rectangleControl1
             // 
