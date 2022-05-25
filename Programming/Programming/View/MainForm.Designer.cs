@@ -53,9 +53,9 @@ namespace Programming.View
             this.RectanglesGroupBox = new System.Windows.Forms.GroupBox();
             this.rectangleControl1 = new Programming.View.Controls.RectangleControl();
             this.MovieGroupBox = new System.Windows.Forms.GroupBox();
+            this.movieControl1 = new Programming.View.Controls.MovieControl();
             this.RectangleTabPage = new System.Windows.Forms.TabPage();
             this.rectanglesCollisionControl1 = new Programming.View.Controls.RectanglesCollisionControl();
-            this.movieControl1 = new Programming.View.Controls.MovieControl();
             this.MainTabControl.SuspendLayout();
             this.EnumTabPage.SuspendLayout();
             this.SeasonHandleGroupBox.SuspendLayout();
@@ -302,6 +302,13 @@ namespace Programming.View
             this.MovieGroupBox.TabStop = false;
             this.MovieGroupBox.Text = "Movies";
             // 
+            // movieControl1
+            // 
+            this.movieControl1.Location = new System.Drawing.Point(6, 19);
+            this.movieControl1.Name = "movieControl1";
+            this.movieControl1.Size = new System.Drawing.Size(296, 369);
+            this.movieControl1.TabIndex = 0;
+            // 
             // RectangleTabPage
             // 
             this.RectangleTabPage.Controls.Add(this.rectanglesCollisionControl1);
@@ -319,13 +326,6 @@ namespace Programming.View
             this.rectanglesCollisionControl1.Name = "rectanglesCollisionControl1";
             this.rectanglesCollisionControl1.Size = new System.Drawing.Size(616, 439);
             this.rectanglesCollisionControl1.TabIndex = 0;
-            // 
-            // movieControl1
-            // 
-            this.movieControl1.Location = new System.Drawing.Point(6, 19);
-            this.movieControl1.Name = "movieControl1";
-            this.movieControl1.Size = new System.Drawing.Size(296, 369);
-            this.movieControl1.TabIndex = 0;
             // 
             // MainForm
             // 

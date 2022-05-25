@@ -7,12 +7,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="340bc002-5277-468b-904c-a56cf1522e43" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Programming/View/Controls/MovieControl.cs" afterDir="false" />
+    <list default="true" id="340bc002-5277-468b-904c-a56cf1522e43" name="Changes" comment="1">
+      <change afterPath="$PROJECT_DIR$/Programming/View/Controls/MovieControl.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Programming/View/Controls/MovieControl.resx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Programming/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Programming/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/Programming.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Programming.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/View/Controls/MovieControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/View/Controls/MovieControl.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Programming/View/MainForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/View/MainForm.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/View/MainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/View/MainForm.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,13 +120,8 @@
       <workItem from="1652936116742" duration="591000" />
       <workItem from="1652941129341" duration="725000" />
       <workItem from="1652941906277" duration="73000" />
-    </task>
-    <task id="LOCAL-00007" summary="1">
-      <created>1646969675728</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1646969675728</updated>
+      <workItem from="1652942039806" duration="1158000" />
+      <workItem from="1653479748089" duration="968000" />
     </task>
     <task id="LOCAL-00008" summary="1">
       <created>1646969864293</created>
@@ -464,7 +459,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652494365356</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="1">
+      <created>1652942201125</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1652942201125</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

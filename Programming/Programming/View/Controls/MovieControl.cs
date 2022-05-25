@@ -17,7 +17,7 @@ namespace Programming.View.Controls
         
         private const int ElementsСount = 5;
         
-        private Movie[] _movies;
+        private List<Movie> _movies;
 
         private Movie _currentMovie;
         
@@ -31,14 +31,14 @@ namespace Programming.View.Controls
         {
             InitializeComponent();
             
-            CreateMovies();
-            
-            _random = new Random();
+            _movies = CreateMovies();
+
+            MovieListBox.SelectedIndex = 0;
         }
-        private void CreateMovies()
+        private List<Movie> CreateMovies()
         {
 
-            _movies = new Movie[ElementsСount];
+            List<Movie> _movies = new List<Movie>();
             var genres = Enum.GetValues(typeof(Genre));
             for (int i = 0; i < ElementsСount; i++)
             {
@@ -52,10 +52,10 @@ namespace Programming.View.Controls
                 MovieListBox.Items.Add($"Movie {i + 1}");
             }
 
-            MovieListBox.SelectedIndex = 0;
+            return _movies;
         }
 
-        private int FindMovieWithMaxRating(Movie[] movies)
+        private int FindMovieWithMaxRating(List<Movie> movies)
         {
             int maxRatingIndex = 0;
             double maxValue = movies[0].Rating;
@@ -87,8 +87,14 @@ namespace Programming.View.Controls
 
             DurationMinutesMovieTextBox.BackColor = _correctColor;
         }
+        
+        private void FindMovieButton_Click(object sender, EventArgs e)
+        {
+            int findMaxRatingIndex = FindMovieWithMaxRating(_movies);
+            MovieListBox.SelectedIndex = findMaxRatingIndex;
+        }
 
-        private void YearReleaseMovieTextBox_TextChanged_1(object sender, EventArgs e)
+        private void YearReleaseMovieTextBox_TextChanged(object sender, EventArgs e)
         {
             try
             {
@@ -105,13 +111,24 @@ namespace Programming.View.Controls
             YearReleaseMovieTextBox.BackColor = _correctColor;
         }
 
-        private void GenreMovieTextBox_TextChanged_1(object sender, EventArgs e)
+        private void MovieListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string genreMovieValue = GenreMovieTextBox.Text;
-            _currentMovie.Genre = genreMovieValue;
+            int selectedIndexMovie = MovieListBox.SelectedIndex;
+            _currentMovie = _movies[selectedIndexMovie];
+            NameMovieTextBox.Text = _currentMovie.Name;
+            GenreMovieTextBox.Text = _currentMovie.Genre;
+            YearReleaseMovieTextBox.Text = _currentMovie.ReleaseYear.ToString();
+            DurationMinutesMovieTextBox.Text = _currentMovie.DurationMinutes.ToString();
+            RatingMovieTextBox.Text = _currentMovie.Rating.ToString();
         }
 
-        private void RatingMovieTextBox_TextChanged_1(object sender, EventArgs e)
+        private void NameMovieTextBox_TextChanged(object sender, EventArgs e)
+        {
+            string nameMovieValue = NameMovieTextBox.Text;
+            _currentMovie.Name = nameMovieValue;
+        }
+
+        private void RatingMovieTextBox_TextChanged(object sender, EventArgs e)
         {
             try
             {
@@ -128,27 +145,10 @@ namespace Programming.View.Controls
             RatingMovieTextBox.BackColor = _correctColor;
         }
 
-        private void NameMovieTextBox_TextChanged_1(object sender, EventArgs e)
+        private void GenreMovieTextBox_TextChanged(object sender, EventArgs e)
         {
-            string nameMovieValue = NameMovieTextBox.Text;
-            _currentMovie.Name = nameMovieValue;
-        }
-
-        private void FindMovieButton_Click(object sender, EventArgs e)
-        {
-            int findMaxRatingIndex = FindMovieWithMaxRating(_movies);
-            MovieListBox.SelectedIndex = findMaxRatingIndex;
-        }
-
-        private void MovieListBox_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-            int selectedIndexMovie = MovieListBox.SelectedIndex;
-            _currentMovie = _movies[selectedIndexMovie];
-            NameMovieTextBox.Text = _currentMovie.Name;
-            GenreMovieTextBox.Text = _currentMovie.Genre;
-            YearReleaseMovieTextBox.Text = _currentMovie.ReleaseYear.ToString();
-            DurationMinutesMovieTextBox.Text = _currentMovie.DurationMinutes.ToString();
-            RatingMovieTextBox.Text = _currentMovie.Rating.ToString();
+            string genreMovieValue = GenreMovieTextBox.Text;
+            _currentMovie.Genre = genreMovieValue;
         }
     }
 }
