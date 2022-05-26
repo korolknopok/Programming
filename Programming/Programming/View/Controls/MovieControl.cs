@@ -22,11 +22,7 @@ namespace Programming.View.Controls
         private Movie _currentMovie;
         
         private Random _random = new Random();
-        
-        private readonly Color _errorColor = Color.LightPink;
 
-        private readonly Color _correctColor = Color.White;
-        
         public MovieControl()
         {
             InitializeComponent();
@@ -81,11 +77,11 @@ namespace Programming.View.Controls
             }
             catch
             {
-                DurationMinutesMovieTextBox.BackColor = _errorColor;
+                DurationMinutesMovieTextBox.BackColor = AppColors._errorColor;
                 return;
             }
 
-            DurationMinutesMovieTextBox.BackColor = _correctColor;
+            DurationMinutesMovieTextBox.BackColor = AppColors._correctColor;
         }
         
         private void FindMovieButton_Click(object sender, EventArgs e)
@@ -104,11 +100,11 @@ namespace Programming.View.Controls
             }
             catch
             {
-                YearReleaseMovieTextBox.BackColor = _errorColor;
+                YearReleaseMovieTextBox.BackColor = AppColors._errorColor;
                 return;
             }
 
-            YearReleaseMovieTextBox.BackColor = _correctColor;
+            YearReleaseMovieTextBox.BackColor = AppColors._correctColor;
         }
 
         private void MovieListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -138,11 +134,11 @@ namespace Programming.View.Controls
             }
             catch
             {
-                RatingMovieTextBox.BackColor = _errorColor;
+                RatingMovieTextBox.BackColor = AppColors._errorColor;
                 return;
             }
 
-            RatingMovieTextBox.BackColor = _correctColor;
+            RatingMovieTextBox.BackColor = AppColors._correctColor;
         }
 
         private void GenreMovieTextBox_TextChanged(object sender, EventArgs e)

@@ -18,10 +18,6 @@ namespace Programming.View.Controls
 
         private Rectangle[] _rectangles;
 
-        private readonly Color _errorColor = Color.LightPink;
-
-        private readonly Color _correctColor = Color.White;
-
         private const int ElementsСount = 5;
 
         public RectangleControl()
@@ -59,11 +55,11 @@ namespace Programming.View.Controls
             }
             catch
             {
-                LengthRectangleTextBox.BackColor = _errorColor;
+                LengthRectangleTextBox.BackColor = AppColors._errorColor;
                 return;
             }
 
-            LengthRectangleTextBox.BackColor = _correctColor;
+            LengthRectangleTextBox.BackColor = AppColors._correctColor;
         }
 
         
@@ -96,11 +92,11 @@ namespace Programming.View.Controls
             }
             catch
             {
-                WidthRectangleTextBox.BackColor = _errorColor;
+                WidthRectangleTextBox.BackColor = AppColors._errorColor;
                 return;
             }
 
-            WidthRectangleTextBox.BackColor = _correctColor;
+            WidthRectangleTextBox.BackColor = AppColors._correctColor;
         }
         private Rectangle[] CreateRectangles()
         {

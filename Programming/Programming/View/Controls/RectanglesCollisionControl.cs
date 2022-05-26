@@ -14,15 +14,6 @@ namespace Programming.View.Controls
 {
     public partial class RectanglesCollisionControl : UserControl
     {
-        
-        private readonly Color _errorColor = Color.LightPink;
-
-        private readonly Color _correctColor = Color.White;
-        
-        private readonly Color _isNotCollisionColor = Color.FromArgb(127, 127, 255, 127);
-        
-        private readonly Color _isCollisionColor = Color.FromArgb(127, 255, 127, 127);
-        
         private List<Rectangle> _rectangles;
         
         private Rectangle _currentRectangle;
@@ -42,7 +33,7 @@ namespace Programming.View.Controls
         {
             for (int i = 0; i < _rectanglePanels.Count; i++)
             {
-                CanvasPanel.Controls[i].BackColor = _isNotCollisionColor;
+                CanvasPanel.Controls[i].BackColor = AppColors._isNotCollisionColor;
             }
 
             for (int i = 0; i < _rectanglePanels.Count - 1; i++)
@@ -51,8 +42,8 @@ namespace Programming.View.Controls
                 {
                     if (CollisionManager.IsCollision(_rectangles[i], _rectangles[j]))
                     {
-                        CanvasPanel.Controls[i].BackColor = _isCollisionColor;
-                        CanvasPanel.Controls[j].BackColor = _isCollisionColor;
+                        CanvasPanel.Controls[i].BackColor = AppColors._isCollisionColor;
+                        CanvasPanel.Controls[j].BackColor = AppColors._isCollisionColor;
                     }
                 }
             }
@@ -140,7 +131,7 @@ namespace Programming.View.Controls
             rectanglePanel.Width = rectangle.Width;
             rectanglePanel.Height = rectangle.Height;
             rectanglePanel.Location = new Point(rectangle.Center.X, rectangle.Center.Y);
-            rectanglePanel.BackColor = _isNotCollisionColor;
+            rectanglePanel.BackColor = AppColors._isNotCollisionColor;
             _rectanglePanels.Add(rectanglePanel);
             CanvasPanel.Controls.Add(rectanglePanel);
             FindCollisions();
@@ -171,7 +162,7 @@ namespace Programming.View.Controls
         {
             try
             {
-                XSelectedTextBox.BackColor = _correctColor;
+                XSelectedTextBox.BackColor = AppColors._correctColor;
                 if (XSelectedTextBox.Text != string.Empty)
                 {
                     var xValue = int.Parse(XSelectedTextBox.Text);
@@ -185,7 +176,7 @@ namespace Programming.View.Controls
             catch (Exception exception)
             {
                 Console.WriteLine(exception);
-                XSelectedTextBox.BackColor = _errorColor;
+                XSelectedTextBox.BackColor = AppColors._errorColor;
             }
         }
 
@@ -193,7 +184,7 @@ namespace Programming.View.Controls
         {
             try
             {
-                YSelectedTextBox.BackColor = _correctColor;
+                YSelectedTextBox.BackColor = AppColors._correctColor;
                 if (YSelectedTextBox.Text != string.Empty)
                 {
                     var yValue = int.Parse(YSelectedTextBox.Text);
@@ -207,7 +198,7 @@ namespace Programming.View.Controls
             catch (Exception exception)
             {
                 Console.WriteLine(exception);
-                YSelectedTextBox.BackColor = _errorColor;
+                YSelectedTextBox.BackColor = AppColors._errorColor;
             }
         }
 
@@ -215,7 +206,7 @@ namespace Programming.View.Controls
         {
             try
             {
-                WidthSelectedTextBox.BackColor = _correctColor;
+                WidthSelectedTextBox.BackColor = AppColors._correctColor;
                 if (WidthSelectedTextBox.Text != string.Empty)
                 {
                     var widthValue = int.Parse(WidthSelectedTextBox.Text);
@@ -230,7 +221,7 @@ namespace Programming.View.Controls
             {
                 Console.WriteLine(exception);
                 
-                WidthSelectedTextBox.BackColor = _errorColor;
+                WidthSelectedTextBox.BackColor = AppColors._errorColor;
             }
         }
 
@@ -238,7 +229,7 @@ namespace Programming.View.Controls
         {
             try
             {
-                HeightSelectedTextBox.BackColor = _correctColor;
+                HeightSelectedTextBox.BackColor = AppColors._correctColor;
                 if (HeightSelectedTextBox.Text != string.Empty)
                 {
                     var heightValue = int.Parse(HeightSelectedTextBox.Text);
@@ -253,7 +244,7 @@ namespace Programming.View.Controls
             catch (Exception exception)
             {
                 Console.WriteLine(exception);
-                HeightSelectedTextBox.BackColor = _errorColor;
+                HeightSelectedTextBox.BackColor = AppColors._errorColor;
             }
         }
 
