@@ -38,7 +38,7 @@ namespace Programming.View.Controls
         private List<Movie> CreateMovies()
         {
 
-            List<Movie> movies = new List<Movie>();
+            List<Movie> _movies = new List<Movie>();
             var genres = Enum.GetValues(typeof(Genre));
             for (int i = 0; i < ElementsСount; i++)
             {
@@ -48,11 +48,11 @@ namespace Programming.View.Controls
                 _currentMovie.Genre = genres.GetValue(_random.Next(0, genres.Length)).ToString();
                 _currentMovie.Name = $"Movie {_currentMovie.Genre} {_currentMovie.ReleaseYear}";
                 _currentMovie.DurationMinutes = _random.Next(150);
-                _movies[i] = _currentMovie;
+                _movies.Add(_currentMovie); 
                 MovieListBox.Items.Add($"Movie {i + 1}");
             }
 
-            return movies;
+            return _movies;
         }
 
         private int FindMovieWithMaxRating(List<Movie> movies)

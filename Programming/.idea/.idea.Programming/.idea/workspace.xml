@@ -31,6 +31,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a92ad44406b431896773a464e9ec96e52e5b0/2e/d988e9f0/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Programming/View/MainForm.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/cvit-/Desktop/Papka/jopa3/Programming/Programming/View/Controls/MovieControl.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/cvit-/Desktop/Papka/jopa3/Programming/Programming/View/MainForm.Designer.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="25wyU4ZEdHi4UbpwHsoQHY5w62y" />
@@ -119,14 +120,7 @@
       <workItem from="1652941129341" duration="725000" />
       <workItem from="1652941906277" duration="73000" />
       <workItem from="1652942039806" duration="1158000" />
-      <workItem from="1653479748089" duration="2787000" />
-    </task>
-    <task id="LOCAL-00009" summary="1">
-      <created>1646970428178</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1646970428178</updated>
+      <workItem from="1653479748089" duration="3540000" />
     </task>
     <task id="LOCAL-00010" summary="1">
       <created>1646970887447</created>
@@ -464,7 +458,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653480882340</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="1">
+      <created>1653537478232</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1653537478232</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
