@@ -8,22 +8,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="340bc002-5277-468b-904c-a56cf1522e43" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Programming/View/Controls/EnumerationControl.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Programming/View/Controls/EnumerationControl.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Programming/View/Controls/EnumerationControl.resx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Programming/View/Controls/SeasonHandleControl.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Programming/View/Controls/SeasonHandleControl.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Programming/View/Controls/SeasonHandleControl.resx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Programming/View/Controls/WeekdayParsingControl.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Programming/View/Controls/WeekdayParsingControl.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Programming/View/Controls/WeekdayParsingControl.resx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Programming/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Programming/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/Model/AppColors.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/AppColors.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/Programming.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Programming.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/View/Controls/MovieControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/View/Controls/MovieControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/View/Controls/RectangleControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/View/Controls/RectangleControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/View/Controls/RectanglesCollisionControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/View/Controls/RectanglesCollisionControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/View/MainForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/View/MainForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Model/Enums/Colors.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Enums/Colors.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Model/Enums/EducationForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Enums/EducationForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Model/Enums/Genre.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Enums/Genre.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Model/Enums/Manufactures.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Enums/Manufactures.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Model/Enums/Season.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Enums/Season.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Model/Enums/Weekday.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Enums/Weekday.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Model/Geometry/CollisionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Geometry/CollisionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Model/Geometry/Point2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Geometry/Point2D.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Model/Geometry/Rectangle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Geometry/Rectangle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Model/Geometry/RectangleFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Geometry/RectangleFactory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Programming/View/MainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/View/MainForm.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -136,14 +131,8 @@
       <workItem from="1653479748089" duration="4178000" />
       <workItem from="1653538918106" duration="59000" />
       <workItem from="1653539019292" duration="118000" />
-      <workItem from="1653539165325" duration="2656000" />
-    </task>
-    <task id="LOCAL-00011" summary="1">
-      <created>1646971153630</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1646971153630</updated>
+      <workItem from="1653539165325" duration="2878000" />
+      <workItem from="1653547370647" duration="2129000" />
     </task>
     <task id="LOCAL-00012" summary="1">
       <created>1646972028230</created>
@@ -481,7 +470,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653538234869</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="1">
+      <created>1653545842510</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1653545842512</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

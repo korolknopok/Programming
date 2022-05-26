@@ -2,17 +2,35 @@
 
 namespace Programming.Model
 {
+    /// <summary>
+    /// Предоставляет методы для создания прямоугольников.
+    /// </summary>
     public class RectangleFactory
     {
+        /// <summary>
+        /// Отступ внутри элемента размещения прямоугольников.
+        /// </summary>
         private const int Margin = 15;
         
+        /// <summary>
+        /// Случайные значения.
+        /// </summary>
         private static Random _random;
 
+        /// <summary>
+        /// Создаёт экземпляр класса <see cref="RectangleFactory"/>.
+        /// </summary>
         static RectangleFactory()
         {
             _random = new Random();
         }
 
+        /// <summary>
+        /// Создаёт прямоугольник со случайными значениями высоты, ширины и координат.
+        /// </summary>
+        /// <param name="widthCanvas">Ширина элемента размещения.</param>
+        /// <param name="heightCanvas">Высота элемента размещения.</param>
+        /// <returns>Возвращает объект Rectangle.</returns>
         public static Rectangle Randomize(int widthCanvas, int heightCanvas)
         {
             var colors = Enum.GetValues(typeof(Colors));
@@ -24,6 +42,10 @@ namespace Programming.Model
             return rectangle;
         }
         
+        /// <summary>
+        /// Создаёт прямоугольник со случайными значениями высоты, ширины и координат.
+        /// </summary>
+        /// <returns>Возвращает объект Rectangle.</returns>
         public static Rectangle Randomize()
         {
             var colors = Enum.GetValues(typeof(Colors));
