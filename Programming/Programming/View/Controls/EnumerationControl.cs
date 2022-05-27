@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Programming.Model;
-using Rectangle = Programming.Model.Rectangle;
 
 namespace Programming.View.Controls
 {
+    /// <summary>
+    /// Предоставляет реализацию по представлению перечислений.
+    /// </summary>
     public partial class EnumerationControl : UserControl
     {
+        /// <summary>
+        /// Создаёт экземпляр класса <see cref="EnumerationControl"/>.
+        /// </summary>
         public EnumerationControl()
         {
             InitializeComponent();

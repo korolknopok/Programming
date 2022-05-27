@@ -1,20 +1,42 @@
 ﻿namespace Programming.Model
 {
     using System;
-    using System.Data;
 
+    /// <summary>
+    /// Хранит данные о фильме.
+    /// </summary>
     public class Movie
     {
+        /// <summary>
+        /// Год релиза фильма.
+        /// </summary>
         private int _releaseYear;
         
+        /// <summary>
+        /// Рейтинг фильма.
+        /// </summary>
         private double _rating;
         
+        /// <summary>
+        /// Продолжительность фильма в минутах.
+        /// </summary>
         private int _durationMinutes;
 
+        /// <summary>
+        /// Создаёт экземпляр класса <see cref="Movie"/>.
+        /// </summary>
         public Movie()
         {
         }
 
+        /// <summary>
+        /// Создаёт экземпляр класса <see cref="Movie"/>.
+        /// </summary>
+        /// <param name="releaseYear">Год релиза фильма. Должно быть в диапазоне от 1900 до 2022 (включительно).</param>
+        /// <param name="durationMinutes">Продолжительность фильма в минутах. Должно быть положительным числом.</param>
+        /// <param name="rating">Рейтинг фильма. Должен быть в диапазоне от 0 до 10 (включительно).</param>
+        /// <param name="name">Название фильма.</param>
+        /// <param name="genre">Жанр фильма.</param>
         public Movie(int releaseYear,
             int durationMinutes,
             int rating,
@@ -29,10 +51,19 @@
             Genre = genre;
         }
 
+        /// <summary>
+        /// Возвращает и задаёт название фильма.
+        /// </summary>
         public string Name { get; set; }
         
+        /// <summary>
+        /// Возвращает и задаёт жанр фильма.
+        /// </summary>
         public string Genre { get; set; }
 
+        /// <summary>
+        /// Возвращает и задаёт продолжительность фильма в минутах. Должно быть положительным числом.
+        /// </summary>
         public int DurationMinutes
         {
             get
@@ -46,6 +77,9 @@
             }
         }
 
+        /// <summary>
+        /// Возвращает и задаёт год релиза фильма. Должно быть в диапазоне от 1900 до 2022 (включительно).
+        /// </summary>
         public int ReleaseYear
         {
             get
@@ -59,6 +93,9 @@
             }
         }
 
+        /// <summary>
+        /// Возвращает и задаёт рейтинг фильма. Должен быть в диапазоне от 0 до 10 (включительно).
+        /// </summary>
         public double Rating
         {
             get

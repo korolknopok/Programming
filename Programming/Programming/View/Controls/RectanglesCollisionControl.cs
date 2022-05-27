@@ -1,25 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Programming.Model;
 using Rectangle = Programming.Model.Rectangle;
 
 namespace Programming.View.Controls
 {
+    /// <summary>
+    /// Предоставляет реализацию по представлению прямоугольников.
+    /// </summary>
     public partial class RectanglesCollisionControl : UserControl
     {
+        /// <summary>
+        /// Коллекция прямоугольников.
+        /// </summary>
         private List<Rectangle> _rectangles;
         
+        /// <summary>
+        /// Выбранный прямоугольник.
+        /// </summary>
         private Rectangle _currentRectangle;
         
+        /// <summary>
+        /// Коллекция отображаемых прямоугольников.
+        /// </summary>
         private List<Panel> _rectanglePanels;
         
+        /// <summary>
+        /// Создаёт экземпляр класса <see cref="RectanglesCollisionControl"/>.
+        /// </summary>
         public RectanglesCollisionControl()
         {
             InitializeComponent();
@@ -29,6 +39,9 @@ namespace Programming.View.Controls
             
         }
         
+        /// <summary>
+        /// Находит пересекающиеся прямоугольники и окрашивает их.
+        /// </summary>
         private void FindCollisions()
         {
             for (int i = 0; i < _rectanglePanels.Count; i++)
@@ -49,6 +62,10 @@ namespace Programming.View.Controls
             }
         }
         
+        /// <summary>
+        /// Обновляет информацию в панели.
+        /// </summary>
+        /// <param name="rectangle">Прямоугольник.</param>
         private void UpdatePanel(Rectangle rectangle, int index)
         {
             var control = CanvasPanel.Controls[index];
@@ -57,6 +74,10 @@ namespace Programming.View.Controls
             control.Height = rectangle.Height;
         }
         
+        /// <summary>
+        /// Обновляет информацию в списке.
+        /// </summary>
+        /// <param name="rectangle">Прямоугольник.</param>
         private void UpdateRectangleInfo(Rectangle rectangle)
         {
             if (rectangle != null)
@@ -90,6 +111,9 @@ namespace Programming.View.Controls
             }
         }
         
+        /// <summary>
+        /// Удаляет информацию о текущем прямоугольнике.
+        /// </summary>
         private void ClearRectangleInfo()
         {
             RectanglesListBox.Items.Clear();
@@ -100,6 +124,11 @@ namespace Programming.View.Controls
             HeightSelectedTextBox.Clear();
         }
        
+        /// <summary>
+        /// Из данных о прямоугольнике возвращает текст.
+        /// </summary>
+        /// <param name="rectangle">Прямоугольник.</param>
+        /// <returns> Возвращает информацию о текущем прямоугольнике.</returns>
         private string GetInfoOfRectangle(Rectangle rectangle)
         {
             return $"{rectangle.Id}: " +

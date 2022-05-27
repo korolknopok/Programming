@@ -1,28 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Programming.Model;
-using Rectangle = Programming.Model.Rectangle;
 
 namespace Programming.View.Controls
 {
+    /// <summary>
+    /// Предоставляет реализацию по представлению фильмов.
+    /// </summary>
     public partial class MovieControl : UserControl
     {
-        
+        /// <summary>
+        /// Количество элементов.
+        /// </summary>
         private const int ElementsСount = 5;
         
+        /// <summary>
+        /// Коллекция фильмов.
+        /// </summary>
         private List<Movie> _movies;
 
+        /// <summary>
+        /// Выбранный фильм.
+        /// </summary>
         private Movie _currentMovie;
         
+        /// <summary>
+        /// Случайные значения.
+        /// </summary>
         private Random _random = new Random();
 
+        /// <summary>
+        /// Создаёт экземпляр класса <see cref="MovieControl"/>.
+        /// </summary>
         public MovieControl()
         {
             InitializeComponent();
@@ -31,6 +41,11 @@ namespace Programming.View.Controls
 
             MovieListBox.SelectedIndex = 0;
         }
+        
+        /// <summary>
+        /// Инициализирует коллекцию фильмов.
+        /// </summary>
+        /// <returns>Возвращает коллекцию фильмов.</returns>
         private List<Movie> CreateMovies()
         {
 

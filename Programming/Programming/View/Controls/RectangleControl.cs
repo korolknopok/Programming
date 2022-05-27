@@ -1,25 +1,33 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Programming.Model;
 using Rectangle = Programming.Model.Rectangle;
 
 namespace Programming.View.Controls
 {
+    /// <summary>
+    /// Представляет реализацию по представлению прямоугольников, генерируемых программой.
+    /// </summary>
     public partial class RectangleControl : UserControl
     {
+        /// <summary>
+        /// Выбранный прямоугольник.
+        /// </summary>
         private Rectangle _currentRectangle;
 
+        /// <summary>
+        /// Коллекция прямоугольников.
+        /// </summary>
         private Rectangle[] _rectangles;
 
+        /// <summary>
+        /// Количество элементов.
+        /// </summary>
         private const int ElementsСount = 5;
 
+        /// <summary>
+        /// Создаёт экземпляр класса <see cref="RectangleControl"/>.
+        /// </summary>
         public RectangleControl()
         {
             InitializeComponent();

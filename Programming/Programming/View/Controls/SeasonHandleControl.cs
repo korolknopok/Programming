@@ -1,20 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Programming.Model;
-using Rectangle = Programming.Model.Rectangle;
+
 
 
 namespace Programming.View.Controls
 {
+    /// <summary>
+    /// Предоставляет реализацию по изменению цвета фона окна и выплывающих сообщений. 
+    /// </summary>
     public partial class SeasonHandleControl : UserControl
     {
+        /// <summary>
+        /// Создает экземпляр класса <see cref="SeasonHandleControl"/>.
+        /// </summary>
         public SeasonHandleControl()
         {
             InitializeComponent();
