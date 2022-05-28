@@ -54,10 +54,10 @@ namespace Programming.View.Controls
             // 
             this.CanvasPanel.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.CanvasPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CanvasPanel.Location = new System.Drawing.Point(227, 0);
+            this.CanvasPanel.Location = new System.Drawing.Point(227, 2);
             this.CanvasPanel.Margin = new System.Windows.Forms.Padding(2);
             this.CanvasPanel.Name = "CanvasPanel";
-            this.CanvasPanel.Size = new System.Drawing.Size(374, 420);
+            this.CanvasPanel.Size = new System.Drawing.Size(376, 435);
             this.CanvasPanel.TabIndex = 33;
             // 
             // YSelectedTextBox
@@ -234,7 +234,7 @@ namespace Programming.View.Controls
             this.Controls.Add(this.RemoveRectangleButton);
             this.Controls.Add(this.AddRectangleButton);
             this.Name = "RectanglesCollisionControl";
-            this.Size = new System.Drawing.Size(616, 439);
+            this.Size = new System.Drawing.Size(605, 439);
             this.ResumeLayout(false);
             this.PerformLayout();
         }

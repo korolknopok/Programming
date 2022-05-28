@@ -7,7 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="340bc002-5277-468b-904c-a56cf1522e43" name="Changes" comment="" />
+    <list default="true" id="340bc002-5277-468b-904c-a56cf1522e43" name="Changes" comment="1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,7 +26,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/cvit-/Desktop/Papka/jopa3/Programming/Programming/Model/AppColors.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/cvit-/Desktop/Papka/jopa3/Programming/Programming/Model/Song.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a92ad44406b431896773a464e9ec96e52e5b0/2e/d988e9f0/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Programming/View/MainForm.Designer.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -122,20 +122,7 @@
       <workItem from="1653539165325" duration="2878000" />
       <workItem from="1653547370647" duration="2395000" />
       <workItem from="1653572960903" duration="4505000" />
-    </task>
-    <task id="LOCAL-00014" summary="1">
-      <created>1646972673742</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1646972673742</updated>
-    </task>
-    <task id="LOCAL-00015" summary="1">
-      <created>1646973291155</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1646973291155</updated>
+      <workItem from="1653702795045" duration="298000" />
     </task>
     <task id="LOCAL-00016" summary="1">
       <created>1646973437339</created>
@@ -466,7 +453,21 @@
       <option name="project" value="LOCAL" />
       <updated>1653662201309</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="1">
+      <created>1653702996882</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1653702996882</updated>
+    </task>
+    <task id="LOCAL-00064" summary="1">
+      <created>1653703065066</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1653703065066</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
