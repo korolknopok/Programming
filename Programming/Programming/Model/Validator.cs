@@ -100,7 +100,7 @@
         {
             if (!long.TryParse(value, out long number))
             {
-                throw new System.ArgumentException(
+                throw new ArgumentException(
                     $"the value of the {nameProperty} field must consist of digits only");
             }
         }
@@ -115,7 +115,7 @@
         {
             if (value.Length != 11)
             {
-                throw new System.ArgumentException(
+                throw new ArgumentException(
                     $"the value of the {nameProperty} field must consist of 11 digits");
             }
         }
