@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
@@ -16,17 +17,17 @@ namespace Programming.View.Controls
         /// Коллекция прямоугольников.
         /// </summary>
         private List<Rectangle> _rectangles;
-        
+
         /// <summary>
         /// Выбранный прямоугольник.
         /// </summary>
         private Rectangle _currentRectangle;
-        
+
         /// <summary>
         /// Коллекция отображаемых прямоугольников.
         /// </summary>
         private List<Panel> _rectanglePanels;
-        
+
         /// <summary>
         /// Создаёт экземпляр класса <see cref="RectanglesCollisionControl"/>.
         /// </summary>
@@ -36,9 +37,8 @@ namespace Programming.View.Controls
             RectanglesListBox.SelectionMode = SelectionMode.One;
             _rectangles = new List<Rectangle>();
             _rectanglePanels = new List<Panel>();
-            
         }
-        
+
         /// <summary>
         /// Находит пересекающиеся прямоугольники и окрашивает их.
         /// </summary>
@@ -61,7 +61,7 @@ namespace Programming.View.Controls
                 }
             }
         }
-        
+
         /// <summary>
         /// Обновляет информацию в панели.
         /// </summary>
@@ -73,7 +73,7 @@ namespace Programming.View.Controls
             control.Width = rectangle.Width;
             control.Height = rectangle.Height;
         }
-        
+
         /// <summary>
         /// Обновляет информацию в списке.
         /// </summary>
@@ -83,7 +83,8 @@ namespace Programming.View.Controls
             if (rectangle != null)
             {
                 var copyRectangle = new Rectangle(rectangle);
-                var oldRectangle = _rectangles[RectanglesListBox.SelectedIndex];
+                var selectedIndex = RectanglesListBox.SelectedIndex;
+                var oldRectangle = _rectangles[selectedIndex];
 
                 var differenceWidth = Math.Abs(oldRectangle.Width - copyRectangle.Width) / 2;
                 var differenceHeight = Math.Abs(oldRectangle.Height - copyRectangle.Height) / 2;
@@ -93,24 +94,38 @@ namespace Programming.View.Controls
                     copyRectangle.Center.X = oldRectangle.Width >= copyRectangle.Width
                         ? oldRectangle.Center.X + differenceWidth
                         : oldRectangle.Center.X - differenceWidth;
-                    XSelectedTextBox.Text = copyRectangle.Center.X.ToString();
-                    
+
 
                     copyRectangle.Center.Y = oldRectangle.Height >= copyRectangle.Height
                         ? oldRectangle.Center.Y + differenceHeight
                         : oldRectangle.Center.Y - differenceHeight;
-                    YSelectedTextBox.Text = copyRectangle.Center.Y.ToString();
                 }
 
 
                 var index = _rectangles.FindIndex(r => r.Equals(copyRectangle));
                 _rectangles[index] = copyRectangle;
+                
+                UpdateRectanglesListBox(index);
 
                 UpdatePanel(copyRectangle, index);
                 FindCollisions();
             }
         }
         
+        /// <summary>
+        /// Обновляет информацию в списке.
+        /// </summary>
+        private void UpdateRectanglesListBox(int index)
+        {
+            RectanglesListBox.Items.Clear();
+            foreach (var rec in _rectangles)
+            {
+                RectanglesListBox.Items.Add(GetInfoOfRectangle(rec));
+            }
+
+            RectanglesListBox.SelectedIndex = index;
+        }
+
         /// <summary>
         /// Удаляет информацию о текущем прямоугольнике.
         /// </summary>
@@ -123,7 +138,7 @@ namespace Programming.View.Controls
             WidthSelectedTextBox.Clear();
             HeightSelectedTextBox.Clear();
         }
-       
+
         /// <summary>
         /// Из данных о прямоугольнике возвращает текст.
         /// </summary>
@@ -155,7 +170,7 @@ namespace Programming.View.Controls
             var rectangle = RectangleFactory.Randomize(CanvasPanel.Width, CanvasPanel.Height);
             RectanglesListBox.Items.Add(GetInfoOfRectangle(rectangle));
             _rectangles.Add(rectangle);
-            
+
             Panel rectanglePanel = new Panel();
             rectanglePanel.Width = rectangle.Width;
             rectanglePanel.Height = rectangle.Height;
@@ -249,7 +264,7 @@ namespace Programming.View.Controls
             catch (Exception exception)
             {
                 Console.WriteLine(exception);
-                
+
                 WidthSelectedTextBox.BackColor = AppColors._errorColor;
             }
         }
@@ -266,7 +281,6 @@ namespace Programming.View.Controls
                     {
                         _currentRectangle.Height = heightValue;
                         UpdateRectangleInfo(_currentRectangle);
-                        
                     }
                 }
             }

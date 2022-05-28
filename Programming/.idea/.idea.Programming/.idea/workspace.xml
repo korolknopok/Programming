@@ -7,7 +7,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="340bc002-5277-468b-904c-a56cf1522e43" name="Changes" comment="1" />
+    <list default="true" id="340bc002-5277-468b-904c-a56cf1522e43" name="Changes" comment="1">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Programming/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Programming/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Model/AppColors.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/AppColors.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Model/Geometry/CollisionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Geometry/CollisionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Model/Geometry/Point2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Geometry/Point2D.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Model/Geometry/Rectangle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Geometry/Rectangle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Model/Geometry/RectangleFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Geometry/RectangleFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Model/Validator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Validator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/View/Controls/RectanglesCollisionControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/View/Controls/RectanglesCollisionControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/View/MainForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/View/MainForm.Designer.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,9 +36,13 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/cvit-/Desktop/Papka/jopa3/Programming/Programming/View/Controls/RectanglesCollisionControl.Designer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/cvit-/Desktop/Papka/jopa3/Programming/Programming/Model/Song.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d672ef0d95b2449089b8789a939dfad252e5a0/34/02daae81/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a92ad44406b431896773a464e9ec96e52e5b0/2e/d988e9f0/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Programming/View/MainForm.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="25wyU4ZEdHi4UbpwHsoQHY5w62y" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -39,7 +53,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.1702564" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -122,14 +136,7 @@
       <workItem from="1653539165325" duration="2878000" />
       <workItem from="1653547370647" duration="2395000" />
       <workItem from="1653572960903" duration="4505000" />
-      <workItem from="1653702795045" duration="298000" />
-    </task>
-    <task id="LOCAL-00016" summary="1">
-      <created>1646973437339</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1646973437339</updated>
+      <workItem from="1653702795045" duration="9493000" />
     </task>
     <task id="LOCAL-00017" summary="1">
       <created>1648096601377</created>
@@ -467,7 +474,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653703065066</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="1">
+      <created>1653703250678</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1653703250678</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -494,5 +508,24 @@
     <MESSAGE value="1321" />
     <MESSAGE value="1" />
     <option name="LAST_COMMIT_MESSAGE" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Programming/View/Controls/RectanglesCollisionControl.cs</url>
+          <line>208</line>
+          <properties documentPath="C:\Users\cvit-\Desktop\Papka\jopa3\Programming\Programming\View\Controls\RectanglesCollisionControl.cs" initialLine="193" containingFunctionPresentation="method 'XSelectedTextBox_TextChanged'">
+            <startOffsets>
+              <option value="7804" />
+            </startOffsets>
+            <endOffsets>
+              <option value="7857" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

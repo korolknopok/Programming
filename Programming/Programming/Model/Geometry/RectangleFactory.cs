@@ -11,19 +11,12 @@ namespace Programming.Model
         /// Отступ внутри элемента размещения прямоугольников.
         /// </summary>
         private const int Margin = 15;
-        
-        /// <summary>
-        /// Случайные значения.
-        /// </summary>
-        private static Random _random;
 
         /// <summary>
-        /// Создаёт экземпляр класса <see cref="RectangleFactory"/>.
+        /// Генератор cлучайные значения.
         /// </summary>
-        static RectangleFactory()
-        {
-            _random = new Random();
-        }
+        private static Random _random = new Random();
+        
 
         /// <summary>
         /// Создаёт прямоугольник со случайными значениями высоты, ширины и координат.

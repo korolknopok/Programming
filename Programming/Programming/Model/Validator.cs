@@ -1,6 +1,6 @@
 ﻿namespace Programming.Model
 {
-    using System;
+     using System;
 
     /// <summary>
     /// Предоставляет методы для проверки входных данных.
@@ -100,7 +100,7 @@
         {
             if (!long.TryParse(value, out long number))
             {
-                throw new ArgumentException(
+                throw new System.ArgumentException(
                     $"the value of the {nameProperty} field must consist of digits only");
             }
         }
@@ -115,7 +115,7 @@
         {
             if (value.Length != 11)
             {
-                throw new ArgumentException(
+                throw new System.ArgumentException(
                     $"the value of the {nameProperty} field must consist of 11 digits");
             }
         }

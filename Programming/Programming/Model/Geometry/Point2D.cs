@@ -3,14 +3,15 @@
 namespace Programming.Model
 {
     /// <summary>
-    /// Хранит данные о координатах центра фигуры.
+    /// Хранит данные о координатах центра.
     /// </summary>
     public class Point2D
     {
         /// <summary>
-        /// Координата Х.
+        /// Координата X.
         /// </summary>
         private int _x;
+
         /// <summary>
         /// Координата Y.
         /// </summary>
@@ -28,7 +29,7 @@ namespace Programming.Model
         }
 
         /// <summary>
-        /// Возвращает и задаёт координату X. Должна быть положительным числом.
+        /// Возвращает и задаёт координату Х. Должна быть положительным числом.
         /// </summary>
         public int X
         {
@@ -39,10 +40,10 @@ namespace Programming.Model
 
             set
             {
-                Validator.AssertOnPositiveValue(nameof(X), value);
                 _x = value;
             }
         }
+
         /// <summary>
         /// Возвращает и задаёт координату Y. Должна быть положительным числом.
         /// </summary>
@@ -55,7 +56,6 @@ namespace Programming.Model
 
             set
             {
-                Validator.AssertOnPositiveValue(nameof(Y), value);
                 _y = value;
             }
         }

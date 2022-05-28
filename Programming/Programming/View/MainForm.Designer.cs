@@ -98,9 +98,10 @@ namespace Programming.View
             // 
             // seasonHandleControl1
             // 
-            this.seasonHandleControl1.Location = new System.Drawing.Point(5, 18);
+            this.seasonHandleControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.seasonHandleControl1.Location = new System.Drawing.Point(2, 15);
             this.seasonHandleControl1.Name = "seasonHandleControl1";
-            this.seasonHandleControl1.Size = new System.Drawing.Size(218, 114);
+            this.seasonHandleControl1.Size = new System.Drawing.Size(284, 144);
             this.seasonHandleControl1.TabIndex = 0;
             // 
             // WeekdayGroupBox
@@ -218,6 +219,7 @@ namespace Programming.View
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.ShowIcon = false;
+            this.Text = "Programming Demo";
             this.MainTabControl.ResumeLayout(false);
             this.EnumTabPage.ResumeLayout(false);
             this.SeasonHandleGroupBox.ResumeLayout(false);

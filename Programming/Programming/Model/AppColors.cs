@@ -10,12 +10,12 @@ namespace Programming.Model
         /// <summary>
         /// Цвет некорректного значения.
         /// </summary>
-        public static readonly Color _errorColor = Color.LightPink;
+        public static readonly Color _errorColor = Color.FromArgb(255, 182, 193);
         
         /// <summary>
         /// Цвет корректного значения.
         /// </summary>
-        public static readonly Color _correctColor = Color.White;
+        public static readonly Color _correctColor = Color.FromArgb(255, 255, 255);
         
         /// <summary>
         /// Цвет непересекающихся прямоугольников.

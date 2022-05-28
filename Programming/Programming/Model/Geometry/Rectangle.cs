@@ -13,12 +13,12 @@ namespace Programming.Model
         /// Количество прямоугольников.
         /// </summary>
         private static int _allRectanglesCount;
-        
+
         /// <summary>
         /// Высота прямоугольника.
         /// </summary>
         private int _height;
-        
+
         /// <summary>
         /// Ширина прямоугольника.
         /// </summary>
@@ -26,13 +26,12 @@ namespace Programming.Model
 
         /// <summary>
         /// Создаёт экземпляр класса <see cref="Rectangle"/>.
-        /// </summary>
+        /// </summar
         public Rectangle()
         {
             _allRectanglesCount++;
             Id = _allRectanglesCount;
         }
-
         /// <summary>
         /// Создаёт экземпляр класса <see cref="Rectangle"/>.
         /// </summary>
@@ -55,13 +54,9 @@ namespace Programming.Model
         }
 
         /// <summary>
-        /// Создаёт экземпляр класса <see cref="Rectangle"/>.
+        /// Создает копию экземплера класса <see cref="Rectangle"/>.
         /// </summary>
-        /// <param name="Id"> Айди.</param>
-        /// <param name="height">Высота. Должна быть положительным числом.</param>
-        /// <param name="width">Ширина. Должна быть положительным числом.</param>
-        /// <param name="color">Цвет.</param>
-        /// <param name="center">Координаты центра.</param>
+        /// <param name="rectangle"> Исходный <see cref="Rectangle"/>.</param>
         public Rectangle(Rectangle rectangle)
         {
             Id = rectangle.Id;
@@ -70,7 +65,7 @@ namespace Programming.Model
             Color = rectangle.Color;
             Center = new Point2D(rectangle.Center.X, rectangle.Center.Y);
         }
-        
+
         /// <summary>
         /// Возвращает и задаёт координаты центра прямоугольника.
         /// </summary>
@@ -85,7 +80,7 @@ namespace Programming.Model
         /// Возвращает уникальный идентификатор прямоугольника.
         /// </summary>
         public int Id { get; set; }
-        
+
         /// <summary>
         /// Возвращает и задаёт высоту прямоугольника. Должна быть положительным числом.
         /// </summary>
@@ -116,6 +111,24 @@ namespace Programming.Model
                 Validator.AssertOnPositiveValue(nameof(Width), value);
                 _width = value;
             }
+        }
+
+        protected bool Equals(Rectangle other)
+        {
+            return Id == other.Id;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj.GetType() != this.GetType()) return false;
+            return Equals((Rectangle) obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return Id;
         }
     }
 }
