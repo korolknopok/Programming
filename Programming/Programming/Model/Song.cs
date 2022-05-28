@@ -13,7 +13,7 @@
         private int _durationSeconds;
 
         /// <summary>
-        /// Создаёт экземпляр класса <see cref="Song"/>.
+        /// Создаёт экземпляр класса. <see cref="Song"/>.
         /// </summary>
         public Song()
         {

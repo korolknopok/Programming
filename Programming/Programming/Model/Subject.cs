@@ -18,14 +18,14 @@
         private int _hoursCount;
 
         /// <summary>
-        /// Создаёт экземпляр класса <see cref="Subject"/>.
+        /// Создаёт экземпляр класса. <see cref="Subject"/>.
         /// </summary>
         public Subject()
         {
         }
 
         /// <summary>
-        /// Создаёт экземпляр класса <see cref="Subject"/>.
+        /// Создаёт экземпляр класса. <see cref="Subject"/>.
         /// </summary>
         /// <param name="name">Название дисциплины.</param>
         /// <param name="hoursCount">Количество академических часов дисциплины. Должно быть положительным числом.</param>

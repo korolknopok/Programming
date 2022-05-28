@@ -7,23 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="340bc002-5277-468b-904c-a56cf1522e43" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Programming/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Programming/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/Model/AppColors.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/AppColors.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/Model/Contact.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Contact.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/Model/Movie.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Movie.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/Model/Route.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Route.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/Model/Song.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Song.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/Model/Subject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Subject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/Model/Time.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Time.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/Model/Validator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Model/Validator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/View/Controls/EnumerationControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/View/Controls/EnumerationControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/View/Controls/MovieControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/View/Controls/MovieControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/View/Controls/RectangleControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/View/Controls/RectangleControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/View/Controls/RectanglesCollisionControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/View/Controls/RectanglesCollisionControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/View/Controls/SeasonHandleControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/View/Controls/SeasonHandleControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/View/MainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/View/MainForm.cs" afterDir="false" />
-    </list>
+    <list default="true" id="340bc002-5277-468b-904c-a56cf1522e43" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,6 +26,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/cvit-/Desktop/Papka/jopa3/Programming/Programming/Model/AppColors.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a92ad44406b431896773a464e9ec96e52e5b0/2e/d988e9f0/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Programming/View/MainForm.Designer.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -136,14 +121,7 @@
       <workItem from="1653539019292" duration="118000" />
       <workItem from="1653539165325" duration="2878000" />
       <workItem from="1653547370647" duration="2395000" />
-      <workItem from="1653572960903" duration="3785000" />
-    </task>
-    <task id="LOCAL-00013" summary="1">
-      <created>1646972454671</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1646972454671</updated>
+      <workItem from="1653572960903" duration="4505000" />
     </task>
     <task id="LOCAL-00014" summary="1">
       <created>1646972673742</created>
@@ -481,7 +459,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653549774140</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="1">
+      <created>1653662201308</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1653662201309</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

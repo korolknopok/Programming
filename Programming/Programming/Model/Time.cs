@@ -23,7 +23,7 @@
         private int _seconds;
         
         /// <summary>
-        /// Создаёт экземпляр класса <see cref="Time"/>.
+        /// Создаёт экземпляр класса. <see cref="Time"/>.
         /// </summary>
         public Time()
         {
