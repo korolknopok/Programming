@@ -7,39 +7,45 @@ namespace BookList.Model
     {
         private string _fullName;
 
-        private DateTime _releaseDate;
+        private int _releaseDate;
 
         public string _author;
 
-        public static int _allNumberOfPages;
+        public  int _countOfPages;
+
+        public static int _allBooks;
         
         private readonly int _id;
 
+        private Genre _genre;
+
         public Book()
         {
-            _allNumberOfPages++;
-            _id = _allNumberOfPages;
+            _allBooks++;
+            _id = _allBooks;
         }
 
         public Book(string fullName,
-                    DateTime releaseDate,
-                    string number,
+                    int releaseDate,
+                    int countOfPages,
                     string author)
         {
             FullName = fullName;
             ReleaseDate = releaseDate;
             Author = author;
-            Number = number;
-            _allNumberOfPages++;
-            _id = _allNumberOfPages;
+            CountOfPages = countOfPages;
+            _allBooks++;
+            _id = _allBooks;
         }
 
         public Book(Book other)
         {
+            Genre = other.Genre;
             _id = other._id;
             FullName = other._fullName;
             ReleaseDate = other._releaseDate;
             Author = other._author;
+            CountOfPages = other._countOfPages;
         }
 
         public int Id
@@ -50,11 +56,17 @@ namespace BookList.Model
             }
         }
 
-        public static int AllNumberOfPages
+        public int CountOfPages
         {
             get
             {
-                return _allNumberOfPages;
+                return _countOfPages;
+            }
+
+            set
+            {
+                Validator.AssertOnPositiveValue(value, nameof(CountOfPages));
+                _countOfPages = value;
             }
         }
 
@@ -85,7 +97,7 @@ namespace BookList.Model
             }
         }
 
-        public DateTime ReleaseDate
+        public int ReleaseDate
         {
             get
             {
@@ -94,10 +106,11 @@ namespace BookList.Model
 
             set
             {
+                Validator.AssertReleaseYear(value, 1700, DateTime.Today.Year, nameof(ReleaseDate));
                 _releaseDate = value;
             }
         }
         
-        public string Number { get; set; }
+        public Genre Genre { get; set; }
     }
 }
