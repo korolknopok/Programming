@@ -14,12 +14,17 @@ namespace BookList.View
     public partial class MainForm : Form
     {
 
+        private string AppdataPath = Application.UserAppDataPath;
+        
         private Book _currentBook;
+        
 
         private List<Book> _books = new List<Book>();
         public MainForm()
         {
             InitializeComponent();
+            
+            
 
             var genre = Enum.GetValues(typeof(Genre));
 
@@ -28,25 +33,6 @@ namespace BookList.View
                 GenreComboBox.Items.Add(value);
             }
 
-        }
-
-        private void NameTextBox_TextChanged(object sender, EventArgs e)
-        {
-            if (ListBoxBook.SelectedIndex != -1)
-            {
-                try
-                {
-                    NameTextBox.BackColor = AppColors._correctColor;
-                    _currentBook.FullName = NameTextBox.Text;
-
-                    if (NameTextBox.Focused) UpdateBookInfo();
-                }
-
-                catch
-                {
-                    NameTextBox.BackColor = AppColors._errorColor;
-                }
-            }
         }
 
         private void UpdateBookList(List<Book> books)
@@ -74,7 +60,59 @@ namespace BookList.View
             ListBoxBook.SelectedIndex = indexOf;
         }
 
-        private void ButtonAdd_Click(object sender, EventArgs e)
+        private void ListBoxBook_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ListBoxBook.SelectedIndex == -1) return;
+            _currentBook = _books[ListBoxBook.SelectedIndex];
+            FullNameTextBox.Text = _currentBook.FullName;
+            AuthorTextBox.Text = _currentBook.Author;
+            ReleaseDateTextBox.Text = _currentBook.ReleaseDate.ToString();
+            CountOfPagesTextBox.Text = _currentBook.CountOfPages.ToString();
+            GenreComboBox.Text = _currentBook.Genre.ToString();
+        }
+
+        private void AuthorTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (ListBoxBook.SelectedIndex != -1) return;
+            try
+            {
+                AuthorTextBox.BackColor = AppColors._correctColor;
+                _currentBook.Author = AuthorTextBox.Text;
+
+                if (AuthorTextBox.Focused) UpdateBookInfo();
+                Serializer.Serialize(AppdataPath,_books);
+            }
+
+            catch
+            {
+                AuthorTextBox.BackColor = AppColors._errorColor;
+            }
+        }
+
+        private void GenreComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ListBoxBook.SelectedIndex == -1) return;
+            var genre = Enum.GetValues(typeof(Genre));
+            _currentBook.Genre = (Genre)GenreComboBox.SelectedItem;
+                
+
+            UpdateBookInfo();
+            Serializer.Serialize(AppdataPath,_books);
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            int index = ListBoxBook.SelectedIndex;
+            
+            if(index == -1) return;
+            
+            _books.RemoveAt(index);
+
+            UpdateBookList(_books);
+            Serializer.Serialize(AppdataPath, _books);
+        }
+
+        private void AddButton_Click(object sender, EventArgs e)
         {
             var book = new Book();
             book.FullName = $"New book {book.Id}";
@@ -83,50 +121,61 @@ namespace BookList.View
             book.Genre = Genre.Fantasy;
             book.ReleaseDate = DateTime.Today.Year;
             _books.Add(book);
+            Serializer.Serialize(AppdataPath, _books);
             UpdateBookList(_books);
-            
         }
 
-        private void ListBoxBook_SelectedIndexChanged(object sender, EventArgs e)
+        private void ReleaseDateTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (ListBoxBook.SelectedIndex != -1)
+            if (ListBoxBook.SelectedIndex == -1) return;
+            try
             {
-                _currentBook = _books[ListBoxBook.SelectedIndex];
-                NameTextBox.Text = _currentBook.FullName;
-                AuthorTextBox.Text = _currentBook.Author;
-                ReleaseDateTextBox.Text = _currentBook.ReleaseDate.ToString();
-                NumberOfPagesTextBox.Text = _currentBook.CountOfPages.ToString();
-                GenreComboBox.Text = _currentBook.Genre.ToString();
+                ReleaseDateTextBox.BackColor = AppColors._correctColor;
+                int releaseDateValue = int.Parse(ReleaseDateTextBox.Text);
+                _currentBook.ReleaseDate = releaseDateValue;
+                    
+                Serializer.Serialize(AppdataPath,_books);
+            }
+
+            catch
+            {
+                ReleaseDateTextBox.BackColor = AppColors._errorColor;
             }
         }
 
-        private void AuthorTextBox_TextChanged(object sender, EventArgs e)
+        private void NumberOfPagesTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (ListBoxBook.SelectedIndex != -1)
+            if (ListBoxBook.SelectedIndex == -1) return;
+            try
             {
-                try
-                {
-                    AuthorTextBox.BackColor = AppColors._correctColor;
-                    _currentBook.Author = AuthorTextBox.Text;
+                CountOfPagesTextBox.BackColor = AppColors._correctColor;
+                int countOfPagesValue = int.Parse(CountOfPagesTextBox.Text);
+                _currentBook.CountOfPages = countOfPagesValue;
+                    
+                Serializer.Serialize(AppdataPath,_books);
+            }
 
-                    if (AuthorTextBox.Focused) UpdateBookInfo();
-                }
-
-                catch
-                {
-                    AuthorTextBox.BackColor = AppColors._errorColor;
-                }
+            catch
+            {
+                CountOfPagesTextBox.BackColor = AppColors._errorColor;
             }
         }
 
-        private void GenreComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void FullNameTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (ListBoxBook.SelectedIndex != -1)
+            if (ListBoxBook.SelectedIndex == -1) return;
+            try
             {
-                var genre = Enum.GetValues(typeof(Genre));
-                _currentBook.Genre = (Genre)GenreComboBox.SelectedItem;
+                FullNameTextBox.BackColor = AppColors._correctColor;
+                _currentBook.FullName = FullNameTextBox.Text;
 
                 UpdateBookInfo();
+                Serializer.Serialize(AppdataPath,_books);
+            }
+
+            catch
+            {
+                FullNameTextBox.BackColor = AppColors._errorColor;
             }
         }
     }

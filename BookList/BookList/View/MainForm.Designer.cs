@@ -31,7 +31,8 @@
         {
             this.ListBoxBook = new System.Windows.Forms.ListBox();
             this.SelectedBookGroupBox = new System.Windows.Forms.GroupBox();
-            this.NumberOfPagesTextBox = new System.Windows.Forms.TextBox();
+            this.FullNameTextBox = new System.Windows.Forms.TextBox();
+            this.CountOfPagesTextBox = new System.Windows.Forms.TextBox();
             this.AuthorTextBox = new System.Windows.Forms.TextBox();
             this.ReleaseDateTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,9 +41,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.NameTextBox = new System.Windows.Forms.TextBox();
-            this.ButtonAdd = new System.Windows.Forms.Button();
-            this.ButtonDelet = new System.Windows.Forms.Button();
+            this.DeleteButton = new System.Windows.Forms.Button();
+            this.AddButton = new System.Windows.Forms.Button();
             this.SelectedBookGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +57,8 @@
             // 
             // SelectedBookGroupBox
             // 
-            this.SelectedBookGroupBox.Controls.Add(this.NumberOfPagesTextBox);
+            this.SelectedBookGroupBox.Controls.Add(this.FullNameTextBox);
+            this.SelectedBookGroupBox.Controls.Add(this.CountOfPagesTextBox);
             this.SelectedBookGroupBox.Controls.Add(this.AuthorTextBox);
             this.SelectedBookGroupBox.Controls.Add(this.ReleaseDateTextBox);
             this.SelectedBookGroupBox.Controls.Add(this.label4);
@@ -66,7 +67,6 @@
             this.SelectedBookGroupBox.Controls.Add(this.label3);
             this.SelectedBookGroupBox.Controls.Add(this.label2);
             this.SelectedBookGroupBox.Controls.Add(this.label1);
-            this.SelectedBookGroupBox.Controls.Add(this.NameTextBox);
             this.SelectedBookGroupBox.Location = new System.Drawing.Point(193, 17);
             this.SelectedBookGroupBox.Name = "SelectedBookGroupBox";
             this.SelectedBookGroupBox.Size = new System.Drawing.Size(358, 166);
@@ -74,12 +74,21 @@
             this.SelectedBookGroupBox.TabStop = false;
             this.SelectedBookGroupBox.Text = "SelectedBook";
             // 
-            // NumberOfPagesTextBox
+            // FullNameTextBox
             // 
-            this.NumberOfPagesTextBox.Location = new System.Drawing.Point(105, 97);
-            this.NumberOfPagesTextBox.Name = "NumberOfPagesTextBox";
-            this.NumberOfPagesTextBox.Size = new System.Drawing.Size(202, 20);
-            this.NumberOfPagesTextBox.TabIndex = 13;
+            this.FullNameTextBox.Location = new System.Drawing.Point(105, 19);
+            this.FullNameTextBox.Name = "FullNameTextBox";
+            this.FullNameTextBox.Size = new System.Drawing.Size(202, 20);
+            this.FullNameTextBox.TabIndex = 14;
+            this.FullNameTextBox.TextChanged += new System.EventHandler(this.FullNameTextBox_TextChanged);
+            // 
+            // CountOfPagesTextBox
+            // 
+            this.CountOfPagesTextBox.Location = new System.Drawing.Point(105, 97);
+            this.CountOfPagesTextBox.Name = "CountOfPagesTextBox";
+            this.CountOfPagesTextBox.Size = new System.Drawing.Size(202, 20);
+            this.CountOfPagesTextBox.TabIndex = 13;
+            this.CountOfPagesTextBox.TextChanged += new System.EventHandler(this.NumberOfPagesTextBox_TextChanged);
             // 
             // AuthorTextBox
             // 
@@ -95,6 +104,7 @@
             this.ReleaseDateTextBox.Name = "ReleaseDateTextBox";
             this.ReleaseDateTextBox.Size = new System.Drawing.Size(202, 20);
             this.ReleaseDateTextBox.TabIndex = 11;
+            this.ReleaseDateTextBox.TextChanged += new System.EventHandler(this.ReleaseDateTextBox_TextChanged);
             // 
             // label4
             // 
@@ -145,40 +155,33 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Full Name:";
             // 
-            // NameTextBox
+            // DeleteButton
             // 
-            this.NameTextBox.Location = new System.Drawing.Point(105, 19);
-            this.NameTextBox.Name = "NameTextBox";
-            this.NameTextBox.Size = new System.Drawing.Size(202, 20);
-            this.NameTextBox.TabIndex = 0;
-            this.NameTextBox.TextChanged += new System.EventHandler(this.NameTextBox_TextChanged);
+            this.DeleteButton.Location = new System.Drawing.Point(112, 415);
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(84, 23);
+            this.DeleteButton.TabIndex = 3;
+            this.DeleteButton.Text = "DeleteButton";
+            this.DeleteButton.UseVisualStyleBackColor = true;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
-            // ButtonAdd
+            // AddButton
             // 
-            this.ButtonAdd.Location = new System.Drawing.Point(13, 415);
-            this.ButtonAdd.Name = "ButtonAdd";
-            this.ButtonAdd.Size = new System.Drawing.Size(75, 23);
-            this.ButtonAdd.TabIndex = 2;
-            this.ButtonAdd.Text = "ButtonAdd";
-            this.ButtonAdd.UseVisualStyleBackColor = true;
-            this.ButtonAdd.Click += new System.EventHandler(this.ButtonAdd_Click);
-            // 
-            // ButtonDelet
-            // 
-            this.ButtonDelet.Location = new System.Drawing.Point(112, 415);
-            this.ButtonDelet.Name = "ButtonDelet";
-            this.ButtonDelet.Size = new System.Drawing.Size(75, 23);
-            this.ButtonDelet.TabIndex = 3;
-            this.ButtonDelet.Text = "ButtonDelet";
-            this.ButtonDelet.UseVisualStyleBackColor = true;
+            this.AddButton.Location = new System.Drawing.Point(13, 415);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(84, 23);
+            this.AddButton.TabIndex = 4;
+            this.AddButton.Text = "AddButton";
+            this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(578, 450);
-            this.Controls.Add(this.ButtonDelet);
-            this.Controls.Add(this.ButtonAdd);
+            this.Controls.Add(this.AddButton);
+            this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.SelectedBookGroupBox);
             this.Controls.Add(this.ListBoxBook);
             this.Name = "MainForm";
@@ -187,6 +190,14 @@
             this.SelectedBookGroupBox.PerformLayout();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.TextBox FullNameTextBox;
+
+        private System.Windows.Forms.TextBox CountOfPagesTextBox;
+
+        private System.Windows.Forms.Button AddButton;
+
+        private System.Windows.Forms.Button DeleteButton;
 
         private System.Windows.Forms.TextBox ReleaseDateTextBox;
         private System.Windows.Forms.Label label4;

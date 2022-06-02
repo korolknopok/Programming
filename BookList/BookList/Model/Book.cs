@@ -9,13 +9,13 @@ namespace BookList.Model
 
         private int _releaseDate;
 
-        public string _author;
+        private string _author;
 
-        public  int _countOfPages;
+        private  int _countOfPages;
 
-        public static int _allBooks;
+        private static int _allBooks;
         
-        private readonly int _id;
+        private int _id;
 
         private Genre _genre;
 
@@ -41,7 +41,7 @@ namespace BookList.Model
         public Book(Book other)
         {
             Genre = other.Genre;
-            _id = other._id;
+            Id = other._id;
             FullName = other._fullName;
             ReleaseDate = other._releaseDate;
             Author = other._author;
@@ -53,6 +53,11 @@ namespace BookList.Model
             get
             {
                 return _id;
+            }
+
+            private set
+            {
+                _id = value;
             }
         }
 
