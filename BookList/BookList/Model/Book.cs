@@ -84,7 +84,7 @@ namespace BookList.Model
 
             set
             {
-                Validator.AssertCountSymbolsInRange(value, 1, 100, nameof(FullName));
+                Validator.AssertCountSymbolsInRange(value, 1, 100, nameof(FullName))
                 _fullName = value;
             }
         }
