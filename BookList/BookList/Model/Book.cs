@@ -1,28 +1,60 @@
 ﻿using System;
-using System.Xml.Serialization.Configuration;
+
 
 namespace BookList.Model
 {
+    
+    /// <summary>
+    /// Хранятся данные о книге.
+    /// </summary>
     public class Book
     {
+        /// <summary>
+        /// Название книги.
+        /// </summary>
         private string _fullName;
 
+        /// <summary>
+        /// Дата выпуска.
+        /// </summary>
         private int _releaseDate;
 
+        /// <summary>
+        /// Автор.
+        /// </summary>
         private string _author;
 
+        /// <summary>
+        /// Количество страниц.
+        /// </summary>
         private int _countOfPages;
 
+        /// <summary>
+        /// Количество книг.
+        /// </summary>
         private static int _allBooks;
         
+        /// <summary>
+        /// Уникальный идентификатор для всех объектов данного класса.
+        /// </summary>
         private readonly int _id;
 
+        /// <summary>
+        /// Создаёт экземпляр класса <see cref="Book"/>.
+        /// </summary>
         public Book()
         {
             _allBooks++;
             _id = _allBooks;
         }
 
+        /// <summary>
+        /// Создает экземпляр класса <see cref="Book"/>.
+        /// </summary>
+        /// <param name="fullName">Полное название. Должно состоять из не менее чем 100 символов.</param>
+        /// <param name="releaseDate">Дата выпуска. Не может быть раньше 1700.1.1 и не позже текущего дня.</param>
+        /// <param name="countOfPages">Количество страниц. Количество страниц должно быть положительным</param>
+        /// <param name="author">Автор.</param>
         public Book(string fullName,
                     int releaseDate,
                     int countOfPages,
@@ -36,6 +68,9 @@ namespace BookList.Model
             _id = _allBooks;
         }
 
+        /// <summary>
+        /// Создает копию экземпляра класса <see cref="Book"/>.
+        /// </summary>
         public Book(Book other)
         {
             Genre = other.Genre;
@@ -45,8 +80,14 @@ namespace BookList.Model
             CountOfPages = other.CountOfPages;
         }
 
+        /// <summary>
+        /// Возвращает идентификатор .
+        /// </summary>
         public int Id => _id;
 
+        /// <summary>
+        /// Возвращает количество страниц, количество строго положительное.
+        /// </summary>
         public int CountOfPages
         {
             get
@@ -60,7 +101,9 @@ namespace BookList.Model
                 _countOfPages = value;
             }
         }
-
+        /// <summary>
+        /// Возвращает имя автора.
+        /// </summary>
         public string Author
         {
             get
@@ -75,6 +118,9 @@ namespace BookList.Model
             }
         }
 
+        /// <summary>
+        /// Возвращает и задает название книги. Должно состоять из менее чем 100 символов.
+        /// </summary>
         public string FullName
         {
             get
@@ -89,6 +135,9 @@ namespace BookList.Model
             }
         }
 
+        /// <summary>
+        /// Возвращает дату выпуска.
+        /// </summary>
         public int ReleaseDate
         {
             get
@@ -103,6 +152,9 @@ namespace BookList.Model
             }
         }
         
+        /// <summary>
+        /// Возвращает жанры.
+        /// </summary>
         public Genre Genre { get; set; }
     }
 }

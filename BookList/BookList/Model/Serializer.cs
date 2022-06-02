@@ -6,6 +6,9 @@ namespace BookList.Model
 {
     public static class Serializer
     {
+        /// <summary>
+        /// Проводит сериализацию данных.
+        /// </summary>
         public static void Serialize(string path, List<Book> books)
         {
             using (StreamWriter writer = new StreamWriter(path + @"\Serialize.json"))
@@ -14,6 +17,10 @@ namespace BookList.Model
             }
         }
 
+        /// <summary>
+        /// Проводит десериализацию данных.
+        /// </summary>
+        /// <returns>Возвращает коллекцию песен.</returns>
         public static List<Book> Deserialize(string path)
         {
             var books = new List<Book>();

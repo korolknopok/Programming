@@ -7,15 +7,29 @@ using BookList.Properties;
 
 namespace BookList.View
 {
+    /// <summary>
+    /// Предоставляет реализацию по представлению главного окна.
+    /// </summary>
     public partial class MainForm : Form
     {
-
+        /// <summary>
+        /// Путь до AppData
+        /// </summary>
         private string AppdataPath = Application.UserAppDataPath;
         
+        /// <summary>
+        /// Выбранная книга.
+        /// </summary>
         private Book _currentBook;
 
+        /// <summary>
+        /// Коллекция книг.
+        /// </summary>
         private List<Book> _books;
 
+        /// <summary>
+        /// Создаёт экземпляр класса <see cref="MainForm"/>.
+        /// </summary>
         public MainForm()
         {
             InitializeComponent();
@@ -33,6 +47,9 @@ namespace BookList.View
 
         }
 
+        /// <summary>
+        /// Очищает поля для вывода информации.
+        /// </summary>
         private void ClearField()
         {
             FullNameTextBox.Clear();
@@ -42,6 +59,10 @@ namespace BookList.View
             GenreComboBox.SelectedIndex = -1;
         }
 
+        /// <summary>
+        /// Ищет индекс элемента по уникальному идентификатору.
+        /// </summary>
+        /// <returns>Возвращает индекс найденного элемента.</returns>
         private int FindIndex()
         {
             var orderedListBooks = from book in _books
@@ -62,6 +83,10 @@ namespace BookList.View
             return index;
         }
 
+        /// <summary>
+        /// Обновляет данные в списке ListBox.
+        /// </summary>
+        /// <param name="selectedIndex">Индекс выбранного элемента.</param>
         private void UpdateListBox(int selectedIndex)
         {
             ListBoxBook.Items.Clear();
