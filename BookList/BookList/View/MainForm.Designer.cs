@@ -33,7 +33,6 @@
             this.SelectedBookGroupBox = new System.Windows.Forms.GroupBox();
             this.FullNameTextBox = new System.Windows.Forms.TextBox();
             this.CountOfPagesTextBox = new System.Windows.Forms.TextBox();
-            this.AuthorTextBox = new System.Windows.Forms.TextBox();
             this.ReleaseDateTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.GenreComboBox = new System.Windows.Forms.ComboBox();
@@ -43,6 +42,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.DeleteButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
+            this.AuthorTextBox = new System.Windows.Forms.TextBox();
             this.SelectedBookGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,9 +57,9 @@
             // 
             // SelectedBookGroupBox
             // 
+            this.SelectedBookGroupBox.Controls.Add(this.AuthorTextBox);
             this.SelectedBookGroupBox.Controls.Add(this.FullNameTextBox);
             this.SelectedBookGroupBox.Controls.Add(this.CountOfPagesTextBox);
-            this.SelectedBookGroupBox.Controls.Add(this.AuthorTextBox);
             this.SelectedBookGroupBox.Controls.Add(this.ReleaseDateTextBox);
             this.SelectedBookGroupBox.Controls.Add(this.label4);
             this.SelectedBookGroupBox.Controls.Add(this.GenreComboBox);
@@ -89,14 +89,6 @@
             this.CountOfPagesTextBox.Size = new System.Drawing.Size(202, 20);
             this.CountOfPagesTextBox.TabIndex = 13;
             this.CountOfPagesTextBox.TextChanged += new System.EventHandler(this.NumberOfPagesTextBox_TextChanged);
-            // 
-            // AuthorTextBox
-            // 
-            this.AuthorTextBox.Location = new System.Drawing.Point(105, 71);
-            this.AuthorTextBox.Name = "AuthorTextBox";
-            this.AuthorTextBox.Size = new System.Drawing.Size(202, 20);
-            this.AuthorTextBox.TabIndex = 12;
-            this.AuthorTextBox.TextChanged += new System.EventHandler(this.AuthorTextBox_TextChanged);
             // 
             // ReleaseDateTextBox
             // 
@@ -175,6 +167,14 @@
             this.AddButton.UseVisualStyleBackColor = true;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
+            // AuthorTextBox
+            // 
+            this.AuthorTextBox.Location = new System.Drawing.Point(105, 72);
+            this.AuthorTextBox.Name = "AuthorTextBox";
+            this.AuthorTextBox.Size = new System.Drawing.Size(202, 20);
+            this.AuthorTextBox.TabIndex = 15;
+            this.AuthorTextBox.TextChanged += new System.EventHandler(this.AuthorTextBox_TextChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,6 +189,7 @@
             this.SelectedBookGroupBox.ResumeLayout(false);
             this.SelectedBookGroupBox.PerformLayout();
             this.ResumeLayout(false);
+
         }
 
         private System.Windows.Forms.TextBox FullNameTextBox;
@@ -201,7 +202,6 @@
 
         private System.Windows.Forms.TextBox ReleaseDateTextBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox AuthorTextBox;
         private System.Windows.Forms.TextBox NumberOfPagesTextBox;
         private System.Windows.Forms.ComboBox GenreComboBox;
 
@@ -227,5 +227,7 @@
         private System.Windows.Forms.ListBox ListBoxBook;
 
         #endregion
+
+        private System.Windows.Forms.TextBox AuthorTextBox;
     }
 }

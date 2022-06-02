@@ -11,13 +11,11 @@ namespace BookList.Model
 
         private string _author;
 
-        private  int _countOfPages;
+        private int _countOfPages;
 
         private static int _allBooks;
         
-        private int _id;
-
-        private Genre _genre;
+        private readonly int _id;
 
         public Book()
         {
@@ -41,25 +39,13 @@ namespace BookList.Model
         public Book(Book other)
         {
             Genre = other.Genre;
-            Id = other._id;
-            FullName = other._fullName;
-            ReleaseDate = other._releaseDate;
-            Author = other._author;
-            CountOfPages = other._countOfPages;
+            FullName = other.FullName;
+            ReleaseDate = other.ReleaseDate;
+            Author = other.Author;
+            CountOfPages = other.CountOfPages;
         }
 
-        public int Id
-        {
-            get
-            {
-                return _id;
-            }
-
-            private set
-            {
-                _id = value;
-            }
-        }
+        public int Id => _id;
 
         public int CountOfPages
         {
@@ -84,6 +70,7 @@ namespace BookList.Model
 
             set
             {
+                Validator.AssertOnPositiveValue(value.Length, nameof(Author));
                 _author = value;
             }
         }
@@ -97,7 +84,7 @@ namespace BookList.Model
 
             set
             {
-                Validator.AssertCountSymbolsInRange(value, 0, 100, nameof(FullName));
+                Validator.AssertCountSymbolsInRange(value, 1, 100, nameof(FullName));
                 _fullName = value;
             }
         }
