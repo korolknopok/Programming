@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using BookList.Model;
+using BookList.Properties;
 
 namespace BookList.View
 {
@@ -208,6 +209,26 @@ namespace BookList.View
             UpdateListBox(index);
 
             Serializer.Serialize(AppdataPath, _books);
+        }
+
+        private void AddButton_MouseEnter(object sender, EventArgs e)
+        {
+            AddButton.Image = Resources.add_24x24;
+        }
+
+        private void AddButton_MouseLeave(object sender, EventArgs e)
+        {
+            AddButton.Image = Resources.add_24x24_uncolor;
+        }
+
+        private void DeleteButton_MouseEnter(object sender, EventArgs e)
+        {
+            DeleteButton.Image = Resources.remove_24x24;
+        }
+
+        private void DeleteButton_MouseLeave(object sender, EventArgs e)
+        {
+            DeleteButton.Image = Resources.remove_24x24_uncolor;
         }
     }
 }
