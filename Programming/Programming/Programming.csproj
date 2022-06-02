@@ -33,6 +33,9 @@
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <ItemGroup>
+        <Reference Include="Programming, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>bin\Debug\Programming.exe</HintPath>
+        </Reference>
         <Reference Include="System" />
         <Reference Include="System.Core" />
         <Reference Include="System.Xml.Linq" />
@@ -46,21 +49,63 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="Model\Colors.cs" />
+        <Compile Include="Model\AppColors.cs" />
         <Compile Include="Model\Contact.cs" />
-        <Compile Include="Model\Discipline.cs" />
-        <Compile Include="Model\EducationForm.cs" />
-        <Compile Include="Model\Film.cs" />
-        <Compile Include="Model\Genre.cs" />
-        <Compile Include="Model\Manufactures.cs" />
-        <Compile Include="Model\Rectangle.cs" />
+        <Compile Include="Model\Enums\Colors.cs" />
+        <Compile Include="Model\Enums\EducationForm.cs" />
+        <Compile Include="Model\Enums\Genre.cs" />
+        <Compile Include="Model\Enums\Manufactures.cs" />
+        <Compile Include="Model\Enums\Season.cs" />
+        <Compile Include="Model\Enums\Weekday.cs" />
+        <Compile Include="Model\Geometry\CollisionManager.cs" />
+        <Compile Include="Model\Geometry\Point2D.cs" />
+        <Compile Include="Model\Geometry\Rectangle.cs" />
+        <Compile Include="Model\Geometry\RectangleFactory.cs" />
+        <Compile Include="Model\Geometry\Ring.cs" />
+        <Compile Include="Model\Subject.cs" />
+        <Compile Include="Model\Movie.cs" />
         <Compile Include="Model\Route.cs" />
-        <Compile Include="Model\Season.cs" />
         <Compile Include="Model\Song.cs" />
         <Compile Include="Model\Time.cs" />
-        <Compile Include="Model\Weekday.cs" />
+        <Compile Include="Model\Validator.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="View\Controls\EnumerationControl.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="View\Controls\EnumerationControl.Designer.cs">
+          <DependentUpon>EnumerationControl.cs</DependentUpon>
+        </Compile>
+        <Compile Include="View\Controls\MovieControl.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="View\Controls\MovieControl.Designer.cs">
+          <DependentUpon>MovieControl.cs</DependentUpon>
+        </Compile>
+        <Compile Include="View\Controls\RectangleControl.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="View\Controls\RectangleControl.Designer.cs">
+          <DependentUpon>RectangleControl.cs</DependentUpon>
+        </Compile>
+        <Compile Include="View\Controls\RectanglesCollisionControl.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="View\Controls\RectanglesCollisionControl.Designer.cs">
+          <DependentUpon>RectanglesCollisionControl.cs</DependentUpon>
+        </Compile>
+        <Compile Include="View\Controls\SeasonHandleControl.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="View\Controls\SeasonHandleControl.Designer.cs">
+          <DependentUpon>SeasonHandleControl.cs</DependentUpon>
+        </Compile>
+        <Compile Include="View\Controls\WeekdayParsingControl.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="View\Controls\WeekdayParsingControl.Designer.cs">
+          <DependentUpon>WeekdayParsingControl.cs</DependentUpon>
+        </Compile>
         <Compile Include="View\Enums.cs" />
         <Compile Include="View\MainForm.cs">
           <SubType>Form</SubType>
@@ -77,6 +122,24 @@
             <AutoGen>True</AutoGen>
             <DependentUpon>Resources.resx</DependentUpon>
         </Compile>
+        <EmbeddedResource Include="View\Controls\EnumerationControl.resx">
+          <DependentUpon>EnumerationControl.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="View\Controls\MovieControl.resx">
+          <DependentUpon>MovieControl.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="View\Controls\RectangleControl.resx">
+          <DependentUpon>RectangleControl.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="View\Controls\RectanglesCollisionControl.resx">
+          <DependentUpon>RectanglesCollisionControl.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="View\Controls\SeasonHandleControl.resx">
+          <DependentUpon>SeasonHandleControl.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="View\Controls\WeekdayParsingControl.resx">
+          <DependentUpon>WeekdayParsingControl.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="View\MainForm.resx">
           <DependentUpon>MainForm.cs</DependentUpon>
         </EmbeddedResource>
@@ -92,6 +155,14 @@
     </ItemGroup>
     <ItemGroup>
         <None Include="App.config" />
+    </ItemGroup>
+    <ItemGroup>
+      <Content Include="Resources\rectangle_add_24x24.png" />
+      <Content Include="Resources\rectangle_add_24x24_uncolor.png" />
+      <Content Include="Resources\rectangle_edit_24x24.png" />
+      <Content Include="Resources\rectangle_edit_24x24_uncolor.png" />
+      <Content Include="Resources\rectangle_remove_24x24.png" />
+      <Content Include="Resources\rectangle_remove_24x24_uncolor.png" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
