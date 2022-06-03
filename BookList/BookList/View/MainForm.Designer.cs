@@ -30,7 +30,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.ListBoxBook = new System.Windows.Forms.ListBox();
             this.SelectedBookGroupBox = new System.Windows.Forms.GroupBox();
             this.AuthorTextBox = new System.Windows.Forms.TextBox();
             this.FullNameTextBox = new System.Windows.Forms.TextBox();
@@ -44,17 +43,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.DeleteButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
+            this.BookListBox = new System.Windows.Forms.ListBox();
             this.SelectedBookGroupBox.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // ListBoxBook
-            // 
-            this.ListBoxBook.FormattingEnabled = true;
-            this.ListBoxBook.Location = new System.Drawing.Point(13, 17);
-            this.ListBoxBook.Name = "ListBoxBook";
-            this.ListBoxBook.Size = new System.Drawing.Size(174, 381);
-            this.ListBoxBook.TabIndex = 0;
-            this.ListBoxBook.SelectedIndexChanged += new System.EventHandler(this.ListBoxBook_SelectedIndexChanged);
             // 
             // SelectedBookGroupBox
             // 
@@ -159,8 +150,8 @@
             // DeleteButton
             // 
             this.DeleteButton.FlatAppearance.BorderSize = 0;
-            this.DeleteButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.DeleteButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.DeleteButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (235)))), ((int) (((byte) (235)))), ((int) (((byte) (235)))));
+            this.DeleteButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (240)))), ((int) (((byte) (240)))), ((int) (((byte) (240)))));
             this.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteButton.Image = global::BookList.Properties.Resources.remove_24x24_uncolor;
             this.DeleteButton.Location = new System.Drawing.Point(69, 404);
@@ -175,8 +166,8 @@
             // AddButton
             // 
             this.AddButton.FlatAppearance.BorderSize = 0;
-            this.AddButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.AddButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.AddButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (235)))), ((int) (((byte) (235)))), ((int) (((byte) (235)))));
+            this.AddButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (240)))), ((int) (((byte) (240)))), ((int) (((byte) (240)))));
             this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddButton.Image = global::BookList.Properties.Resources.add_24x24_uncolor;
             this.AddButton.Location = new System.Drawing.Point(13, 404);
@@ -188,23 +179,33 @@
             this.AddButton.MouseEnter += new System.EventHandler(this.AddButton_MouseEnter);
             this.AddButton.MouseLeave += new System.EventHandler(this.AddButton_MouseLeave);
             // 
+            // BookListBox
+            // 
+            this.BookListBox.FormattingEnabled = true;
+            this.BookListBox.Location = new System.Drawing.Point(13, 17);
+            this.BookListBox.Name = "BookListBox";
+            this.BookListBox.Size = new System.Drawing.Size(174, 381);
+            this.BookListBox.TabIndex = 5;
+            this.BookListBox.SelectedIndexChanged += new System.EventHandler(this.BookListBox_SelectedIndexChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(578, 450);
+            this.Controls.Add(this.BookListBox);
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.SelectedBookGroupBox);
-            this.Controls.Add(this.ListBoxBook);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.Text = "Book list";
             this.SelectedBookGroupBox.ResumeLayout(false);
             this.SelectedBookGroupBox.PerformLayout();
             this.ResumeLayout(false);
-
         }
+
+        private System.Windows.Forms.ListBox BookListBox;
 
         private System.Windows.Forms.TextBox FullNameTextBox;
 

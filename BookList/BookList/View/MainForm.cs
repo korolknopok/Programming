@@ -89,7 +89,7 @@ namespace BookList.View
         /// <param name="selectedIndex">Индекс выбранного элемента.</param>
         private void UpdateListBox(int selectedIndex)
         {
-            ListBoxBook.Items.Clear();
+            BookListBox.Items.Clear();
             var orderedListBooks = from book in _books
                 orderby book.FullName
                 select book;
@@ -97,29 +97,15 @@ namespace BookList.View
 
             foreach (Book book in _books)
             {
-                ListBoxBook.Items.Add($"{book.FullName}/{book.Author}/{book.Genre}");
+                BookListBox.Items.Add($"{book.FullName}/{book.Author}/{book.Genre}");
             }
 
-            ListBoxBook.SelectedIndex = selectedIndex;
-        }
-
-        private void ListBoxBook_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int index = ListBoxBook.SelectedIndex;
-
-            if (index == -1) return;
-
-            _currentBook = _books[index];
-            FullNameTextBox.Text = _currentBook.FullName;
-            AuthorTextBox.Text = _currentBook.Author;
-            ReleaseDateTextBox.Text = _currentBook.ReleaseDate.ToString();
-            CountOfPagesTextBox.Text = _currentBook.CountOfPages.ToString();
-            GenreComboBox.Text = _currentBook.Genre.ToString();
+            BookListBox.SelectedIndex = selectedIndex;
         }
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
-            int index = ListBoxBook.SelectedIndex;
+            int index = BookListBox.SelectedIndex;
             
             if(index == -1) return;
             
@@ -145,14 +131,14 @@ namespace BookList.View
 
         private void ReleaseDateTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (ListBoxBook.SelectedIndex == -1) return;
+            if (BookListBox.SelectedIndex == -1) return;
             try
             {
                 ReleaseDateTextBox.BackColor = AppColors._correctColor;
                 int releaseDateValue = int.Parse(ReleaseDateTextBox.Text);
                 _currentBook.ReleaseDate = releaseDateValue;
 
-                UpdateListBox(ListBoxBook.SelectedIndex);
+                UpdateListBox(BookListBox.SelectedIndex);
 
                 Serializer.Serialize(AppdataPath,_books);
             }
@@ -165,14 +151,14 @@ namespace BookList.View
 
         private void NumberOfPagesTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (ListBoxBook.SelectedIndex == -1) return;
+            if (BookListBox.SelectedIndex == -1) return;
             try
             {
                 CountOfPagesTextBox.BackColor = AppColors._correctColor;
                 int countOfPagesValue = int.Parse(CountOfPagesTextBox.Text);
                 _currentBook.CountOfPages = countOfPagesValue;
 
-                UpdateListBox(ListBoxBook.SelectedIndex);
+                UpdateListBox(BookListBox.SelectedIndex);
 
                 Serializer.Serialize(AppdataPath,_books);
             }
@@ -185,7 +171,7 @@ namespace BookList.View
 
         private void FullNameTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (ListBoxBook.SelectedIndex == -1) return;
+            if (BookListBox.SelectedIndex == -1) return;
 
             try
             {
@@ -206,14 +192,14 @@ namespace BookList.View
 
         private void AuthorTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (ListBoxBook.SelectedIndex == -1) return;
+            if (BookListBox.SelectedIndex == -1) return;
 
             try
             {
                 AuthorTextBox.BackColor = AppColors._correctColor;
                 _currentBook.Author = AuthorTextBox.Text;
 
-                UpdateListBox(ListBoxBook.SelectedIndex);
+                UpdateListBox(BookListBox.SelectedIndex);
 
                 Serializer.Serialize(AppdataPath, _books);
             }
@@ -225,7 +211,7 @@ namespace BookList.View
 
         private void GenreComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (ListBoxBook.SelectedIndex == -1) return;
+            if (BookListBox.SelectedIndex == -1) return;
 
             var genre = Enum.GetValues(typeof(Genre));
             _currentBook.Genre = (Genre)GenreComboBox.SelectedItem;
@@ -254,6 +240,20 @@ namespace BookList.View
         private void DeleteButton_MouseLeave(object sender, EventArgs e)
         {
             DeleteButton.Image = Resources.remove_24x24_uncolor;
+        }
+
+        private void BookListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = BookListBox.SelectedIndex;
+
+            if (index == -1) return;
+
+            _currentBook = _books[index];
+            FullNameTextBox.Text = _currentBook.FullName;
+            AuthorTextBox.Text = _currentBook.Author;
+            ReleaseDateTextBox.Text = _currentBook.ReleaseDate.ToString();
+            CountOfPagesTextBox.Text = _currentBook.CountOfPages.ToString();
+            GenreComboBox.Text = _currentBook.Genre.ToString();
         }
     }
 }

@@ -93,7 +93,7 @@
   <ItemGroup>
     <Content Include="Resources\add_24x24.png" />
     <Content Include="Resources\add_24x24_uncolor.png" />
-    <Content Include="Resources\book.ico" />
+    <Content Include="Resources\book_64x64.ico" />
     <Content Include="Resources\remove_24x24.png" />
     <Content Include="Resources\remove_24x24_uncolor.png" />
   </ItemGroup>
