@@ -49,6 +49,7 @@
             // 
             // SelectedBookGroupBox
             // 
+            this.SelectedBookGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.SelectedBookGroupBox.Controls.Add(this.AuthorTextBox);
             this.SelectedBookGroupBox.Controls.Add(this.FullNameTextBox);
             this.SelectedBookGroupBox.Controls.Add(this.CountOfPagesTextBox);
@@ -149,6 +150,7 @@
             // 
             // DeleteButton
             // 
+            this.DeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.DeleteButton.FlatAppearance.BorderSize = 0;
             this.DeleteButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (235)))), ((int) (((byte) (235)))), ((int) (((byte) (235)))));
             this.DeleteButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (240)))), ((int) (((byte) (240)))), ((int) (((byte) (240)))));
@@ -165,6 +167,7 @@
             // 
             // AddButton
             // 
+            this.AddButton.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.AddButton.FlatAppearance.BorderSize = 0;
             this.AddButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (235)))), ((int) (((byte) (235)))), ((int) (((byte) (235)))));
             this.AddButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (240)))), ((int) (((byte) (240)))), ((int) (((byte) (240)))));
@@ -181,6 +184,7 @@
             // 
             // BookListBox
             // 
+            this.BookListBox.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left)));
             this.BookListBox.FormattingEnabled = true;
             this.BookListBox.Location = new System.Drawing.Point(13, 17);
             this.BookListBox.Name = "BookListBox";
