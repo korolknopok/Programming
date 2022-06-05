@@ -130,7 +130,7 @@ namespace BookList.Model
 
             set
             {
-                Validator.AssertCountSymbolsInRange(value, 1, 100, nameof(FullName));
+                Validator.AssertCountSymbolsInRange(value, InitialConstants.MinLenghtFullName, InitialConstants.MaxLenghtFullName, nameof(FullName));
                 _fullName = value;
             }
         }
@@ -147,7 +147,7 @@ namespace BookList.Model
 
             set
             {
-                Validator.AssertReleaseYear(value, 1700, DateTime.Today.Year, nameof(ReleaseDate));
+                Validator.AssertReleaseYear(value, InitialConstants.MinReleaseDate, DateTime.Today.Year, nameof(ReleaseDate));
                 _releaseDate = value;
             }
         }

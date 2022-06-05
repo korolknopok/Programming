@@ -52,7 +52,9 @@
     <Compile Include="Model\AppColors.cs" />
     <Compile Include="Model\Book.cs" />
     <Compile Include="Model\Genre.cs" />
+    <Compile Include="Model\InitialConstants.cs" />
     <Compile Include="Model\Serializer.cs" />
+    <Compile Include="Model\Sorting.cs" />
     <Compile Include="Model\Validator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

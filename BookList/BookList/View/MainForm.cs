@@ -12,11 +12,7 @@ namespace BookList.View
     /// </summary>
     public partial class MainForm : Form
     {
-        /// <summary>
-        /// Путь до AppData
-        /// </summary>
-        private string AppdataPath = Application.UserAppDataPath;
-        
+
         /// <summary>
         /// Выбранная книга.
         /// </summary>
@@ -34,7 +30,7 @@ namespace BookList.View
         {
             InitializeComponent();
 
-            _books = Serializer.Deserialize(AppdataPath);
+            _books = Serializer.Deserialize();
 
             var genre = Enum.GetValues(typeof(Genre));
 
@@ -50,7 +46,7 @@ namespace BookList.View
         /// <summary>
         /// Очищает поля для вывода информации.
         /// </summary>
-        private void ClearField()
+        private void ClearBookInfo()
         {
             FullNameTextBox.Clear();
             ReleaseDateTextBox.Clear();
@@ -58,31 +54,6 @@ namespace BookList.View
             CountOfPagesTextBox.Clear();
             GenreComboBox.SelectedIndex = -1;
         }
-
-        /// <summary>
-        /// Ищет индекс элемента по уникальному идентификатору.
-        /// </summary>
-        /// <returns>Возвращает индекс найденного элемента.</returns>
-        private int FindIndex()
-        {
-            var orderedListBooks = from book in _books
-                orderby book.FullName
-                select book;
-            _books = orderedListBooks.ToList();
-            int currentBookId = _currentBook.Id;
-            int index = -1;
-
-            for (int i = 0; i < _books.Count; i++)
-            {
-                if (_books[i].Id != currentBookId) continue;
-
-                index = i;
-                break;
-            }
-
-            return index;
-        }
-
         /// <summary>
         /// Обновляет данные в списке ListBox.
         /// </summary>
@@ -90,14 +61,10 @@ namespace BookList.View
         private void UpdateListBox(int selectedIndex)
         {
             BookListBox.Items.Clear();
-            var orderedListBooks = from book in _books
-                orderby book.FullName
-                select book;
-            _books = orderedListBooks.ToList();
-
+            _books = Sorting.SortedBooks(_books);
             foreach (Book book in _books)
             {
-                BookListBox.Items.Add($"{book.FullName}/{book.Author}/{book.Genre}");
+                BookListBox.Items.Add($"{book.FullName} / {book.Author} / {book.Genre}");
             }
 
             BookListBox.SelectedIndex = selectedIndex;
@@ -112,8 +79,8 @@ namespace BookList.View
             _books.RemoveAt(index);
 
             UpdateListBox(-1);
-            ClearField();
-            Serializer.Serialize(AppdataPath, _books);
+            ClearBookInfo();
+            Serializer.Serialize(_books);
         }
 
         private void AddButton_Click(object sender, EventArgs e)
@@ -125,8 +92,9 @@ namespace BookList.View
             _currentBook.Genre = Genre.Fantasy;
             _currentBook.ReleaseDate = DateTime.Today.Year;
             _books.Add(_currentBook);
-            Serializer.Serialize(AppdataPath, _books);
-            UpdateListBox(0);
+            int index = _books.IndexOf(_currentBook);
+            Sorting.SortedBooks(_books);
+            UpdateListBox(index);
         }
 
         private void ReleaseDateTextBox_TextChanged(object sender, EventArgs e)
@@ -140,7 +108,7 @@ namespace BookList.View
 
                 UpdateListBox(BookListBox.SelectedIndex);
 
-                Serializer.Serialize(AppdataPath,_books);
+                Serializer.Serialize(_books);
             }
 
             catch
@@ -160,7 +128,7 @@ namespace BookList.View
 
                 UpdateListBox(BookListBox.SelectedIndex);
 
-                Serializer.Serialize(AppdataPath,_books);
+                Serializer.Serialize(_books);
             }
 
             catch
@@ -177,11 +145,10 @@ namespace BookList.View
             {
                 FullNameTextBox.BackColor = AppColors._correctColor;
                 _currentBook.FullName = FullNameTextBox.Text;
-
-                int index = FindIndex();
+                int index = _books.IndexOf(_currentBook);
                 UpdateListBox(index);
 
-                Serializer.Serialize(AppdataPath,_books);
+                Serializer.Serialize(_books);
             }
 
             catch
@@ -201,7 +168,7 @@ namespace BookList.View
 
                 UpdateListBox(BookListBox.SelectedIndex);
 
-                Serializer.Serialize(AppdataPath, _books);
+                Serializer.Serialize(_books);
             }
             catch
             {
@@ -215,11 +182,10 @@ namespace BookList.View
 
             var genre = Enum.GetValues(typeof(Genre));
             _currentBook.Genre = (Genre)GenreComboBox.SelectedItem;
-
-            int index = FindIndex();
+            int index = _books.IndexOf(_currentBook);
             UpdateListBox(index);
 
-            Serializer.Serialize(AppdataPath, _books);
+            Serializer.Serialize(_books);
         }
 
         private void AddButton_MouseEnter(object sender, EventArgs e)
