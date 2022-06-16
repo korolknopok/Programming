@@ -9,19 +9,13 @@ namespace BookList.Model
     /// </summary>
     public static class Serializer
     {
-        /// <summary>
-        /// Путь до AppData
-        /// </summary>
-        private static string AppdataPath = Application.UserAppDataPath;
-        
-        
-        
+
         /// <summary>
         /// Проводит сериализацию данных.
         /// </summary>
         public static void Serialize(List<Book> books)
         {
-            using (StreamWriter writer = new StreamWriter(AppdataPath + InitialConstants.SerializerResult))
+            using (StreamWriter writer = new StreamWriter(InitialConstants.FilePath))
             {
                 writer.Write(JsonConvert.SerializeObject(books));
             }
@@ -37,7 +31,7 @@ namespace BookList.Model
 
             try
             {
-                using (StreamReader reader = new StreamReader(AppdataPath + InitialConstants.SerializerResult))
+                using (StreamReader reader = new StreamReader(InitialConstants.FilePath))
                 {
                     books = JsonConvert.DeserializeObject<List<Book>>(reader.ReadToEnd());
                 }

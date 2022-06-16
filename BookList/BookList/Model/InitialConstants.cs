@@ -1,4 +1,7 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.IO;
+using Newtonsoft.Json;
+using System.Windows.Forms;
 
 namespace BookList.Model
 {
@@ -24,7 +27,15 @@ namespace BookList.Model
         /// Минимальное количество символов для <see cref="Book.ReleaseDate"/>
         /// </summary>
         public const int MinReleaseDate = 1700;
-        
 
+        /// <summary>
+        /// Путь до AppData
+        /// </summary>
+        public static readonly string AppdataPath = Application.UserAppDataPath;
+
+        /// <summary>
+        /// Хранит путь до папки хранения.
+        /// </summary>
+        public static readonly string FilePath = AppdataPath + InitialConstants.SerializerResult;
     }
 }
