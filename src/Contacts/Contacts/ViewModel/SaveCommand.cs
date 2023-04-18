@@ -7,6 +7,9 @@ using System.Windows.Input;
 
 namespace View.ViewModel
 {
+    /// <summary>
+    /// Реализует интерфес для реалицазии отгрузки данных
+    /// </summary>
     public class SaveCommand : ICommand
     {
         

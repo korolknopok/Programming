@@ -11,12 +11,20 @@ using View.Model.Services;
 
 namespace View.ViewModel
 {
+    /// <summary>
+    /// ViewModel для окна MainWindow.
+    /// </summary>
     public class MainVM : INotifyPropertyChanged
     {
-        
+        /// <summary>
+        /// Контакт.
+        /// </summary>
         public Contact Contact { get; set; } = new Contact();
 
-        public string Name
+        /// <summary>
+        /// Возвращает и задаёт имя контакта.
+        /// </summary>
+        public string Name  
         {
             get => Contact.Name;
             set
@@ -26,7 +34,10 @@ namespace View.ViewModel
             }
         }
 
-        public int PhoneNumber
+        /// <summary>
+        /// Возвращает и задаёт номер телефона контакта.
+        /// </summary>
+        public long PhoneNumber
         {
             get => Contact.PhoneNumber;
             set
@@ -36,6 +47,9 @@ namespace View.ViewModel
             }
         }
 
+        /// <summary>
+        /// Возвращает и задаёт электронную почту контакта.
+        /// </summary>
         public string Email
         {
             get => Contact.Email;
@@ -46,19 +60,32 @@ namespace View.ViewModel
             }
         }
 
+        /// <summary>
+        /// Событие изменения свойства.
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
+        /// <summary>
+        /// При вызове зажигает событие <see cref="PropertyChanged"/>.
+        /// </summary>
+        /// <param name="prop">Имя свойства, вызвавшего метод.</param>
         public void OnPropertyChanged([CallerMemberName] string prop = "")
         {
             if (PropertyChanged != null)
                 PropertyChanged(this, new PropertyChangedEventArgs(prop));
         }
 
+        /// <summary>
+        /// Сохраняет данные.
+        /// </summary>
         public void Save()
         {
             ContactSerializer.Serialize(Contact);
         }
 
+        /// <summary>
+        /// Загружает данные.
+        /// </summary>
         public void Load()
         {
             Contact contact = ContactSerializer.Deserialize();
@@ -67,6 +94,9 @@ namespace View.ViewModel
             Email = contact.Email;
         }
 
+        /// <summary>
+        /// Команда сериализации контакта.
+        /// </summary>
         public ICommand SaveCommand
         {
             get
@@ -75,6 +105,9 @@ namespace View.ViewModel
             }
         }
 
+        /// <summary>
+        /// Команда десериализации контакта.
+        /// </summary>
         public ICommand LoadCommand
         {
             get

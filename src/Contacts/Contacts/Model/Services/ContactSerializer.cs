@@ -8,12 +8,20 @@ using System.Threading.Tasks;
 
 namespace View.Model.Services
 {
+    /// <summary>
+    /// Представляет реализацию по сериализации данных.
+    /// </summary>
     public static class ContactSerializer
     {
         public static string MyDocumentsPath { get; set; } =
             Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
             + @"\Contacts\contacts.json";
 
+        /// <summary>
+        /// Проводит десериализацию данных.
+        /// </summary>
+        /// <param name="path">Путь десериализации.</param>
+        /// <returns>Возвращает экземпляр класса <see cref="Contact"/>.</returns>
         public static void Serialize(Contact contact)
         {
             if (!Directory.Exists(Path.GetDirectoryName(MyDocumentsPath)))

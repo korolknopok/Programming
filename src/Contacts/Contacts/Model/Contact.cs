@@ -9,14 +9,20 @@ using View;
 
 namespace View.Model
 {
+    /// <summary>
+    /// Хранит данные о контакте.
+    /// </summary>
     public class Contact
     {
         private string _name;
 
         private string _email;
 
-        private int _phoneNumberNumber;
+        private long _phoneNumberNumber;
 
+        /// <summary>
+        /// Возвращает и задаёт имя контакта.
+        /// </summary>
         public string Name
         {
             get => (_name == null) ? null : _name;
@@ -26,6 +32,9 @@ namespace View.Model
             }
         }
 
+        /// <summary>
+        /// Возвращает и задаёт электронную почту контакта.
+        /// </summary>
         public string Email
         {
             get => (_email == null) ? null : _email;
@@ -35,7 +44,10 @@ namespace View.Model
             }
         }
 
-        public int PhoneNumber
+        /// <summary>
+        /// Возвращает и задаёт номер телефона контакта.
+        /// </summary>
+        public long PhoneNumber
         {
             get => _phoneNumberNumber;
             set
@@ -44,11 +56,20 @@ namespace View.Model
             }
         }
 
+        /// <summary>
+        /// Создаёт экземпляр класса <see cref="Contact"/>.
+        /// </summary>
         public Contact()
         {
 
         }
 
+        /// <summary>
+        /// Создаёт экземпляр класса <see cref="Contact"/>.
+        /// </summary>
+        /// <param name="name">Имя.</param>
+        /// <param name="email">Электронная почта.</param>
+        /// <param name="phoneNumber">Номер телефона.</param>
         public Contact(string name, string email, int phoneNumber)
         {
             Name = name;

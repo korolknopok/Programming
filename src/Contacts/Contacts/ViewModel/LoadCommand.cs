@@ -7,6 +7,9 @@ using System.Windows.Input;
 
 namespace View.ViewModel
 {
+    /// <summary>
+    /// Реализует интерфес для реалицазии загрузки данных
+    /// </summary>
     public class LoadCommand : ICommand
     {
         
