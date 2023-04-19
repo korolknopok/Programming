@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:View.ViewModel"
         mc:Ignorable="d"
-        Title="Contacts" Height="450" Width="500" RenderTransformOrigin="0.5,1" MinHeight="450" 
-        MinWidth="500">
+        Title="Contacts" Height="462" Width="558" RenderTransformOrigin="0.5,1" MinHeight="450" 
+        MinWidth="500" Icon="/call.ico">
 
     <Grid x:Name="ContactcsGrid" Margin="15,15,15,15" >
         <Grid.RowDefinitions>
@@ -14,11 +14,12 @@
             <RowDefinition Height="31"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.5*"/>
-            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="206*"/>
+            <ColumnDefinition Width="29*"/>
+            <ColumnDefinition Width="235*"/>
         </Grid.ColumnDefinitions>
-        <GroupBox x:Name="EditGroupBox" Header="Edit Contact" Margin="3"  Grid.Column="0" 
-                  Grid.Row="0">
+        <GroupBox x:Name="EditGroupBox" Header="Edit Contact" Margin="3,3,3,3"  Grid.Column="0" 
+                  Grid.Row="0" Grid.ColumnSpan="2">
             <StackPanel x:Name="EditStackPanel">
                 <TextBlock Text="Name:" Margin="3"/>
                 <TextBox Margin="3" Text="{Binding Name, 
@@ -31,7 +32,7 @@
                     UpdateSourceTrigger=PropertyChanged}"/>
             </StackPanel>
         </GroupBox>
-        <GroupBox x:Name="ReadGroupBox" Header="Read Contact" Margin="3"  Grid.Column="1" 
+        <GroupBox x:Name="ReadGroupBox" Header="Read Contact" Margin="3,3,3,3"  Grid.Column="2" 
                   Grid.Row="0">
             <StackPanel x:Name="ReadStackPanel">
                 <TextBlock Text="Name:" Margin="3"/>
@@ -45,8 +46,7 @@
                     UpdateSourceTrigger=PropertyChanged}"/>
             </StackPanel>
         </GroupBox>
-        <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" 
-                    HorizontalAlignment="Right">
+        <StackPanel Grid.Column="2" Orientation="Horizontal" Grid.Row="1" FlowDirection="RightToLeft">
             <Button Margin="3" Height="25" Width="75" Content="Save" Command="{Binding SaveCommand}"/>
             <Button Margin="3" Height="25" Width="75" Content="Load" Command="{Binding LoadCommand}" />
         </StackPanel>
