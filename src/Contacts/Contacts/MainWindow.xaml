@@ -5,20 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:View.ViewModel"
         mc:Ignorable="d"
-        Title="Contacts" Height="462" Width="558" RenderTransformOrigin="0.5,1" MinHeight="450" 
+        Title="Contacts" Height="300" Width="500" RenderTransformOrigin="0.5,1" MinHeight="300" 
         MinWidth="500" Icon="/call.ico">
 
-    <Grid x:Name="ContactcsGrid" Margin="15,15,15,15" >
+    <Grid  Margin="15" >
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="31"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="206*"/>
             <ColumnDefinition Width="29*"/>
             <ColumnDefinition Width="235*"/>
         </Grid.ColumnDefinitions>
-        <GroupBox x:Name="EditGroupBox" Header="Edit Contact" Margin="3,3,3,3"  Grid.Column="0" 
+        <GroupBox  Header="Edit Contact" Margin="3"  Grid.Column="0" 
                   Grid.Row="0" Grid.ColumnSpan="2">
             <StackPanel x:Name="EditStackPanel">
                 <TextBlock Text="Name:" Margin="3"/>
@@ -32,7 +32,7 @@
                     UpdateSourceTrigger=PropertyChanged}"/>
             </StackPanel>
         </GroupBox>
-        <GroupBox x:Name="ReadGroupBox" Header="Read Contact" Margin="3,3,3,3"  Grid.Column="2" 
+        <GroupBox  Header="Read Contact" Margin="3"  Grid.Column="2" 
                   Grid.Row="0">
             <StackPanel x:Name="ReadStackPanel">
                 <TextBlock Text="Name:" Margin="3"/>
@@ -46,7 +46,7 @@
                     UpdateSourceTrigger=PropertyChanged}"/>
             </StackPanel>
         </GroupBox>
-        <StackPanel Grid.Column="2" Orientation="Horizontal" Grid.Row="1" FlowDirection="RightToLeft">
+        <StackPanel Grid.Column="2" Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Right" >
             <Button Margin="3" Height="25" Width="75" Content="Save" Command="{Binding SaveCommand}"/>
             <Button Margin="3" Height="25" Width="75" Content="Load" Command="{Binding LoadCommand}" />
         </StackPanel>

@@ -18,43 +18,22 @@ namespace View.Model
 
         private string _email;
 
-        private long _phoneNumberNumber;
-
         /// <summary>
         /// Возвращает и задаёт имя контакта.
         /// </summary>
-        public string Name
-        {
-            get => (_name == null) ? null : _name;
-            set
-            {
-                _name = value;
-            }
-        }
+        public string Name { get; set; }
+        
 
         /// <summary>
         /// Возвращает и задаёт электронную почту контакта.
         /// </summary>
-        public string Email
-        {
-            get => (_email == null) ? null : _email;
-            set
-            {
-                _email = value;
-            }
-        }
+        public string Email { get; set; }
+        
 
         /// <summary>
         /// Возвращает и задаёт номер телефона контакта.
         /// </summary>
-        public long PhoneNumber
-        {
-            get => _phoneNumberNumber;
-            set
-            {
-                _phoneNumberNumber = value;
-            }
-        }
+        public long PhoneNumber { get; set; }
 
         /// <summary>
         /// Создаёт экземпляр класса <see cref="Contact"/>.
