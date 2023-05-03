@@ -9,20 +9,17 @@
 
   <ItemGroup>
     <None Remove="call.ico" />
+    <None Remove="Resourse\photo_placeholder_100x100.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="call.ico" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Resourse\call.ico">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </None>
+    <Resource Include="Resourse\photo_placeholder_100x100.png" />
   </ItemGroup>
 
 </Project>

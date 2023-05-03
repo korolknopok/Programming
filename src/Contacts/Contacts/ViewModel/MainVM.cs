@@ -1,119 +1,234 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 using System.Windows.Input;
-using View.Model;
-using View.Model.Services;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using Contacts.Model;
+using Contacts.Model.Services;
 
-namespace View.ViewModel
+namespace Contacts.ViewModel
 {
     /// <summary>
-    /// ViewModel для окна MainWindow.
+    ///  ViewModel для окна MainWindow.
     /// </summary>
-    public class MainVM : INotifyPropertyChanged
+    public class MainVM : ObservableObject
     {
         /// <summary>
-        /// Контакт.
+        ///  Хранит булевое значение доступности кнопки добавления.
         /// </summary>
-        public Contact Contact { get; set; } = new Contact();
+        private bool _isEnabledAddButton;
 
         /// <summary>
-        /// Возвращает и задаёт имя контакта.
+        ///  Хранит булевое значение доступности кнопки редактирования.
         /// </summary>
-        public string Name  
+        private bool _isEnabledEditButton;
+
+        /// <summary>
+        ///  Хранит булевое значение доступности кнопки удаления.
+        /// </summary>
+        private bool _isEnabledRemoveButton;
+
+        /// <summary>
+        ///  Хранит булевое значение доступности редактирования текстовых полей.
+        /// </summary>
+        private bool _isReadOnlyTextBoxes;
+
+        /// <summary>
+        ///  Хранит булевое значение видимости кнопки принятия изменений.
+        /// </summary>
+        private bool _isVisibilityApplyButton;
+
+        /// <summary>
+        ///  Текущий контакт.
+        /// </summary>
+        private ContactVM _selectedContact;
+
+        /// <summary>
+        ///  Создаёт экземпляр класса <see cref="MainVM"/>.
+        /// </summary>
+        public MainVM()
         {
-            get => Contact.Name;
+            Contacts = ContactSerializer.Deserialize(Path);
+            EditCommand = new RelayCommand(EditContact);
+            AddCommand = new RelayCommand(AddContact);
+            RemoveCommand = new RelayCommand(RemoveContact);
+            ApplyCommand = new RelayCommand(ApplyChangesContact);
+            IsReadOnlyTextBoxes = true;
+            IsVisibilityApplyButton = false;
+            SetEnabled(true, false, false);
+        }
+
+        /// <summary>
+        ///  Возвращает и задаёт путь сериализации. По умолчанию - папка "Мои документы".
+        /// </summary>
+        public string Path { get; set; } =
+            Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
+            + @"\Contacts\contacts.json";
+
+        /// <summary>
+        ///  Возвращает и задаёт коллекцию контактов.
+        /// </summary>
+        public ObservableCollection<ContactVM> Contacts { get; set; }
+
+        /// <summary>
+        ///  Возвращает и задает исходную версию редактируемого контакта.
+        /// </summary>
+        public ContactVM Buffer { get; set; }
+
+        /// <summary>
+        ///  Возвращает и задает текущий контакт.
+        /// </summary>
+        public ContactVM SelectedContact
+        {
+            get => _selectedContact;
             set
             {
-                Contact.Name = value;
+                if (Buffer != null && Contacts.IndexOf(SelectedContact) != -1)
+                {
+                    Contacts[Contacts.IndexOf(SelectedContact)] = Buffer;
+                    Buffer = null;
+                }
+
+                _selectedContact = value;
+                IsVisibilityApplyButton = false;
+                IsReadOnlyTextBoxes = true;
+                if (SelectedContact == null)
+                    SetEnabled(true, false, false);
+                else
+                    SetEnabled(true, true, true);
                 OnPropertyChanged();
             }
         }
 
         /// <summary>
-        /// Возвращает и задаёт номер телефона контакта.
+        ///  Возвращает команду добавления контакта.
         /// </summary>
-        public long PhoneNumber
+        public ICommand AddCommand { get; }
+
+        /// <summary>
+        ///  Возвращает команду принятия изменений.
+        /// </summary>
+        public ICommand ApplyCommand { get; }
+
+        /// <summary>
+        ///  Возвращает команду редактирования контакта.
+        /// </summary>
+        public ICommand EditCommand { get; }
+
+        /// <summary>
+        ///  Возвращает команду удаления контакта.
+        /// </summary>
+        public ICommand RemoveCommand { get; }
+
+        /// <summary>
+        ///  Возвращает и задаёт значение доступности редактирования текстовых полей.
+        /// </summary>
+        public bool IsReadOnlyTextBoxes
         {
-            get => Contact.PhoneNumber;
-            set
-            {
-                Contact.PhoneNumber = value;
-                OnPropertyChanged();
-            }
+            get => _isReadOnlyTextBoxes;
+            set => SetProperty(ref _isReadOnlyTextBoxes, value);
         }
 
         /// <summary>
-        /// Возвращает и задаёт электронную почту контакта.
+        ///  Возвращает и задаёт значение доступности кнопки добавления.
         /// </summary>
-        public string Email
+        public bool IsEnabledAddButton
         {
-            get => Contact.Email;
-            set
-            {
-                Contact.Email = value;
-                OnPropertyChanged();
-            }
+            get => _isEnabledAddButton;
+            set => SetProperty(ref _isEnabledAddButton, value);
         }
 
         /// <summary>
-        /// Событие изменения свойства.
+        ///  Возвращает и задаёт значение доступности кнопки удаления.
         /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        /// <summary>
-        /// При вызове зажигает событие <see cref="PropertyChanged"/>.
-        /// </summary>
-        /// <param name="prop">Имя свойства, вызвавшего метод.</param>
-        public void OnPropertyChanged([CallerMemberName] string prop = "")
+        public bool IsEnabledRemoveButton
         {
-            if (PropertyChanged != null)
-                PropertyChanged(this, new PropertyChangedEventArgs(prop));
+            get => _isEnabledRemoveButton;
+            set => SetProperty(ref _isEnabledRemoveButton, value);
         }
 
         /// <summary>
-        /// Сохраняет данные.
+        ///  Возвращает и задаёт значение доступности кнопки редактирования.
         /// </summary>
-        public void Save()
+        public bool IsEnabledEditButton
         {
-            ContactSerializer.Serialize(Contact);
+            get => _isEnabledEditButton;
+            set => SetProperty(ref _isEnabledEditButton, value);
         }
 
         /// <summary>
-        /// Загружает данные.
+        ///  Возвращает и задаёт значение видимости кнопки принятия изменений.
         /// </summary>
-        public void Load()
+        public bool IsVisibilityApplyButton
         {
-            Contact contact = ContactSerializer.Deserialize();
-            Name = contact.Name;
-            PhoneNumber = contact.PhoneNumber;
-            Email = contact.Email;
+            get => _isVisibilityApplyButton;
+            set => SetProperty(ref _isVisibilityApplyButton, value);
         }
 
         /// <summary>
-        /// Команда сериализации контакта.
+        ///  Вызывает редактирование нового экземпляра класса <see cref="ContactVM"/>.
         /// </summary>
-        public ICommand SaveCommand
+        private void AddContact()
         {
-            get
-            {
-                return new SaveCommand(this);
-            }
+            SelectedContact = null;
+            SelectedContact = new ContactVM(new Contact());
+            IsVisibilityApplyButton = true;
+            IsReadOnlyTextBoxes = false;
+            SetEnabled(false, false, false);
         }
 
         /// <summary>
-        /// Команда десериализации контакта.
+        ///  Вызывает редактирования текущего контакта.
         /// </summary>
-        public ICommand LoadCommand
+        private void EditContact()
         {
-            get
-            {
-                return new LoadCommand(this);
-            }
+            Buffer = (ContactVM)SelectedContact.Clone();
+            IsReadOnlyTextBoxes = false;
+            IsVisibilityApplyButton = true;
+            SetEnabled(false, false, false);
+        }
+
+        /// <summary>
+        ///  Удаляет текущий контакт.
+        /// </summary>
+        private void RemoveContact()
+        {
+            if (SelectedContact == null) return;
+            var index = Contacts.IndexOf(SelectedContact);
+            Contacts.RemoveAt(index);
+            if (Contacts.Count == 0)
+                SelectedContact = null;
+            else if (index == Contacts.Count)
+                SelectedContact = Contacts[index - 1];
+            else
+                SelectedContact = Contacts[index];
+            ContactSerializer.Serialize(Contacts, Path);
+        }
+
+        /// <summary>
+        ///  Принимает изменения редактирования контакта.
+        /// </summary>
+        private void ApplyChangesContact()
+        {
+            if (!Contacts.Contains(SelectedContact)) Contacts.Add(SelectedContact);
+            IsVisibilityApplyButton = false;
+            IsReadOnlyTextBoxes = true;
+            Buffer = null;
+            SetEnabled(true, true, true);
+            ContactSerializer.Serialize(Contacts, Path);
+        }
+
+        /// <summary>
+        ///  Устанавливает значения доступности кнопок.
+        /// </summary>
+        /// <param name="addButton">Кнопка добавления контакта.</param>
+        /// <param name="removeButton">Кнопка удаления контакта.</param>
+        /// <param name="editButton">Кнопка редактирования контакта.</param>
+        private void SetEnabled(bool addButton, bool editButton, bool removeButton)
+        {
+            IsEnabledAddButton = addButton;
+            IsEnabledRemoveButton = removeButton;
+            IsEnabledEditButton = editButton;
         }
     }
 }

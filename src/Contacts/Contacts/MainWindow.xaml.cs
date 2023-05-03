@@ -12,10 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using View.ViewModel;
+using Contacts.ViewModel;
 
 
-namespace View
+namespace Contacts
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
