@@ -5,18 +5,16 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Contacts.Model;
 using Contacts.Model.Services;
+using Contacts.ViewModel;
 
-namespace Contacts.ViewModel
+namespace View.ViewModel
 {
     /// <summary>
     ///  ViewModel для окна MainWindow.
     /// </summary>
     public class MainVM : ObservableObject
     {
-        /// <summary>
-        ///  Хранит булевое значение доступности кнопки добавления.
-        /// </summary>
-        private bool _isEnabledAddButton;
+        
 
         /// <summary>
         ///  Хранит булевое значение доступности кнопки редактирования.
@@ -24,19 +22,9 @@ namespace Contacts.ViewModel
         private bool _isEnabledEditButton;
 
         /// <summary>
-        ///  Хранит булевое значение доступности кнопки удаления.
-        /// </summary>
-        private bool _isEnabledRemoveButton;
-
-        /// <summary>
         ///  Хранит булевое значение доступности редактирования текстовых полей.
         /// </summary>
         private bool _isReadOnlyTextBoxes;
-
-        /// <summary>
-        ///  Хранит булевое значение видимости кнопки принятия изменений.
-        /// </summary>
-        private bool _isVisibilityApplyButton;
 
         /// <summary>
         ///  Текущий контакт.
@@ -54,8 +42,7 @@ namespace Contacts.ViewModel
             RemoveCommand = new RelayCommand(RemoveContact);
             ApplyCommand = new RelayCommand(ApplyChangesContact);
             IsReadOnlyTextBoxes = true;
-            IsVisibilityApplyButton = false;
-            SetEnabled(true, false, false);
+            IsEnabledEditButton = false;
         }
 
         /// <summary>
@@ -73,7 +60,7 @@ namespace Contacts.ViewModel
         /// <summary>
         ///  Возвращает и задает исходную версию редактируемого контакта.
         /// </summary>
-        public ContactVM Buffer { get; set; }
+        public ContactVM ContactClone { get; set; }
 
         /// <summary>
         ///  Возвращает и задает текущий контакт.
@@ -83,19 +70,18 @@ namespace Contacts.ViewModel
             get => _selectedContact;
             set
             {
-                if (Buffer != null && Contacts.IndexOf(SelectedContact) != -1)
+                if (ContactClone != null && Contacts.IndexOf(SelectedContact) != -1)
                 {
-                    Contacts[Contacts.IndexOf(SelectedContact)] = Buffer;
-                    Buffer = null;
+                    Contacts[Contacts.IndexOf(SelectedContact)] = ContactClone;
+                    ContactClone = null;
                 }
 
                 _selectedContact = value;
-                IsVisibilityApplyButton = false;
                 IsReadOnlyTextBoxes = true;
                 if (SelectedContact == null)
-                    SetEnabled(true, false, false);
+                    IsReadOnlyTextBoxes = true;
                 else
-                    SetEnabled(true, true, true);
+                    IsEnabledEditButton = true;
                 OnPropertyChanged();
             }
         }
@@ -130,24 +116,6 @@ namespace Contacts.ViewModel
         }
 
         /// <summary>
-        ///  Возвращает и задаёт значение доступности кнопки добавления.
-        /// </summary>
-        public bool IsEnabledAddButton
-        {
-            get => _isEnabledAddButton;
-            set => SetProperty(ref _isEnabledAddButton, value);
-        }
-
-        /// <summary>
-        ///  Возвращает и задаёт значение доступности кнопки удаления.
-        /// </summary>
-        public bool IsEnabledRemoveButton
-        {
-            get => _isEnabledRemoveButton;
-            set => SetProperty(ref _isEnabledRemoveButton, value);
-        }
-
-        /// <summary>
         ///  Возвращает и задаёт значение доступности кнопки редактирования.
         /// </summary>
         public bool IsEnabledEditButton
@@ -157,24 +125,15 @@ namespace Contacts.ViewModel
         }
 
         /// <summary>
-        ///  Возвращает и задаёт значение видимости кнопки принятия изменений.
-        /// </summary>
-        public bool IsVisibilityApplyButton
-        {
-            get => _isVisibilityApplyButton;
-            set => SetProperty(ref _isVisibilityApplyButton, value);
-        }
-
-        /// <summary>
         ///  Вызывает редактирование нового экземпляра класса <see cref="ContactVM"/>.
         /// </summary>
         private void AddContact()
         {
             SelectedContact = null;
             SelectedContact = new ContactVM(new Contact());
-            IsVisibilityApplyButton = true;
             IsReadOnlyTextBoxes = false;
-            SetEnabled(false, false, false);
+            IsEnabledEditButton = false;
+
         }
 
         /// <summary>
@@ -182,10 +141,9 @@ namespace Contacts.ViewModel
         /// </summary>
         private void EditContact()
         {
-            Buffer = (ContactVM)SelectedContact.Clone();
+            ContactClone = (ContactVM)SelectedContact.Clone();
             IsReadOnlyTextBoxes = false;
-            IsVisibilityApplyButton = true;
-            SetEnabled(false, false, false);
+            IsEnabledEditButton = false;
         }
 
         /// <summary>
@@ -211,24 +169,11 @@ namespace Contacts.ViewModel
         private void ApplyChangesContact()
         {
             if (!Contacts.Contains(SelectedContact)) Contacts.Add(SelectedContact);
-            IsVisibilityApplyButton = false;
             IsReadOnlyTextBoxes = true;
-            Buffer = null;
-            SetEnabled(true, true, true);
+            ContactClone = null;
+            IsEnabledEditButton = true;
+            IsReadOnlyTextBoxes = true;
             ContactSerializer.Serialize(Contacts, Path);
-        }
-
-        /// <summary>
-        ///  Устанавливает значения доступности кнопок.
-        /// </summary>
-        /// <param name="addButton">Кнопка добавления контакта.</param>
-        /// <param name="removeButton">Кнопка удаления контакта.</param>
-        /// <param name="editButton">Кнопка редактирования контакта.</param>
-        private void SetEnabled(bool addButton, bool editButton, bool removeButton)
-        {
-            IsEnabledAddButton = addButton;
-            IsEnabledRemoveButton = removeButton;
-            IsEnabledEditButton = editButton;
         }
     }
 }

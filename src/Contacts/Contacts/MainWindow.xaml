@@ -69,7 +69,7 @@
                             Margin="{StaticResource DefaultMargin}"
                             Command="{Binding AddCommand}"
                             Content="Add"
-                            IsEnabled="{Binding IsEnabledAddButton}"/>
+                            IsEnabled="{Binding IsReadOnlyTextBoxes}"/>
                         <Button
                             Grid.Column="1"
                             Height="{StaticResource DefaultButtonHeightValue}"
@@ -83,7 +83,7 @@
                             Margin="{StaticResource DefaultMargin}"
                             Command="{Binding RemoveCommand}"
                             Content="Remove"
-                            IsEnabled="{Binding IsEnabledRemoveButton}"/>
+                            IsEnabled="{Binding IsEnabledEditButton}"/>
                     </Grid>
                 </Grid>
             </DockPanel>
@@ -129,7 +129,7 @@
                             Command="{Binding ApplyCommand}"
                             Content="Apply"
                             Style="{StaticResource DefaultButton}"
-                            Visibility="{Binding IsVisibilityApplyButton, Converter={StaticResource VisibilityConverter}}"/>
+                            Visibility="{Binding IsReadOnlyTextBoxes, Converter={StaticResource VisibilityConverter}}"/>
                     </StackPanel>
                 </Grid>
             </DockPanel>
