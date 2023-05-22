@@ -144,6 +144,7 @@
                             Command="{Binding ApplyCommand}"
                             Content="Apply"
                             Style="{StaticResource DefaultButton}"
+                            IsEnabled="{Binding SelectedContact.HasErrors, Converter={StaticResource InverseConverter}}"
                             Visibility="{Binding IsReadOnlyTextBoxes, Converter={StaticResource VisibilityConverter}}"/>
                     </StackPanel>
                 </Grid>

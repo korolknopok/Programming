@@ -32,4 +32,13 @@
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="Height" Value="{StaticResource DefaultContactInfoTextBlockHeightValue}"/>
     </Style>
+    <Style x:Key="ValidationStyleTextBox" TargetType="TextBox">
+        <Style.Triggers>
+            <Trigger Property="Validation.HasError" Value="True">
+                <Setter Property="ToolTip"
+                        Value="{Binding RelativeSource={RelativeSource Self}, Path=(Validation.Errors)[0].ErrorContent}" />
+                <Setter Property="Background" Value="{StaticResource HasErrorBackgroundColorBrush}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
 </ResourceDictionary>
