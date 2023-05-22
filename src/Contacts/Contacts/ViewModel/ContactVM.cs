@@ -1,10 +1,11 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using CommunityToolkit.Mvvm.ComponentModel;
 using Contacts.Model;
 
 namespace Contacts.ViewModel
 {
-    public class ContactVM : ObservableObject, ICloneable
+    public class ContactVM : ObservableValidator, ICloneable
     {
         /// <summary>
         ///  Создаёт экземпляр класса <see cref="ContactVM"/>.
@@ -13,6 +14,7 @@ namespace Contacts.ViewModel
         public ContactVM(Contact contact)
         {
             Contact = contact;
+            ValidateAllProperties();
         }
 
         /// <summary>
@@ -23,6 +25,8 @@ namespace Contacts.ViewModel
         /// <summary>
         ///  Возвращает и задаёт имя контакта.
         /// </summary>
+        [MaxLength(100)]
+        [Required(AllowEmptyStrings = false)]
         public string Name
         {
             get => Contact.Name;
@@ -30,12 +34,15 @@ namespace Contacts.ViewModel
                 Contact.Name,
                 value,
                 Contact,
-                (contact, name) => Contact.Name = name);
+                (contact, name) => contact.Name = name, true);
         }
 
         /// <summary>
         ///  Возвращает и задаёт электронную почту контакта.
         /// </summary>
+        [EmailAddress]
+        [MaxLength(100)]
+        [Required(AllowEmptyStrings = false)]
         public string Email
         {
             get => Contact.Email;
@@ -43,12 +50,15 @@ namespace Contacts.ViewModel
                 Contact.Email,
                 value,
                 Contact,
-                (contact, email) => Contact.Email = email);
+                (contact, email) => contact.Email = email, true);
         }
 
         /// <summary>
         ///  Возвращает и задаёт номер телефона контакта.
         /// </summary>
+        [MaxLength(100)]
+        [Required(AllowEmptyStrings = false)]
+        [Phone(ErrorMessage = "Phone Number can contains only digits and symbols '+()- '. Example: +7 (999) 111-22-33")]
         public string Phone
         {
             get => Contact.Phone;
@@ -56,7 +66,7 @@ namespace Contacts.ViewModel
                 Contact.Phone,
                 value,
                 Contact,
-                (contact, phone) => Contact.Phone = phone);
+                (contact, number) => contact.Phone = number, true);
         }
 
         /// <summary>

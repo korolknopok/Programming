@@ -5,11 +5,16 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:services="clr-namespace:Contacts.Model.Services"
+    xmlns:viewModel="clr-namespace:View.ViewModel"
+    xmlns:controls="clr-namespace:Contacts"
+    xmlns:controls1="clr-namespace:Contacts.Controls"
+    xmlns:services1="clr-namespace:View.Model.Services"
     Title="Contacts"
     Width="650"
     Height="450"
     MinWidth="650"
     MinHeight="450"
+    d:DataContext="{d:DesignInstance viewModel:MainVM}"
     Icon="call.ico"
     mc:Ignorable="d">
     <Window.Resources>
@@ -18,6 +23,7 @@
                 <ResourceDictionary Source="/Resourse/DefaultStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
             <services:VisibilityConverter x:Key="VisibilityConverter"/>
+            <services1:InverseConverter x:Key="InverseConverter" />
         </ResourceDictionary>
     </Window.Resources>
     <Grid>
@@ -53,7 +59,16 @@
                         SelectedItem="{Binding SelectedContact, UpdateSourceTrigger=PropertyChanged}">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-                                <TextBlock Text="{Binding Name, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                                <StackPanel Margin="3">
+                                    <TextBlock
+                                        FontSize="12"
+                                        FontWeight="SemiBold"
+                                        Text="{Binding Name}"/>
+                                    <TextBlock
+                                        FontSize="10"
+                                        Text="{Binding Phone}"/>
+                                </StackPanel>
+
                             </DataTemplate>
                         </ListBox.ItemTemplate>
                     </ListBox>
@@ -134,5 +149,8 @@
                 </Grid>
             </DockPanel>
         </Grid>
+        <StackPanel Grid.Column="2">
+            <controls1:ContactControl DataContext="{Binding ContactVM, UpdateSourceTrigger=PropertyChanged}" />
+        </StackPanel>
     </Grid>
 </Window>

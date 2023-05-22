@@ -19,12 +19,12 @@ namespace View.ViewModel
         /// <summary>
         ///  Хранит булевое значение доступности кнопки редактирования.
         /// </summary>
-        private bool _isEnabledEditButton;
+        private bool _isEnabledEdit;
 
         /// <summary>
         ///  Хранит булевое значение доступности редактирования текстовых полей.
         /// </summary>
-        private bool _isReadOnlyTextBoxes;
+        private bool _isReadOnly;
 
         /// <summary>
         ///  Текущий контакт.
@@ -111,8 +111,8 @@ namespace View.ViewModel
         /// </summary>
         public bool IsReadOnlyTextBoxes
         {
-            get => _isReadOnlyTextBoxes;
-            set => SetProperty(ref _isReadOnlyTextBoxes, value);
+            get => _isReadOnly;
+            set => SetProperty(ref _isReadOnly, value);
         }
 
         /// <summary>
@@ -120,8 +120,8 @@ namespace View.ViewModel
         /// </summary>
         public bool IsEnabledEditButton
         {
-            get => _isEnabledEditButton;
-            set => SetProperty(ref _isEnabledEditButton, value);
+            get => _isEnabledEdit;
+            set => SetProperty(ref _isEnabledEdit, value);
         }
 
         /// <summary>
