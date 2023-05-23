@@ -14,7 +14,6 @@ namespace Contacts.ViewModel
         public ContactVM(Contact contact)
         {
             Contact = contact;
-            ValidateAllProperties();
         }
 
         /// <summary>

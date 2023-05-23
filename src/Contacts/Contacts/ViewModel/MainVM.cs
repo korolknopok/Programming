@@ -14,8 +14,6 @@ namespace View.ViewModel
     /// </summary>
     public class MainVM : ObservableObject
     {
-        
-
         /// <summary>
         ///  Хранит булевое значение доступности кнопки редактирования.
         /// </summary>
@@ -131,8 +129,12 @@ namespace View.ViewModel
         {
             SelectedContact = null;
             SelectedContact = new ContactVM(new Contact());
+            SelectedContact.Name = "";
+            SelectedContact.Phone = "";
+            SelectedContact.Email = "";
             IsReadOnlyTextBoxes = false;
             IsEnabledEditButton = false;
+
 
         }
 

@@ -8,10 +8,14 @@
     <sys:Double xmlns:sys="clr-namespace:System;assembly=mscorlib" x:Key="DefaultContactInfoTextBlockHeightValue">18</sys:Double>
     <ImageSource x:Key="PhotoPlaceholder">/Resourse/photo_placeholder_100x100.png</ImageSource>
     <Color x:Key="LightGrayBackgroundColor">#f8f8f8</Color>
-    <SolidColorBrush x:Key="LightGrayBackgroundColorBrush" Color="{StaticResource LightGrayBackgroundColor}" />
+    <SolidColorBrush x:Key="LightGrayBackgroundColorBrush"
+                     Color="{StaticResource LightGrayBackgroundColor}" />
     <Color x:Key="WhiteBackgroundColor">#ffffff</Color>
-    <SolidColorBrush x:Key="WhiteBackgroundColorBrush" Color="{StaticResource WhiteBackgroundColor}" />
-
+    <SolidColorBrush x:Key="WhiteBackgroundColorBrush"
+                     Color="{StaticResource WhiteBackgroundColor}" />
+    <Color x:Key="HasErrorBackgroundColor">#ffdddd</Color>
+    <SolidColorBrush x:Key="HasErrorBackgroundColorBrush"
+                     Color="{StaticResource HasErrorBackgroundColor}" />
     <Thickness
         x:Key="DefaultMargin"
         Bottom="{StaticResource DefaultMarginValue}"
