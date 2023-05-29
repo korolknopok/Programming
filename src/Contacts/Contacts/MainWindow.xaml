@@ -5,16 +5,15 @@
     xmlns:controls="clr-namespace:View.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:model="clr-namespace:Contacts.Model"
-    xmlns:services="clr-namespace:Contacts.Model.Services"
-    xmlns:services1="clr-namespace:View.Model.Services"
-    xmlns:viewModel="clr-namespace:View.ViewModel"
+    xmlns:converters="clr-namespace:View.Converters"
+    xmlns:viewModel1="clr-namespace:ViewModel;assembly=ViewModel"
+    xmlns:model1="clr-namespace:Contacts.Model;assembly=Model"
     Title="Contacts"
     Width="650"
     Height="450"
     MinWidth="650"
     MinHeight="450"
-    d:DataContext="{d:DesignInstance viewModel:MainVM}"
+    d:DataContext="{d:DesignInstance viewModel1:MainVM}"
     Icon="call.ico"
     mc:Ignorable="d">
     <Window.Resources>
@@ -22,8 +21,8 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/Resourse/DefaultStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
-            <services:VisibilityConverter x:Key="VisibilityConverter"/>
-            <services1:InverseConverter x:Key="InverseConverter"/>
+            <converters:VisibilityConverter x:Key="VisibilityConverter"/>
+            <converters:InverseConverter x:Key="InverseConverter"/>
         </ResourceDictionary>
 
     </Window.Resources>
@@ -61,7 +60,7 @@
                         SelectedItem="{Binding SelectedContact, UpdateSourceTrigger=PropertyChanged}"
                         Validation.ErrorTemplate="{x:Null}">
                         <ListBox.ItemTemplate>
-                            <DataTemplate DataType="{x:Type model:Contact}">
+                            <DataTemplate DataType="{x:Type model1:Contact}">
                                 <StackPanel Orientation="Horizontal">
                                     <Image
                                         Width="32"

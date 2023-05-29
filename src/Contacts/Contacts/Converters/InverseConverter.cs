@@ -3,11 +3,11 @@ using System.Globalization;
 using System.Windows.Data;
 
 
-namespace View.Model.Services
+namespace View.Converters
 {
     public class InverseConverter : IValueConverter
     {
-        
+
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             if (value is bool boolValue)
@@ -18,7 +18,7 @@ namespace View.Model.Services
             return value;
         }
 
-        
+
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
             if (value is bool boolValue)

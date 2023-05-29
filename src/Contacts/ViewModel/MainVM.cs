@@ -4,10 +4,11 @@ using System.Windows.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Contacts.Model;
-using Contacts.Model.Services;
+using ViewModel.Services;
+
 using Contacts.ViewModel;
 
-namespace View.ViewModel
+namespace ViewModel
 {
     /// <summary>
     ///  ViewModel для окна MainWindow.

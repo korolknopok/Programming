@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Windows;
 using System.Windows.Data;
 
-namespace Contacts.Model.Services
+namespace View.Converters
 {
     /// <summary>
     ///  Представляет реализацию для конвертирования bool значений.
