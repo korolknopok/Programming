@@ -1,6 +1,5 @@
 ﻿using System.Collections.ObjectModel;
 using System.IO;
-using Contacts.ViewModel;
 using Newtonsoft.Json;
 
 namespace ViewModel.Services

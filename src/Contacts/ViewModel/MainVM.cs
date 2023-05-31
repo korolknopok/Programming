@@ -6,8 +6,6 @@ using CommunityToolkit.Mvvm.Input;
 using Contacts.Model;
 using ViewModel.Services;
 
-using Contacts.ViewModel;
-
 namespace ViewModel
 {
     /// <summary>
